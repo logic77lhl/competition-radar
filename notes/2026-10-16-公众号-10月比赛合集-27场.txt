@@ -1,0 +1,246 @@
+id="js_content" style="visibility: hidden; opacity: 0; ">
+[图]
+
+文章信息来自CompHub[1]整理，请以比赛官网为准。
+后台回复“加群”和志同道合的伙伴讨论！01
+热门比赛
+
+01 · 68天后结束
+Enveda CASMI 2026 - Molecule ID From Mass Spectra
+报名截至 2026年12月8日奖励 50,000 Usd队伍 2785+支队伍主办方 Enveda标签 #Biology #Chemistry #Custom Metric
+时间：2026年9月15日 - 2026年12月15日
+链接: https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra
+
+02 · 56天后结束
+Google - The Gemma 4 Developer Agent Competition
+报名截至 2026年11月26日奖励 65,000 Usd队伍 1991+支队伍主办方 Google DeepMind标签 #Artificial Intelligence #Custom Metric #coding
+时间：2026年9月23日 - 2026年12月3日
+链接: https://www.kaggle.com/competitions/gemma-4-developer-agent
+
+03 · 初赛 · 38天后结束
+蚂蚁灵波具身大模型挑战赛
+报名截至 2026年10月26日奖励 ￥ 280000队伍 1415+支队伍标签 #机器人 #计算机视觉
+时间：2026年9月11日 - 2026年11月15日
+链接: https://tianchi.aliyun.com/competition/entrance/532514
+
+04 · 11天后结束
+Climate Risk and Health Prediction Challenge
+报名截至 2026年10月19日奖励 $1 000 USD队伍 1410+支队伍
+时间：2026年8月18日 - 2026年10月19日
+链接: https://zindi.africa/competitions/climate-risk-health-prediction-challenge
+
+05 · 26天后结束
+ARC Prize 2026 - ARC-AGI-3
+报名截至 2026年10月26日奖励 850,000 Usd队伍 1340+支队伍主办方 Abstraction and Reasoning Corpus标签 #Artificial Intelligence #Custom Metric #general knowledge and reasoning
+时间：2026年3月26日 - 2026年11月3日
+链接: https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-3
+
+06 · 第一赛季 · 84天后结束
+知乎知学堂大模型挑战赛：大模型复杂表格识别与内容理解
+报名截至 2026年12月31日奖励 ￥ 20000队伍 1243+支队伍标签 #大语言模型 #自然语言处理
+时间：2026年8月7日 - 2026年12月31日
+链接: https://tianchi.aliyun.com/competition/entrance/532510
+
+07 · 24天后结束
+Predicting Airline Satisfaction
+奖励 Swag队伍 1157+支队伍主办方 Kaggle标签 #Beginner #Roc Auc Score #Tabular
+时间：2026年10月1日 - 2026年11月1日
+链接: https://www.kaggle.com/competitions/playground-series-s6e10
+
+08 · 26天后结束
+ARC Prize 2026 - ARC-AGI-2
+报名截至 2026年10月27日奖励 700,000 Usd队伍 909+支队伍主办方 Abstraction and Reasoning Corpus标签 #Artificial Intelligence #Custom Metric
+时间：2026年3月26日 - 2026年11月3日
+链接: https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2
+
+09 · 排名赛 · 23天后结束
+余震预测技术国际大赛
+报名截至 2026年10月31日奖励 $ 30000队伍 848+支队伍标签 #地球物理学 #地质科学 #地震学
+时间：2026年1月28日 - 2026年10月31日
+链接: https://tianchi.aliyun.com/competition/entrance/532460
+
+10 · A榜_打榜赛 · 229天后结束
+【打榜赛】CCL25-Eval 任务2：第三届汉语框架语义解析评测
+报名截至 2027年5月24日奖励 ￥ 5000队伍 659+支队伍标签 #自然语言处理
+时间：2025年3月20日 - 2027年5月25日
+链接: https://tianchi.aliyun.com/competition/entrance/532338
+
+02
+比赛简介
+
+Kaggle（10场）
+01 · 15天后结束
+RSNA Knee Abnormality Detection
+报名截至 2026年10月16日奖励 77,000 Usd队伍 145+支队伍主办方 Radiological Society of North America标签 #Computer Vision #Image #Image Classification #Medicine #Roc Auc Score #Text
+时间：2026年8月5日 - 2026年10月23日
+链接: https://www.kaggle.com/competitions/rsna-knee-abnormality-detection
+
+02 · 24天后结束
+Predicting Airline Satisfaction
+奖励 Swag队伍 1157+支队伍主办方 Kaggle标签 #Beginner #Roc Auc Score #Tabular
+时间：2026年10月1日 - 2026年11月1日
+链接: https://www.kaggle.com/competitions/playground-series-s6e10
+
+03 · 26天后结束
+ARC Prize 2026 - ARC-AGI-2
+报名截至 2026年10月27日奖励 700,000 Usd队伍 909+支队伍主办方 Abstraction and Reasoning Corpus标签 #Artificial Intelligence #Custom Metric
+时间：2026年3月26日 - 2026年11月3日
+链接: https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2
+
+04 · 26天后结束
+ARC Prize 2026 - ARC-AGI-3
+报名截至 2026年10月26日奖励 850,000 Usd队伍 1340+支队伍主办方 Abstraction and Reasoning Corpus标签 #Artificial Intelligence #Custom Metric #general knowledge and reasoning
+时间：2026年3月26日 - 2026年11月3日
+链接: https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-3
+
+05 · 33天后结束
+ARC Prize 2026 - Paper Track
+奖励 450,000 Usd队伍 76+支队伍主办方 Abstraction and Reasoning Corpus标签 #Artificial Intelligence #general knowledge and reasoning
+时间：2026年3月26日 - 2026年11月10日
+链接: https://www.kaggle.com/competitions/arc-prize-2026-paper-track
+
+06 · 36天后结束
+Google - The Gemma 4 Developer Agent Paper Track
+报名截至 2026年11月13日奖励 35,000 Usd队伍 161+支队伍主办方 Google DeepMind标签 #Artificial Intelligence #coding
+时间：2026年9月23日 - 2026年11月13日
+链接: https://www.kaggle.com/competitions/gemma-4-developer-agent-paper
+
+07 · 56天后结束
+Google - The Gemma 4 Developer Agent Competition
+报名截至 2026年11月26日奖励 65,000 Usd队伍 1991+支队伍主办方 Google DeepMind标签 #Artificial Intelligence #Custom Metric #coding
+时间：2026年9月23日 - 2026年12月3日
+链接: https://www.kaggle.com/competitions/gemma-4-developer-agent
+
+08 · 68天后结束
+Enveda CASMI 2026 - Molecule ID From Mass Spectra
+报名截至 2026年12月8日奖励 50,000 Usd队伍 2785+支队伍主办方 Enveda标签 #Biology #Chemistry #Custom Metric
+时间：2026年9月15日 - 2026年12月15日
+链接: https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra
+
+09 · 91天后结束
+NFL Big Data Bowl 2027
+报名截至 2027年1月7日奖励 100,000 Usd队伍 66+支队伍主办方 The National Football League标签 #Data Analytics #Football #Sports
+时间：2026年10月7日 - 2027年1月7日
+链接: https://www.kaggle.com/competitions/nfl-big-data-bowl-2027
+
+10 · 93天后结束
+The Pokémon Company - PTCG AI Battle Challenge Playground
+报名截至 2027年1月2日奖励 Swag队伍 248+支队伍主办方 The Pokémon Company - PTCGABC Team标签 #Artificial Intelligence #Custom Metric #Games #Reinforcement Learning
+时间：2026年9月29日 - 2027年1月9日
+链接: https://www.kaggle.com/competitions/the-pokemon-company-ptcg-ai-battle-challenge-playground
+
+阿里天池（10场）
+01 · 初赛 · 今日结束
+AI+跨境黑客松巅峰赛——用AI解跨境真命题
+报名截至 2026年10月8日奖励 ￥ 100000队伍 385+支队伍标签 #物流 #电商
+时间：2026年8月7日 - 2026年10月8日
+链接: https://tianchi.aliyun.com/competition/entrance/532509
+
+02 · 报名与作品提交阶段 · 12天后结束
+欧莱雅美妆科技黑客松 - 赛题1 数据共情者 - 消费者的AI管家
+报名截至 2026年10月20日奖励 ￥ 200000队伍 628+支队伍标签 #多模态 #智能体
+时间：2026年7月17日 - 2026年10月20日
+链接: https://tianchi.aliyun.com/competition/entrance/532503
+
+03 · 报名与作品提交阶段 · 12天后结束
+欧莱雅美妆科技黑客松 - 赛题2 信任守护师 - 创造者的AI卫士
+报名截至 2026年10月20日奖励 ￥ 200000队伍 330+支队伍标签 #多模态 #智能体
+时间：2026年7月17日 - 2026年10月20日
+链接: https://tianchi.aliyun.com/competition/entrance/532496
+
+04 · 报名与作品提交阶段 · 12天后结束
+欧莱雅美妆科技黑客松 - 赛题3 无界体验家 - 用爱(AI)让美触手可及
+报名截至 2026年10月20日奖励 ￥ 200000队伍 430+支队伍标签 #多模态 #智能体
+时间：2026年7月17日 - 2026年10月20日
+链接: https://tianchi.aliyun.com/competition/entrance/532497
+
+05 · 排名赛 · 23天后结束
+余震预测技术国际大赛
+报名截至 2026年10月31日奖励 $ 30000队伍 848+支队伍标签 #地球物理学 #地质科学 #地震学
+时间：2026年1月28日 - 2026年10月31日
+链接: https://tianchi.aliyun.com/competition/entrance/532460
+
+06 · 初赛 · 38天后结束
+2026-跨本体具身认知极限联合挑战赛
+报名截至 2026年10月21日奖励 ￥ 100000队伍 222+支队伍标签 #机器人
+时间：2026年7月30日 - 2026年11月15日
+链接: https://tianchi.aliyun.com/competition/entrance/532508
+
+07 · 初赛 · 38天后结束
+蚂蚁灵波具身大模型挑战赛
+报名截至 2026年10月26日奖励 ￥ 280000队伍 1415+支队伍标签 #机器人 #计算机视觉
+时间：2026年9月11日 - 2026年11月15日
+链接: https://tianchi.aliyun.com/competition/entrance/532514
+
+08 · 初赛 · 84天后结束
+OpenLET 具身智能挑战赛
+报名截至 2026年12月31日奖励 ￥ 500000队伍 81+支队伍标签 #工业制造 #机器人 #第三方竞赛
+时间：2026年9月23日 - 2026年12月31日
+链接: https://tianchi.aliyun.com/competition/entrance/532515
+
+09 · 第一赛季 · 84天后结束
+知乎知学堂大模型挑战赛：大模型复杂表格识别与内容理解
+报名截至 2026年12月31日奖励 ￥ 20000队伍 1243+支队伍标签 #大语言模型 #自然语言处理
+时间：2026年8月7日 - 2026年12月31日
+链接: https://tianchi.aliyun.com/competition/entrance/532510
+
+10 · A榜_打榜赛 · 229天后结束
+【打榜赛】CCL25-Eval 任务2：第三届汉语框架语义解析评测
+报名截至 2027年5月24日奖励 ￥ 5000队伍 659+支队伍标签 #自然语言处理
+时间：2025年3月20日 - 2027年5月25日
+链接: https://tianchi.aliyun.com/competition/entrance/532338
+
+ZINDI（5场）
+01 · 11天后结束
+Climate Risk and Health Prediction Challenge
+报名截至 2026年10月19日奖励 $1 000 USD队伍 1410+支队伍
+时间：2026年8月18日 - 2026年10月19日
+链接: https://zindi.africa/competitions/climate-risk-health-prediction-challenge
+
+02 · 11天后结束
+Sasol Customer Value Recruitment Challenge
+报名截至 2026年10月19日奖励 R25 000 ZAR队伍 181+支队伍
+时间：2026年9月23日 - 2026年10月19日
+链接: https://zindi.africa/competitions/sasol-customer-value-recruitment-challenge
+
+03 · 24天后结束
+IndabaX Eswatini: VAT File & Pay Predictive Analytics Challenge
+报名截至 2026年11月1日奖励 50 000 SZL队伍 118+支队伍主办方 IndabaX
+时间：2026年9月25日 - 2026年11月1日
+链接: https://zindi.africa/competitions/eswatini-indabax-hack
+
+04 · 24天后结束
+Bias Bounty Mapping Equity Challenge
+报名截至 2026年11月1日奖励 $10 000 USD
+时间：2026年8月28日 - 2026年11月1日
+链接: https://zindi.africa/competitions/bias-bounty-mapping-equity-challenge
+
+05 · 24天后结束
+October Study Jam: Google WAXAL ASR Challenge
+报名截至 2026年11月1日奖励 500 Points队伍 33+支队伍
+时间：2026年10月5日 - 2026年11月1日
+链接: https://zindi.africa/competitions/google-waxal-asr-challenge-october-study-jam
+
+Datafountain（1场）
+01 · 22天后结束
+6G/B6G内生AI：多用户MIMO端到端传输系统设计
+报名截至 2026年10月30日奖励 ¥ 300000队伍 248+支队伍主办方 IMT-2030（6G）推进组标签 #人工智能 #大数据
+时间：2026年8月16日 - 2026年10月30日
+链接: https://www.datafountain.cn/competitions/1176
+
+AIcrowd（1场）
+01 · Phase 2 · 10天后结束
+ARC White-Box Estimation Challenge 2026
+报名截至 2026年10月18日奖励 $150,000+ Prize Money队伍 141+支队伍主办方 Alignment Research Center标签 #mechanistic_estimation #white_box
+时间：截至 2026年10月18日
+链接: https://www.aicrowd.com/challenges/arc-white-box-estimation-challenge-2026
+
+[1] 上CompHub事实查看比赛动态：https://comphub.notion.site/CompHub-c353e310c8f84846ace87a13221637e8
+
+预览时标签不可点
+
+阅读原文
+
+不喜欢
+
+<div class="

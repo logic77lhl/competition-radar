@@ -1,0 +1,113 @@
+{
+  "settings": {
+    "horizonDays": 150,
+    "evergreenDays": 365,
+    "reminderLadder": [30, 14, 7, 3, 1, 0],
+    "kaggleMaxPages": 12,
+    "timeoutMs": 25000,
+    "retries": 2,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
+  },
+
+  "sources": {
+    "kaggle": {
+      "enabled": true,
+      "label": "Kaggle",
+      "region": "intl",
+      "home": "https://www.kaggle.com/competitions",
+      "note": "官方内部列表接口（POST /api/i/.../ListCompetitions），字段完整：截止日、奖金、主办方、赛道标签。"
+    },
+    "mlcontests": {
+      "enabled": true,
+      "label": "ML Contests",
+      "region": "intl",
+      "home": "https://mlcontests.com/",
+      "note": "国际 ML 竞赛聚合站，页面内嵌全量 JSON，含 added（收录日期）——最适合判断「有没有最新的」。"
+    },
+    "grandchallenge": {
+      "enabled": true,
+      "label": "Grand Challenge",
+      "region": "intl",
+      "home": "https://grand-challenge.org/challenges/",
+      "note": "医学影像算法挑战托管平台（MICCAI 系列几乎都在此），有 JSON API。"
+    },
+    "datafountain": {
+      "enabled": true,
+      "label": "DataFountain",
+      "region": "cn",
+      "home": "https://www.datafountain.cn/competitions",
+      "note": "国内平台，服务端渲染，含「可报名」状态、比赛日期、奖金。"
+    },
+    "aicrowd": {
+      "enabled": true,
+      "label": "AIcrowd",
+      "region": "intl",
+      "home": "https://www.aicrowd.com/challenges",
+      "note": "研究型竞赛（NeurIPS 等会议赛）。列表页不含截止日，只作为「新增条目」来源。"
+    },
+    "codalab": {
+      "enabled": true,
+      "label": "CodaLab Competitions",
+      "region": "intl",
+      "home": "https://codalab.lisn.upsaclay.fr/competitions?is_active=on",
+      "note": "学术评测托管（WMT 等）。必须带 ?is_active=on —— 不带会返回 1256 条（含大量往届），带上只剩 380 条在办。列表页不展示截止日。"
+    },
+    "drivendata": {
+      "enabled": true,
+      "label": "DrivenData",
+      "region": "intl",
+      "home": "https://www.drivendata.org/competitions/",
+      "note": "社会公益/科学向竞赛，列表页有 Ongoing / Past 分区。"
+    },
+    "evalai": {
+      "enabled": true,
+      "label": "EvalAI",
+      "region": "intl",
+      "home": "https://eval.ai/web/challenges/list",
+      "note": "学术评测托管（CVPR/ICCV/NeurIPS workshop 挑战赛大量挂这里）。前端是 Angular，正文为空壳；真实数据走 /api/challenges/challenge/{present,future}/approved/public，有 start_date / end_date / 主办团队。"
+    },
+    "devfolio": {
+      "enabled": true,
+      "label": "Devfolio",
+      "region": "intl",
+      "home": "https://devfolio.co/hackathons",
+      "note": "全球黑客松平台。页面内嵌 __NEXT_DATA__（react-query 缓存），分 open / upcoming / featured / past 四组，带起止时间、报名人数、时区。场次什么主题都有，按关键词只留 AI 相关。"
+    },
+    "taikai": {
+      "enabled": true,
+      "label": "TAIKAI",
+      "region": "intl",
+      "home": "https://taikai.network/en/hackathons",
+      "note": "欧洲黑客松平台。__NEXT_DATA__ 里是 Apollo 规范化缓存（ROOT_QUERY 只存 ref，要自己解）。列表 20 场，只有 isClosed，**不返回任何日期** —— 所以按「未标截止」处理。"
+    },
+    "lablab": {
+      "enabled": true,
+      "label": "lablab.ai",
+      "region": "intl",
+      "home": "https://lablab.ai/ai-hackathons",
+      "note": "AI 黑客松，更新最快。列表页只有 slug，标题和起止日要抓详情页内嵌的 JSON-LD Event（Next.js App Router 的 flight 流）。每次最多抓 20 个详情页。"
+    },
+    "ctftime": {
+      "enabled": false,
+      "label": "CTFtime",
+      "region": "intl",
+      "home": "https://ctftime.org/",
+      "note": "网络安全 CTF 赛历（JSON API）。与 AI 竞赛无关，默认关闭；想要就把 enabled 改成 true。"
+    }
+  },
+
+  "watchlist": [
+    { "name": "阿里云天池", "url": "https://tianchi.aliyun.com/competition/gameList/activeList", "note": "赛事列表为前端渲染，脚本抓不到正文，需人工/浏览器查看" },
+    { "name": "科大讯飞 AI 开发者大赛", "url": "https://challenge.xfyun.cn/", "note": "前端渲染（Next.js），赛题明细不在 HTML 里" },
+    { "name": "百度飞桨 AI Studio", "url": "https://aistudio.baidu.com/competition", "note": "前端渲染" },
+    { "name": "华为云大赛", "url": "https://competition.huaweicloud.com/", "note": "前端渲染" },
+    { "name": "和鲸社区", "url": "https://www.heywhale.com/home", "note": "前端渲染" },
+    { "name": "琶洲算法大赛", "url": "https://www.aicompetition-pz.com/topic", "note": "赛题详情页的截止日需人工确认" },
+    { "name": "Devpost 黑客松", "url": "https://devpost.com/hackathons", "note": "Cloudflare 403，脚本无法抓取" },
+    { "name": "Zindi", "url": "https://zindi.africa/competitions", "note": "前端渲染" },
+    { "name": "赛氪", "url": "https://www.saikr.com/", "note": "前端渲染" },
+    { "name": "我爱竞赛网", "url": "https://www.52jingsai.com/", "note": "GBK 编码，首页为分类导航；具体赛事文章页可读" },
+    { "name": "AITOP100", "url": "https://www.aitop100.cn/", "note": "赛事聚合；/competition 路径 404，需从首页找入口" },
+    { "name": "CompeteHub", "url": "https://www.competehub.dev/en/competitions", "note": "前端渲染" }
+  ]
+}

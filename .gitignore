@@ -1,0 +1,13 @@
+# 采集产物：每天都会变，只为本地看板服务，不进仓库
+state/out/
+state/snapshots/
+state/log/
+state/panel.log
+state/*.log
+
+# 导出的站点是产物，但故意提交 —— 它就是 Pages 的内容
+# docs/ 不忽略
+
+node_modules/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,13 @@
+# 仓库里一律 LF：GitHub Actions 的 run 脚本被 CRLF 插入 \r 会直接报
+# `$'\r': command not found`，而本机 core.autocrlf=true 默认会把文本改成 CRLF。
+* text=auto
+*.yml text eol=lf
+*.yaml text eol=lf
+*.mjs text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.vbs text eol=crlf

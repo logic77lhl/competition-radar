@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>参赛雷达</title>
+<style>
+/* ── 设计令牌：与 workbuddy2api / opencode-quota 同一套 ───────────────── */
+:root {
+  --bg: #0c0e14; --surface: #14171f; --surface-2: #1a1e28; --raise: #202531;
+  --line: #262c3a; --line-soft: #1e232e;
+  --ink: #e8ebf2; --ink-2: #a8b0c2; --ink-3: #6b7488;
+  --accent: #5b7cfa; --accent-ink: #ffffff; --accent-soft: rgba(91,124,250,.13);
+  --ok: #3ddc97; --ok-soft: rgba(61,220,151,.12);
+  --warn: #f5b544; --warn-soft: rgba(245,181,68,.12);
+  --bad: #f0655f; --bad-soft: rgba(240,101,95,.12);
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.5);
+  --mono: ui-monospace, "Cascadia Mono", "SF Mono", Consolas, monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+[data-theme="light"] {
+  --bg: #f4f5f8; --surface: #ffffff; --surface-2: #f8f9fb; --raise: #ffffff;
+  --line: #e2e5ec; --line-soft: #eceef3;
+  --ink: #14171f; --ink-2: #545c6e; --ink-3: #8b93a5;
+  --accent: #3d5fe0; --accent-ink: #ffffff; --accent-soft: rgba(61,95,224,.09);
+  --ok: #0f9d63; --ok-soft: rgba(15,157,99,.1);
+  --warn: #b47611; --warn-soft: rgba(180,118,17,.11);
+  --bad: #cf3b34; --bad-soft: rgba(207,59,52,.09);
+  --shadow: 0 1px 2px rgba(16,20,32,.06), 0 8px 24px -14px rgba(16,20,32,.14);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body {
+  background: var(--bg); color: var(--ink); font: 14px/1.55 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent-soft); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* ── 壳层 ──────────────────────────────────────────────────────────── */
+.shell { display: grid; grid-template-columns: 212px 1fr; min-height: 100vh; }
+.nav {
+  background: var(--surface); border-right: 1px solid var(--line);
+  display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh;
+}
+.brand { padding: 20px 18px 16px; border-bottom: 1px solid var(--line-soft); }
+.brand .name { font-weight: 650; letter-spacing: -.01em; font-size: 15px; display: flex; align-items: center; gap: 7px; }
+.brand .name svg { width: 16px; height: 16px; color: var(--accent); }
+.brand .sub { color: var(--ink-3); font-size: 11.5px; font-family: var(--mono); margin-top: 4px; }
+.nav ul { list-style: none; padding: 10px 8px; flex: 1; overflow: auto; }
+.nav a {
+  display: flex; align-items: center; gap: 9px; padding: 8px 11px; margin-bottom: 2px;
+  color: var(--ink-2); text-decoration: none; border-radius: 7px; font-size: 13.5px; cursor: pointer;
+}
+.nav a:hover { background: var(--surface-2); color: var(--ink); }
+.nav a.on { background: var(--accent-soft); color: var(--accent); font-weight: 550; }
+.nav a .n {
+  margin-left: auto; font: 500 11px var(--mono); color: var(--ink-3);
+  background: var(--surface-2); border-radius: 999px; padding: 1px 7px; min-width: 20px; text-align: center;
+}
+.nav a.on .n { background: var(--accent-soft); color: var(--accent); }
+.nav .sig { padding: 12px 16px; border-top: 1px solid var(--line-soft); font-size: 11.5px; color: var(--ink-3); line-height: 1.8; }
+.nav .sig .row { display: flex; align-items: center; gap: 7px; }
+.pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--ok); flex: none; }
+.pulse.bad { background: var(--bad); }
+.pulse.warn { background: var(--warn); }
+.pulse.live { animation: pl 1.4s ease-in-out infinite; }
+@keyframes pl { 50% { opacity: .3; } }
+
+.main { min-width: 0; display: flex; flex-direction: column; }
+.topbar {
+  display: flex; align-items: center; gap: 12px; padding: 12px 24px;
+  border-bottom: 1px solid var(--line); background: var(--surface);
+  position: sticky; top: 0; z-index: 20;
+}
+.topbar h2 { font-size: 15.5px; font-weight: 620; letter-spacing: -.01em; white-space: nowrap; }
+.topbar .meta { color: var(--ink-3); font-size: 12px; font-family: var(--mono); white-space: nowrap; }
+.topbar .grow { flex: 1; }
+.view { padding: 22px 24px 80px; max-width: 1500px; margin: 0 auto; width: 100%; }
+
+/* ── 控件 ──────────────────────────────────────────────────────────── */
+button {
+  font: inherit; color: var(--ink); background: var(--surface-2);
+  border: 1px solid var(--line); border-radius: 7px; padding: 6px 12px; cursor: pointer;
+  transition: border-color .12s, background .12s; white-space: nowrap;
+}
+button:hover:not(:disabled) { border-color: var(--accent); }
+button:disabled { opacity: .55; cursor: default; }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 550; }
+button.primary:hover:not(:disabled) { filter: brightness(1.08); }
+button.icon { padding: 6px 9px; }
+input[type="search"] {
+  font: inherit; color: var(--ink); background: var(--surface-2);
+  border: 1px solid var(--line); border-radius: 7px; padding: 6px 11px; width: 240px;
+}
+input[type="search"]::placeholder { color: var(--ink-3); }
+.chip {
+  display: inline-flex; align-items: center; gap: 5px; padding: 2px 9px;
+  border: 1px solid var(--line); border-radius: 999px;
+  font-size: 11.5px; color: var(--ink-3); white-space: nowrap;
+}
+.chip.solid { background: var(--surface-2); color: var(--ink-2); }
+.filters { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; margin-bottom: 16px; }
+.filters .lab { color: var(--ink-3); font-size: 12px; margin-right: 2px; }
+.fbtn {
+  font: 500 12.5px var(--sans); padding: 4px 11px; border-radius: 999px;
+  background: transparent; border: 1px solid var(--line); color: var(--ink-2);
+}
+.fbtn.on { background: var(--accent-soft); border-color: transparent; color: var(--accent); font-weight: 550; }
+.fbtn .c { font-family: var(--mono); font-size: 11px; opacity: .75; margin-left: 4px; }
+.spacer { flex: 1; }
+
+/* ── 统计条 ────────────────────────────────────────────────────────── */
+.stats {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  border: 1px solid var(--line); border-radius: 11px; background: var(--surface);
+  overflow: hidden; margin-bottom: 20px; box-shadow: var(--shadow);
+}
+@media (max-width: 1240px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 620px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+.stat { padding: 14px 17px; border-right: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+.stat .v { font: 600 26px/1.15 var(--mono); font-variant-numeric: tabular-nums; letter-spacing: -.02em; white-space: nowrap; }
+.stat .v .small { font-size: 13px; color: var(--ink-3); font-weight: 500; margin-left: 3px; }
+.stat .k { color: var(--ink-3); font-size: 11.5px; margin-top: 5px; }
+.stat.good .v { color: var(--ok); }
+.stat.warn .v { color: var(--warn); }
+.stat.bad .v { color: var(--bad); }
+.stat.clickable { cursor: pointer; }
+.stat.clickable:hover { background: var(--surface-2); }
+.stat .d { font: 11.5px var(--mono); color: var(--ink-3); margin-top: 3px; }
+
+/* ── 面板 ──────────────────────────────────────────────────────────── */
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 11px; box-shadow: var(--shadow); margin-bottom: 20px; overflow: hidden; }
+.box > header { display: flex; align-items: center; gap: 12px; padding: 12px 17px; border-bottom: 1px solid var(--line-soft); }
+.box > header h3 { font-size: 13.5px; font-weight: 600; white-space: nowrap; }
+.box > header h3 .hint { font-size: 11.5px; font-weight: 400; color: var(--ink-3); margin-left: 6px; }
+.box > header .grow { flex: 1; }
+.box > header .note { color: var(--ink-3); font-size: 12px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.box .pad { padding: 17px; }
+.box .foot { padding: 11px 17px; border-top: 1px solid var(--line-soft); color: var(--ink-3); font-size: 12px; line-height: 1.7; }
+.lead {
+  background: var(--accent-soft); border: 1px solid transparent; border-left: 3px solid var(--accent);
+  padding: 10px 14px; border-radius: 6px; margin-bottom: 18px; font-size: 13.5px;
+}
+.lead b { color: var(--ink); }
+.lead .warnline { color: var(--warn); }
+.lead .badline { color: var(--bad); }
+.lead .risk { margin-top: 6px; font-size: 12.5px; }
+.lead .muted { color: var(--ink-3); font-size: 12.5px; }
+
+/* ── 日报 ──────────────────────────────────────────────────────────── */
+details.box > summary {
+  padding: 12px 17px; cursor: pointer; font-size: 13.5px; font-weight: 600;
+  list-style: none; color: var(--ink-2);
+}
+details.box > summary::-webkit-details-marker { display: none; }
+details.box > summary::before { content: '▸ '; color: var(--ink-3); }
+details.box[open] > summary::before { content: '▾ '; }
+details.box[open] > summary { border-bottom: 1px solid var(--line-soft); }
+pre.md {
+  margin: 0; padding: 14px 17px; white-space: pre-wrap; word-break: break-word;
+  font: 12.5px/1.75 var(--mono); color: var(--ink-2);
+}
+.mini { display: flex; flex-direction: column; gap: 9px; }
+.mini .row { display: grid; grid-template-columns: 104px 1fr 40px; gap: 10px; align-items: center; font-size: 12.5px; color: var(--ink-2); }
+.mini .bar { height: 7px; border-radius: 4px; background: var(--surface-2); overflow: hidden; }
+.mini .bar i { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+.mini .n { text-align: right; font-family: var(--mono); color: var(--ink-2); }
+
+/* ── 截止压力条 ────────────────────────────────────────────────────── */
+.bands { display: flex; gap: 2px; height: 10px; border-radius: 6px; overflow: hidden; background: var(--surface-2); margin-bottom: 10px; }
+.bands i { display: block; height: 100%; }
+.bands i.b0 { background: var(--bad); }
+.bands i.b1 { background: #e8734f; }
+.bands i.b2 { background: var(--warn); }
+.bands i.b3 { background: var(--accent); }
+.bands i.b4 { background: var(--ink-3); opacity: .45; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend b { font-family: var(--mono); color: var(--ink); font-weight: 600; }
+.legend .dot { width: 8px; height: 8px; border-radius: 2px; }
+
+/* ── 表格 ──────────────────────────────────────────────────────────── */
+.tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+.tbl th {
+  text-align: left; font-weight: 600; font-size: 11.5px; color: var(--ink-3);
+  padding: 8px 14px; border-bottom: 1px solid var(--line-soft); white-space: nowrap;
+  position: sticky; top: 0; background: var(--surface); z-index: 1;
+}
+.tbl td { padding: 9px 14px; border-bottom: 1px solid var(--line-soft); vertical-align: middle; }
+.tbl tr:last-child td { border-bottom: none; }
+.tbl tbody tr { cursor: pointer; }
+.tbl tbody tr:hover td { background: var(--surface-2); }
+.tbl .nm { font-weight: 550; color: var(--ink); }
+.tbl .nm .ext { color: var(--ink-3); font-size: 11px; margin-left: 5px; }
+.tbl .sub { color: var(--ink-3); font-size: 11.5px; margin-top: 2px; }
+.tbl .date { font: 12.5px var(--mono); color: var(--ink-2); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.tbl .date .reg { font-size: 10px; color: var(--warn); margin-left: 3px; }
+.tbl .money { font: 12px var(--mono); color: var(--ink-2); white-space: nowrap; }
+.tbl .org { color: var(--ink-3); font-size: 12px; max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tbl .cat { white-space: nowrap; }
+.tbl .c { text-align: right; font-variant-numeric: tabular-nums; }
+
+.days {
+  display: inline-block; min-width: 52px; text-align: center; font: 600 12px var(--mono);
+  padding: 2px 7px; border-radius: 6px; white-space: nowrap;
+}
+.days.u0 { background: var(--bad-soft); color: var(--bad); }
+.days.u1 { background: var(--bad-soft); color: var(--bad); }
+.days.u2 { background: rgba(232,115,79,.13); color: #e8734f; }
+.days.u3 { background: var(--warn-soft); color: var(--warn); }
+.days.u4 { background: var(--accent-soft); color: var(--accent); }
+.days.u5 { background: var(--surface-2); color: var(--ink-3); }
+[data-theme="light"] .days.u2 { color: #b5542f; }
+
+.src { font: 10.5px var(--mono); color: var(--ink-3); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; white-space: nowrap; }
+.warnmark { color: var(--warn); font-size: 12px; }
+
+.empty { padding: 40px 16px; text-align: center; color: var(--ink-3); font-size: 13px; }
+.empty .t { color: var(--ink-2); font-weight: 550; margin-bottom: 5px; }
+
+/* ── 历史趋势 ──────────────────────────────────────────────────────── */
+.chart { width: 100%; height: auto; display: block; }
+.chart .grid { stroke: var(--line-soft); stroke-width: 1; }
+.chart .ln { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.chart .ar { fill: var(--accent-soft); }
+.chart .pt { fill: var(--accent); }
+.chart .tx { fill: var(--ink-3); font: 10px var(--mono); }
+
+/* ── 抽屉（具体信息） ─────────────────────────────────────────────── */
+.scrim { position: fixed; inset: 0; background: rgba(0,0,0,.45); opacity: 0; pointer-events: none; transition: opacity .16s; z-index: 40; }
+.scrim.on { opacity: 1; pointer-events: auto; }
+.drawer {
+  position: fixed; top: 0; right: 0; height: 100vh; width: min(560px, 96vw);
+  background: var(--surface); border-left: 1px solid var(--line); z-index: 50;
+  transform: translateX(100%); transition: transform .2s ease; display: flex; flex-direction: column;
+  box-shadow: -20px 0 50px -30px rgba(0,0,0,.8);
+}
+.drawer.on { transform: none; }
+.drawer > header { padding: 16px 20px 14px; border-bottom: 1px solid var(--line-soft); }
+.drawer > header .top { display: flex; align-items: flex-start; gap: 10px; }
+.drawer > header h3 { font-size: 16px; font-weight: 620; line-height: 1.4; flex: 1; letter-spacing: -.01em; }
+.drawer > header .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+.drawer .body { padding: 18px 20px 30px; overflow: auto; flex: 1; }
+.kv { display: grid; grid-template-columns: 96px 1fr; gap: 9px 14px; font-size: 13px; margin-bottom: 20px; }
+.kv dt { color: var(--ink-3); font-size: 12.5px; }
+.kv dd { color: var(--ink); word-break: break-word; }
+.kv dd .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.kv dd .hot { color: var(--bad); font-weight: 600; }
+.sec { font-size: 11.5px; color: var(--ink-3); text-transform: none; margin: 0 0 8px; font-weight: 600; letter-spacing: .02em; }
+.tagbox { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.drawer .actions { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 4px; }
+.drawer a.go { text-decoration: none; }
+
+/* ── 运行提示 ─────────────────────────────────────────────────────── */
+.runbar { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: var(--accent); }
+.runbar .spin { width: 12px; height: 12px; border: 2px solid var(--accent-soft); border-top-color: var(--accent); border-radius: 50%; animation: sp .8s linear infinite; }
+@keyframes sp { to { transform: rotate(360deg); } }
+.toast {
+  position: fixed; bottom: 22px; left: 50%; transform: translate(-50%, 12px);
+  background: var(--raise); border: 1px solid var(--line); border-radius: 9px;
+  padding: 9px 15px; font-size: 13px; box-shadow: var(--shadow); opacity: 0;
+  pointer-events: none; transition: all .18s; z-index: 60; max-width: 90vw;
+}
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+.toast.bad { border-color: var(--bad); color: var(--bad); }
+@media (max-width: 860px) {
+  .shell { grid-template-columns: 1fr; }
+  .nav { position: static; height: auto; }
+  .nav ul { display: flex; overflow-x: auto; gap: 4px; }
+  .nav a { white-space: nowrap; }
+  .nav .sig { display: none; }
+  input[type="search"] { width: 150px; }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="nav">
+    <div class="brand">
+      <div class="name">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 12l6-6"/></svg>
+        参赛雷达
+      </div>
+      <div class="sub">competition-radar</div>
+    </div>
+    <ul id="nav"></ul>
+    <div class="sig" id="sig"></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <h2 id="viewTitle">总览</h2>
+      <span class="meta" id="topMeta"></span>
+      <span class="grow"></span>
+      <div id="runWrap"></div>
+      <input type="search" id="q" placeholder="搜索赛事 / 主办方 / 标签" autocomplete="off">
+      <button class="icon" id="btnTheme" title="切换主题">◐</button>
+      <button id="btnRefresh" title="重新读取 state/">刷新</button>
+    </header>
+    <div class="view" id="view"></div>
+  </main>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer">
+  <header>
+    <div class="top">
+      <h3 id="dTitle"></h3>
+      <button class="icon" id="dClose" title="关闭">✕</button>
+    </div>
+    <div class="badges" id="dBadges"></div>
+  </header>
+  <div class="body" id="dBody"></div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ───────────────────────────── 状态 ───────────────────────────── */
+const S = {
+  data: null,
+  view: 'overview',
+  q: '',
+  cat: 'all',
+  win: 'all',
+  onlyPrize: false,
+  sort: 'deadline',
+  busy: false,
+  timer: null,
+  report: null,
+  reportDate: null,
+};
+
+const VIEWS = [
+  { id: 'overview', label: '总览' },
+  { id: 'daily', label: '每日日报' },
+  { id: 'soon', label: '临近截止', key: 'reminders' },
+  { id: 'new', label: '新增赛事', key: 'newItems' },
+  { id: 'open', label: '在办总表', key: 'open' },
+  { id: 'nodeadline', label: '未标截止', key: 'noDeadline' },
+  { id: 'evergreen', label: '常设练习赛', key: 'evergreen' },
+  { id: 'changes', label: '变更与截止' },
+  { id: 'health', label: '来源健康' },
+  { id: 'trend', label: '历史趋势' },
+  { id: 'watch', label: '人工入口' },
+];
+
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const safeUrl = (u) => (/^https?:\/\//i.test(String(u || '')) ? String(u) : '');
+const fmtInt = (n) => (n === null || n === undefined || Number.isNaN(n) ? '—' : Number(n).toLocaleString('zh-CN'));
+
+function dayClass(d) {
+  if (d === null || d === undefined) return 'u5';
+  if (d <= 1) return 'u0';
+  if (d <= 3) return 'u1';
+  if (d <= 7) return 'u2';
+  if (d <= 14) return 'u3';
+  if (d <= 30) return 'u4';
+  return 'u5';
+}
+function daysLabel(d) {
+  if (d === null || d === undefined) return '无截止';
+  if (d < 0) return `逾期 ${-d} 天`;
+  if (d === 0) return '今天截止';
+  return `${d} 天`;
+}
+function ageLabel(h) {
+  if (h === null || h === undefined) return '未知';
+  if (h < 1) return `${Math.max(1, Math.round(h * 60))} 分钟前`;
+  if (h < 48) return `${Math.round(h)} 小时前`;
+  return `${Math.round(h / 24)} 天前`;
+}
+
+/* ───────────────────────────── 取数 ───────────────────────────── */
+async function load(quiet) {
+  try {
+    const res = await fetch('/api/state', { cache: 'no-store' });
+    const data = await res.json();
+    S.data = data;
+    if (!data.ok) {
+      renderFatal(data);
+      return;
+    }
+    render();
+    scheduleNext();
+  } catch (err) {
+    if (!quiet) toast('读取失败：' + err.message, true);
+  }
+}
+
+function scheduleNext() {
+  clearTimeout(S.timer);
+  const running = S.data && S.data.running;
+  S.timer = setTimeout(() => load(true), running ? 2000 : 60000);
+}
+
+/* ───────────────────────────── 渲染 ───────────────────────────── */
+function renderFatal(d) {
+  document.getElementById('view').innerHTML =
+    `<div class="box"><div class="pad"><div class="empty"><div class="t">还没有可展示的数据</div>
+     <div>${esc(d.error || '未知错误')}</div>
+     <div style="margin-top:10px;font-family:var(--mono);font-size:12px">${esc(d.hint || '')}</div>
+     </div></div></div>`;
+  document.getElementById('topMeta').textContent = 'state/ 为空';
+}
+
+function counts() {
+  const d = S.data;
+  const c = d.counts || {};
+  return {
+    open: d.items.open.length,
+    soon: d.items.reminders.length,
+    fresh: d.items.newItems.length,
+    noDl: d.items.noDeadline.length,
+    evergreen: d.items.evergreen.length,
+    total: c.total ?? 0,
+    closed: c.closed ?? 0,
+    healthOk: d.healthOk,
+    healthTotal: d.healthTotal,
+  };
+}
+
+function render() {
+  const d = S.data;
+  if (!d || !d.ok) return;
+  const c = counts();
+
+  document.getElementById('viewTitle').textContent = (VIEWS.find((v) => v.id === S.view) || VIEWS[0]).label;
+  document.getElementById('topMeta').textContent = `${d.date} · 采集于 ${ageLabel(d.ageHours)}`;
+
+  // 侧栏
+  document.getElementById('nav').innerHTML = VIEWS.map((v) => {
+    let n = '';
+    if (v.key) n = `<span class="n">${d.items[v.key]?.length ?? 0}</span>`;
+    else if (v.id === 'overview') n = `<span class="n">${c.open}</span>`;
+    else if (v.id === 'daily') n = `<span class="n" title="${d.ladder[0]} 天内截止">${c.soon}</span>`;
+    else if (v.id === 'health') n = `<span class="n">${c.healthOk}/${c.healthTotal}</span>`;
+    else if (v.id === 'changes') n = `<span class="n">${d.items.justClosed.length + d.items.deadlineChanges.length + d.items.reopened.length}</span>`;
+    return `<li><a data-view="${v.id}" class="${S.view === v.id ? 'on' : ''}">${v.label}${n}</a></li>`;
+  }).join('');
+
+  const okAll = c.healthOk === c.healthTotal && c.healthTotal > 0;
+  const stale = d.ageHours !== null && d.ageHours > 36;
+  document.getElementById('sig').innerHTML = `
+    <div class="row"><span class="pulse ${d.running ? 'live' : stale ? 'warn' : okAll ? '' : 'bad'}"></span>
+      <span>${d.running ? '正在采集…' : stale ? '数据偏旧' : '采集正常'}</span></div>
+    <div>${esc(d.date)} · ${esc(ageLabel(d.ageHours))}</div>
+    <div>来源 ${c.healthOk}/${c.healthTotal} 正常</div>
+    <div style="margin-top:4px;opacity:.8">每天 09:00 自动采集</div>`;
+
+  // 运行按钮
+  document.getElementById('runWrap').innerHTML = d.running
+    ? `<div class="runbar"><span class="spin"></span>采集进行中…</div>`
+    : `<button class="primary" id="btnRun">立即采集</button>`;
+
+  const v = S.view;
+  if (v === 'overview') renderOverview();
+  else if (v === 'daily') renderDaily();
+  else if (v === 'soon') renderTable(d.items.reminders, { title: '临近截止', hint: `${d.ladder[0]} 天内到期`, sortable: true });
+  else if (v === 'new') renderTable(d.items.newItems, { title: '新增赛事', hint: '台账里 firstSeen = 今天（当天首次出现，重跑不变）', sortable: true, empty: '今天没有首次出现的赛事 —— 不是采集失败（看「来源健康」）' });
+  else if (v === 'open') renderTable(d.items.open, { title: '在办总表', hint: '按实际卡人的截止日升序', sortable: true, showFilters: true });
+  else if (v === 'nodeadline') renderNoDeadline();
+  else if (v === 'evergreen') renderTable(d.items.evergreen, { title: '常设 / 长期开放的练习赛', hint: `截止日超过 ${d.evergreenDays} 天，不算真实竞赛`, sortable: true });
+  else if (v === 'changes') renderChanges();
+  else if (v === 'health') renderHealth();
+  else if (v === 'trend') renderTrend();
+  else if (v === 'watch') renderWatch();
+
+  wire();
+}
+
+/* ── 总览 ── */
+function renderOverview() {
+  const d = S.data;
+  const c = counts();
+  const total = d.bands.reduce((a, b) => a + b.count, 0) || 1;
+  const bandColors = ['b0', 'b1', 'b2', 'b3', 'b4'];
+
+  const notes = (d.notes || []).map((n) => `<div class="warnline">⚠ ${esc(n)}</div>`).join('');
+  const sourceTag = d.dataSource === 'export'
+    ? '结构化导出'
+    : '快照兜底';
+
+  const html = `
+  <div class="lead">
+    发现 <b>${c.fresh}</b> 个此前没见过的赛事；有 <b>${c.soon}</b> 个截止日在 ${d.ladder[0]} 天内，
+    最近一个是 <b>${esc(nearestName())}</b>。
+    <div class="muted">数据源：${sourceTag} · 本次 ${fmtInt(d.counts.total)} 条记录${d.dedupCount ? `，合并 ${fmtInt(d.dedupCount)} 条跨来源重复` : ''}${d.durationMs ? ` · 耗时 ${(d.durationMs / 1000).toFixed(1)}s` : ''}</div>
+    ${notes}
+  </div>
+
+  <div class="stats">
+    <div class="stat clickable" data-go="open"><div class="v">${c.open}</div><div class="k">在办 · 有截止日</div></div>
+    <div class="stat ${c.soon ? 'warn' : ''} clickable" data-go="soon"><div class="v">${c.soon}</div><div class="k">${d.ladder[0]} 天内到期</div></div>
+    <div class="stat ${c.fresh ? 'good' : ''} clickable" data-go="new"><div class="v">${c.fresh}</div><div class="k">新增赛事</div></div>
+    <div class="stat clickable" data-go="nodeadline"><div class="v">${c.noDl}</div><div class="k">在办 · 未标截止</div></div>
+    <div class="stat clickable" data-go="health"><div class="v ${c.healthOk === c.healthTotal ? 'good' : 'bad'}">${c.healthOk}<span class="small">/${c.healthTotal}</span></div><div class="k">来源健康</div></div>
+    <div class="stat"><div class="v">${fmtInt(d.counts.total)}</div><div class="k">本次采集记录</div></div>
+  </div>
+
+  <div class="box">
+    <header><h3>截止压力<span class="hint">按看板当天重算，不是采集那天</span></h3><span class="grow"></span><span class="note">${c.open} 个有截止日</span></header>
+    <div class="pad">
+      <div class="bands">
+        ${d.bands.map((b, i) => b.count ? `<i class="${bandColors[i]}" style="flex:${b.count}" title="${esc(b.label)} ${b.count} 个"></i>` : '').join('') || '<i class="b4" style="flex:1"></i>'}
+      </div>
+      <div class="legend">
+        ${d.bands.map((b, i) => `<span><i class="dot" style="background:var(--${['bad', 'bad', 'warn', 'accent', 'ink-3'][i]})"></i>${esc(b.label)} <b>${b.count}</b></span>`).join('')}
+      </div>
+    </div>
+  </div>
+
+  ${tableHTML(d.items.reminders, { title: '临近截止', hint: `${d.ladder[0]} 天内，按剩余天数`, compact: true })}
+  ${listHTML(d.items.newItems, '新增赛事', '台账里 firstSeen = 今天')}
+  `;
+  document.getElementById('view').innerHTML = html;
+}
+
+function nearestName() {
+  const list = S.data.items.reminders;
+  return list.length ? list[0].name : '（暂无）';
+}
+
+/* ── 每日日报 ── */
+async function renderDaily() {
+  const d = S.data;
+  const date = S.reportDate || d.date;
+  const stillHere = () => S.view === 'daily' && (S.reportDate || S.data.date) === date;
+  const view = document.getElementById('view');
+  view.innerHTML = `<div class="box"><div class="pad"><div class="empty"><div class="t">正在读取 ${esc(date)} 的日报…</div></div></div></div>`;
+  try {
+    const res = await fetch('/api/report?date=' + encodeURIComponent(date), { cache: 'no-store' });
+    const ct = res.headers.get('content-type') || '';
+    if (!ct.includes('application/json')) {
+      if (!stillHere()) return;
+      view.innerHTML = `<div class="box"><div class="pad"><div class="empty">
+        <div class="t">看板服务还是旧版本</div>
+        <div>日报接口 <code>/api/report</code> 还没生效 —— 重启一次 <code>panel/server.mjs</code>，再刷新本页。</div>
+      </div></div></div>`;
+      return;
+    }
+    const r = await res.json();
+    if (!stillHere()) return; // 取数期间切走了，别把新页面覆盖掉
+    if (!r.ok) {
+      view.innerHTML = `<div class="box"><div class="pad"><div class="empty">
+        <div class="t">${esc(r.date || date)} 没有日报</div>
+        <div>${esc(r.error || '')}</div>
+        <div style="margin-top:10px;font-family:var(--mono);font-size:12px">${esc(r.hint || '')}</div>
+      </div></div></div>`;
+      return;
+    }
+    S.report = r;
+    paintDaily(r);
+  } catch (err) {
+    if (!stillHere()) return;
+    view.innerHTML = `<div class="box"><div class="pad"><div class="empty"><div class="t">读取日报失败</div><div>${esc(err.message)}</div></div></div></div>`;
+  }
+}
+
+function deltaLine(n, unit) {
+  if (n === null || n === undefined) return '';
+  if (n === 0) return '与上一份持平';
+  return `${n > 0 ? '↑' : '↓'} ${Math.abs(n)}${unit} 较上一份`;
+}
+
+function changesBlock(ch) {
+  if (!ch.justClosed.length && !ch.deadlineChanges.length && !ch.reopened.length) {
+    return `<div class="box"><div class="empty"><div class="t">没有变化</div><div>没有改期、重新开放或刚刚截止。</div></div></div>`;
+  }
+  const block = (title, hint, list, render) => list.length ? `<div class="box">
+    <header><h3>${esc(title)}<span class="hint">${esc(hint)}</span></h3><span class="grow"></span><span class="note">${list.length} 条</span></header>
+    <table class="tbl"><tbody>${list.map(render).join('')}</tbody></table></div>` : '';
+  return block('刚刚截止', '不再可报名', ch.justClosed, (x) => `<tr data-id="${esc(x.id)}"${safeUrl(x.url) ? ` data-url="${esc(safeUrl(x.url))}"` : ''}>
+      <td class="date" style="width:110px">${esc(x.deadline || '—')}</td>
+      <td><div class="nm">${esc(x.name)}</div><div class="sub">${esc(x.sourceLabel)}</div></td></tr>`)
+    + block('截止日变更', '和上一次采集不一样', ch.deadlineChanges, (x) => `<tr data-id="${esc(x.id)}"${safeUrl(x.url) ? ` data-url="${esc(safeUrl(x.url))}"` : ''}>
+      <td class="date" style="width:110px">${esc(x.deadline || '—')}<div class="sub">原 ${esc(x.wasDeadline || '—')}</div></td>
+      <td><div class="nm">${esc(x.name)}</div><div class="sub">${esc(x.sourceLabel)}</div></td></tr>`)
+    + block('重新开放', '之前关掉了又出现', ch.reopened, (x) => `<tr data-id="${esc(x.id)}"${safeUrl(x.url) ? ` data-url="${esc(safeUrl(x.url))}"` : ''}>
+      <td class="date" style="width:110px">${esc(x.deadline || '—')}</td>
+      <td><div class="nm">${esc(x.name)}</div><div class="sub">${esc(x.sourceLabel)}</div></td></tr>`);
+}
+
+function paintDaily(r) {
+  const isLatest = r.date === S.data.date;
+  const c = r.counts || {};
+  document.getElementById('topMeta').textContent = `${r.date} · ${r.kindLabel}`;
+
+  const risks = r.risks.map((k) => `<div class="risk ${k.level === 'bad' ? 'badline' : 'warnline'}">${k.level === 'bad' ? '❌' : '⚠'} ${esc(k.text)}</div>`).join('');
+
+  // 日期轨：新增打 ●，来源有失败打 ⚠，鼠标悬停看当天计数
+  const rail = (r.index || []).map((x) => {
+    const on = x.date === r.date ? 'on' : '';
+    const dot = x.counts?.newItems ? ' ●' : '';
+    const bad = x.healthTotal && x.healthOk < x.healthTotal ? ' ⚠' : '';
+    const tip = x.counts
+      ? `${x.date}：在办 ${x.counts.openWithDeadline ?? '—'} · 新增 ${x.counts.newItems ?? '—'} · 临近 ${x.counts.reminders ?? '—'}`
+      : x.date;
+    return `<button class="fbtn ${on}" data-report="${x.date}" title="${esc(tip)}">${x.date.slice(5)}${dot}${bad}</button>`;
+  }).join('');
+
+  const stat = (go, cls, v, k, dline) => `<div class="stat ${cls} ${isLatest && go ? 'clickable' : ''}" ${isLatest && go ? `data-go="${go}"` : ''}>
+    <div class="v">${v}</div><div class="k">${esc(k)}</div>${dline ? `<div class="d">${esc(dline)}</div>` : ''}</div>`;
+
+  const freshHtml = !r.freshKnown
+    ? `<div class="box"><div class="pad" style="color:var(--ink-3);font-size:13px;line-height:1.8">
+        这一天的数据没有记录新增（快照 / 历史计数）。空白不代表当天没有新赛事 —— 精确的新增要从结构化导出开始。</div></div>`
+    : r.fresh.length
+      ? listHTML(r.fresh, '新出现', '此前没见过的赛事')
+      : `<div class="box"><div class="empty"><div class="t">没有新赛事</div><div>没有此前没见过的赛事 —— 不是采集失败（看「来源健康」）。</div></div></div>`;
+
+  const changesHtml = !r.changesKnown
+    ? `<div class="box"><div class="pad" style="color:var(--ink-3);font-size:13px;line-height:1.8">
+        这一天的数据没有记录变更（快照 / 历史计数）。改期 / 重新开放要等结构化导出。</div></div>`
+    : changesBlock(r.changes);
+
+  const totalBands = r.bands.reduce((a, b) => a + b.count, 0);
+  const bandsHtml = totalBands ? `<div class="box">
+    <header><h3>截止压力<span class="hint">按 ${esc(r.date)} 当天重算</span></h3><span class="grow"></span>
+      <span class="note">${r.actions.length} 个在 ${r.actionDays} 天内</span></header>
+    <div class="pad">
+      <div class="bands">${r.bands.map((b, i) => b.count ? `<i class="b${i}" style="flex:${b.count}" title="${esc(b.label)} ${b.count} 个"></i>` : '').join('') || '<i class="b4" style="flex:1"></i>'}</div>
+      <div class="legend">${r.bands.map((b, i) => `<span><i class="dot" style="background:var(--${['bad', 'bad', 'warn', 'accent', 'ink-3'][i]})"></i>${esc(b.label)} <b>${b.count}</b></span>`).join('')}</div>
+    </div></div>` : '';
+
+  const catsHtml = r.byCategory.length ? `<div class="box">
+    <header><h3>在办按方向<span class="hint">按日报当天算</span></h3><span class="grow"></span>
+      <span class="note">${c.openWithDeadline ?? '—'} 个有截止日</span></header>
+    <div class="pad mini">${r.byCategory.map((x) => `<div class="row">
+      <span>${esc(x.label)}</span>
+      <span class="bar"><i style="width:${Math.round((x.count / Math.max(1, r.byCategory[0].count)) * 100)}%"></i></span>
+      <span class="n">${x.count}</span></div>`).join('')}</div></div>` : '';
+
+  const html = `
+  <div class="filters">
+    <span class="lab">日期</span>${rail}
+    ${isLatest ? '' : `<span class="spacer"></span><button class="fbtn" data-report="${esc(S.data.date)}">回到今天</button>`}
+  </div>
+
+  <div class="lead">
+    ${esc(r.headline)}
+    <div class="muted">${esc(r.metaLine)}</div>
+    ${risks}
+  </div>
+
+  <div class="stats">
+    ${stat('open', '', fmtInt(c.openWithDeadline), '在办 · 有截止日', deltaLine(r.delta?.open, ' 个'))}
+    ${stat('new', r.freshKnown && r.fresh.length ? 'good' : '', r.freshKnown ? fmtInt(r.fresh.length) : '—', '新增赛事', '')}
+    ${stat(null, r.actions.length ? 'warn' : '', fmtInt(r.actions.length), `${r.actionDays} 天内截止`, '')}
+    ${stat('nodeadline', '', fmtInt(c.openNoDeadline), '在办 · 未标截止', '')}
+    ${stat('changes', '', r.changesKnown ? fmtInt(r.changes.justClosed.length) : '—', '刚刚截止', '')}
+    ${stat('health', '', `${r.health.ok}<span class="small">/${r.health.total}</span>`, '来源健康', '')}
+  </div>
+
+  ${r.actions.length
+    ? tableHTML(r.actions, { title: '今天要做', hint: `${r.actionDays} 天内截止，按剩余天数`, compact: true })
+    : `<div class="box"><div class="empty"><div class="t">${r.actionDays} 天内没有要截止的</div><div>接下来可以看「临近截止」（${S.data.ladder[0]} 天内）。</div></div></div>`}
+
+  ${freshHtml}
+  ${changesHtml}
+  ${bandsHtml}
+  ${catsHtml}
+
+  <div class="box"><div class="pad" style="display:flex;gap:9px;flex-wrap:wrap;align-items:center">
+    <button class="primary" id="btnCopyDaily">复制日报</button>
+    ${r.hasDigest ? `<a class="go" href="${esc(r.digestUrl)}" target="_blank" rel="noreferrer"><button>打开完整摘要 ↗</button></a>` : ''}
+    <span style="color:var(--ink-3);font-size:12px">日报只列要点；未标截止、常设练习赛等完整清单在「完整摘要」里。</span>
+  </div></div>
+
+  <details class="box">
+    <summary>查看日报原文（Markdown，可直接粘贴）</summary>
+    <pre class="md">${esc(r.markdown)}</pre>
+  </details>`;
+
+  document.getElementById('view').innerHTML = html;
+
+  // 日报里的行直接跳官网：抽屉读的是今天的台账，翻旧日报时会和当天状态对不上
+  document.querySelectorAll('#view tr[data-id]').forEach((tr) => {
+    const u = safeUrl(tr.dataset.url);
+    if (u) tr.onclick = () => window.open(u, '_blank', 'noreferrer');
+    else tr.style.cursor = 'default';
+  });
+  document.querySelectorAll('[data-report]').forEach((b) => {
+    b.onclick = () => {
+      S.reportDate = b.dataset.report;
+      const h = `#daily/${S.reportDate}`;
+      if (location.hash !== h) history.replaceState(null, '', h);
+      renderDaily();
+    };
+  });
+  const copy = document.getElementById('btnCopyDaily');
+  if (copy) copy.onclick = async () => {
+    try { await navigator.clipboard.writeText(r.markdown); toast('日报已复制'); }
+    catch { toast('复制失败，展开下方原文手动选择', true); }
+  };
+}
+
+/* ── 通用表格 ── */
+function tableHTML(items, opts = {}) {
+  const { title, hint, empty, compact } = opts;
+  const rows = items.map((x) => rowHTML(x, compact)).join('');
+  const body = items.length
+    ? `<table class="tbl"><thead><tr>
+        <th style="width:104px">截止</th><th style="width:92px">剩余</th><th>赛事</th>
+        <th style="width:120px">方向</th><th style="width:120px">奖金</th><th style="width:200px">主办</th><th style="width:88px">来源</th>
+      </tr></thead><tbody>${rows}</tbody></table>`
+    : `<div class="empty"><div class="t">没有条目</div><div>${esc(empty || '这一类目前是空的')}</div></div>`;
+
+  return `<div class="box">
+    <header><h3>${esc(title)}${hint ? `<span class="hint">${esc(hint)}</span>` : ''}</h3><span class="grow"></span><span class="note">${items.length} 条</span></header>
+    ${body}
+  </div>`;
+}
+
+function rowHTML(x, compact) {
+  const url = safeUrl(x.url);
+  const warn = x.confidence && !/^已核实/.test(x.confidence) ? `<span class="warnmark" title="${esc(x.confidence)}">⚠️</span>` : '';
+  const org = x.organizer ? esc(x.organizer) : '—';
+  return `<tr data-id="${esc(x.id)}"${url ? ` data-url="${esc(url)}"` : ''}>
+    <td class="date">${esc(x.deadline || '—')}${x.deadlineIsReg ? '<span class="reg" title="真正卡人的是报名截止">报名</span>' : ''}</td>
+    <td><span class="days ${dayClass(x.daysLeft)}">${esc(daysLabel(x.daysLeft))}</span></td>
+    <td><div class="nm">${esc(x.name)} ${warn}${url ? '<span class="ext">↗</span>' : ''}</div>
+      ${compact && x.tags?.length ? `<div class="sub">${esc(x.tags.slice(0, 4).join(' · '))}</div>` : ''}</td>
+    <td class="cat"><span class="chip">${esc(x.categoryLabel)}</span></td>
+    <td class="money">${esc(x.prize || '—')}</td>
+    <td class="org" title="${esc(x.organizer || '')}">${org}</td>
+    <td><span class="src">${esc(x.sourceLabel)}</span></td>
+  </tr>`;
+}
+
+function listHTML(items, title, hint) {
+  if (!items.length) return '';
+  return `<div class="box">
+    <header><h3>${esc(title)}${hint ? `<span class="hint">${esc(hint)}</span>` : ''}</h3><span class="grow"></span><span class="note">${items.length} 条</span></header>
+    <table class="tbl"><tbody>${items.map((x) => `
+      <tr data-id="${esc(x.id)}"${safeUrl(x.url) ? ` data-url="${esc(safeUrl(x.url))}"` : ''}>
+        <td style="width:104px" class="date">${esc(x.deadline || '—')}</td>
+        <td style="width:92px"><span class="days ${dayClass(x.daysLeft)}">${esc(daysLabel(x.daysLeft))}</span></td>
+        <td><div class="nm">${esc(x.name)}</div><div class="sub">${esc(x.organizer || '—')} · ${esc(x.categoryLabel)} · ${esc(x.prize || '无奖金')}</div></td>
+        <td style="width:88px"><span class="src">${esc(x.sourceLabel)}</span></td>
+      </tr>`).join('')}</tbody></table>
+  </div>`;
+}
+
+/* ── 带筛选的表格页 ── */
+function renderTable(items, opts) {
+  const filtered = applyFilters(items);
+  document.getElementById('view').innerHTML =
+    filtersHTML(items) + tableHTML(filtered, { ...opts, empty: opts.empty || '当前筛选条件下没有条目，换个条件试试' });
+}
+
+function filtersHTML(items) {
+  const cats = {};
+  for (const x of items) cats[x.category] = (cats[x.category] || 0) + 1;
+  const catChips = Object.entries(cats)
+    .sort((a, b) => b[1] - a[1])
+    .map(([k, n]) => `<button class="fbtn ${S.cat === k ? 'on' : ''}" data-cat="${esc(k)}">${esc(CAT_LABEL[k] || k)}<span class="c">${n}</span></button>`)
+    .join('');
+  const wins = [['7', '7 天内'], ['14', '14 天内'], ['30', '30 天内'], ['all', '全部']];
+  return `<div class="filters">
+    <span class="lab">方向</span>
+    <button class="fbtn ${S.cat === 'all' ? 'on' : ''}" data-cat="all">全部<span class="c">${items.length}</span></button>
+    ${catChips}
+    <span class="spacer"></span>
+    <span class="lab">截止</span>
+    ${wins.map(([k, l]) => `<button class="fbtn ${S.win === k ? 'on' : ''}" data-win="${k}">${l}</button>`).join('')}
+    <button class="fbtn ${S.onlyPrize ? 'on' : ''}" data-prize="1">只看有奖金</button>
+  </div>`;
+}
+
+const CAT_LABEL = {
+  ai4s: '科学智能 AI4S', medical: '医疗健康', 'llm-agent': '大模型 / Agent',
+  cv: '计算机视觉', 'rl-robotics': '强化学习 / 机器人', security: '安全', general: '综合',
+};
+
+function applyFilters(items) {
+  const q = S.q.trim().toLowerCase();
+  return items.filter((x) => {
+    if (S.cat !== 'all' && x.category !== S.cat) return false;
+    if (S.win !== 'all' && (x.daysLeft === null || x.daysLeft > Number(S.win))) return false;
+    if (S.onlyPrize && !x.prize) return false;
+    if (q) {
+      const hay = `${x.name} ${x.organizer} ${x.prize} ${x.sourceLabel} ${x.categoryLabel} ${(x.tags || []).join(' ')}`.toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+/* ── 未标截止 ── */
+function renderNoDeadline() {
+  const items = S.data.items.noDeadline;
+  const bySrc = {};
+  for (const x of items) (bySrc[x.sourceLabel] = bySrc[x.sourceLabel] || []).push(x);
+  const q = S.q.trim().toLowerCase();
+  const blocks = Object.entries(bySrc).map(([label, list]) => {
+    const shown = q ? list.filter((x) => `${x.name} ${x.organizer}`.toLowerCase().includes(q)) : list;
+    if (!shown.length) return '';
+    const cap = 40;
+    return `<div class="box">
+      <header><h3>${esc(label)}<span class="hint">列表页不展示截止日，需点进去确认</span></h3><span class="grow"></span><span class="note">${list.length} 条</span></header>
+      <table class="tbl"><tbody>${shown.slice(0, cap).map((x) => `
+        <tr data-id="${esc(x.id)}"><td><div class="nm">${esc(x.name)}</div><div class="sub">${esc(x.categoryLabel)}${x.organizer ? ' · ' + esc(x.organizer) : ''}</div></td>
+        <td style="width:88px"><span class="src">${esc(x.sourceLabel)}</span></td></tr>`).join('')}</tbody></table>
+      ${shown.length > cap ? `<div class="foot">只列前 ${cap} 条（共 ${shown.length} 条）。用顶部搜索框缩小范围。</div>` : ''}
+    </div>`;
+  }).join('');
+  document.getElementById('view').innerHTML = blocks || `<div class="box"><div class="empty"><div class="t">没有条目</div></div></div>`;
+}
+
+/* ── 变更 ── */
+function renderChanges() {
+  const d = S.data;
+  const jc = d.items.justClosed;
+  const dc = d.items.deadlineChanges;
+  const ro = d.items.reopened;
+  const block = (title, hint, list) => list.length ? `<div class="box">
+      <header><h3>${esc(title)}<span class="hint">${esc(hint)}</span></h3><span class="grow"></span><span class="note">${list.length} 条</span></header>
+      <table class="tbl"><thead><tr><th style="width:104px">截止</th><th>赛事</th><th style="width:120px">方向</th><th style="width:88px">来源</th></tr></thead><tbody>
+      ${list.map((x) => `<tr data-id="${esc(x.id)}"><td class="date">${esc(x.deadline || '—')}${x.wasDeadline ? `<div class="sub">原 ${esc(x.wasDeadline)}</div>` : ''}</td>
+        <td><div class="nm">${esc(x.name)}</div></td><td><span class="chip">${esc(x.categoryLabel)}</span></td><td><span class="src">${esc(x.sourceLabel)}</span></td></tr>`).join('')}
+      </tbody></table></div>` : '';
+
+  const html =
+    block('最近截止（7 天内）', '按台账里的截止日推算，已经不能报名了', jc) +
+    block('截止日变更', '和上一次采集不一样', dc) +
+    block('重新开放', '之前关掉了又出现', ro);
+
+  const caveat = d.hasExport ? '' : `<div class="box"><div class="pad" style="color:var(--ink-3);font-size:13px;line-height:1.8">
+    截止日变更 / 重新开放需要和上一次采集做 diff。当前是快照兜底数据，等下一次采集写入 <code>state/out/latest.json</code> 后才有精确记录。</div></div>`;
+
+  const empty = !jc.length && !dc.length && !ro.length
+    ? `<div class="box"><div class="empty"><div class="t">最近 7 天没有赛事截止</div><div>也没有改期或重新开放。</div></div></div>`
+    : '';
+
+  document.getElementById('view').innerHTML = html + caveat + empty;
+}
+
+/* ── 来源健康 ── */
+function renderHealth() {
+  const d = S.data;
+  const rows = d.health.map((h) => `<tr>
+    <td><div class="nm">${esc(h.label)}</div><div class="sub">${esc(h.id)}</div></td>
+    <td>${h.ok ? '<span style="color:var(--ok)">✅ 正常</span>' : '<span style="color:var(--bad);font-weight:600">❌ 失败</span>'}</td>
+    <td class="c">${fmtInt(h.count)}</td>
+    <td class="c">${h.ms ? h.ms + ' ms' : '—'}</td>
+    <td class="org" title="${esc(h.note || '')}">${esc(h.note || h.error || '—')}</td>
+  </tr>`).join('');
+  document.getElementById('view').innerHTML = `
+  <div class="box">
+    <header><h3>来源健康<span class="hint">任何一个连续失败都要当问题处理，别以为「没新赛事」</span></h3><span class="grow"></span>
+      <span class="note">${d.healthOk}/${d.healthTotal} 正常</span></header>
+    <table class="tbl"><thead><tr><th>来源</th><th style="width:100px">状态</th><th class="c" style="width:80px">条数</th><th class="c" style="width:90px">耗时</th><th>说明</th></tr></thead>
+    <tbody>${rows}</tbody></table>
+    <div class="foot">这份表就是防「静默失败」的：采集全量跑，所以「源挂了」和「今天没新比赛」能区分开。</div>
+  </div>`;
+}
+
+/* ── 历史趋势 ── */
+function renderTrend() {
+  const h = S.data.history || [];
+  if (h.length < 2) {
+    document.getElementById('view').innerHTML = `<div class="box"><div class="empty"><div class="t">历史还不够</div><div>至少要有两天的记录才能画趋势。</div></div></div>`;
+    return;
+  }
+  const W = Math.max(620, (document.getElementById('view').clientWidth || 900) - 40), H = 170, P = 26;
+  const vals = h.map((r) => r.counts?.openWithDeadline ?? 0);
+  const news = h.map((r) => r.counts?.newItems ?? 0);
+  const max = Math.max(...vals, 1);
+  const x = (i) => P + (i * (W - P * 2)) / Math.max(1, h.length - 1);
+  const y = (v) => H - P - (v / max) * (H - P * 2);
+  const line = vals.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  const area = `${line} L${x(h.length - 1).toFixed(1)},${H - P} L${x(0).toFixed(1)},${H - P} Z`;
+  const grid = [0, 0.5, 1].map((f) => `<line class="grid" x1="${P}" x2="${W - P}" y1="${y(max * f)}" y2="${y(max * f)}"/>
+    <text class="tx" x="${P - 6}" y="${y(max * f) + 3}" text-anchor="end">${Math.round(max * f)}</text>`).join('');
+  const dots = vals.map((v, i) => `<circle class="pt" cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="2.6"><title>${esc(h[i].date)} · ${v} 个</title></circle>`).join('');
+  const labels = [0, Math.floor((h.length - 1) / 2), h.length - 1].map((i) => `<text class="tx" x="${x(i).toFixed(1)}" y="${H - 6}" text-anchor="middle">${esc(h[i].date.slice(5))}</text>`).join('');
+
+  const rows = [...h].reverse().map((r) => {
+    const c = r.counts || {};
+    return `<tr><td class="date">${esc(r.date)}</td>
+      <td class="c">${fmtInt(c.openWithDeadline)}</td>
+      <td class="c">${fmtInt(c.newItems)}</td>
+      <td class="c">${fmtInt(c.total)}</td>
+      <td class="c">${fmtInt(c.closed)}</td>
+      <td class="c">${(r.health || []).filter((x) => x.ok).length}/${(r.health || []).length}</td></tr>`;
+  }).join('');
+
+  document.getElementById('view').innerHTML = `
+  <div class="box">
+    <header><h3>在办赛事数<span class="hint">每天一行 history.jsonl</span></h3><span class="grow"></span><span class="note">${h.length} 天</span></header>
+    <div class="pad"><svg class="chart" viewBox="0 0 ${W} ${H}">
+      ${grid}<path class="ar" d="${area}"/><path class="ln" d="${line}"/>${dots}${labels}
+    </svg></div>
+  </div>
+  <div class="box">
+    <header><h3>每日明细</h3><span class="grow"></span><span class="note">新增 / 在办 / 关闭</span></header>
+    <table class="tbl"><thead><tr><th style="width:120px">日期</th><th class="c">在办有截止</th><th class="c">新增</th><th class="c">总记录</th><th class="c">已关闭</th><th class="c">来源</th></tr></thead>
+    <tbody>${rows}</tbody></table>
+  </div>`;
+}
+
+/* ── 人工入口 ── */
+function renderWatch() {
+  const w = S.data.watchlist || [];
+  const rows = w.map((x) => `<tr>
+    <td><div class="nm">${esc(x.name)}</div></td>
+    <td class="org">${esc(x.note || '')}</td>
+    <td style="width:100px">${safeUrl(x.url) ? `<a class="go" href="${esc(safeUrl(x.url))}" target="_blank" rel="noreferrer" style="color:var(--accent);text-decoration:none;font-size:12.5px">打开 ↗</a>` : '—'}</td>
+  </tr>`).join('');
+  document.getElementById('view').innerHTML = `
+  <div class="box">
+    <header><h3>需人工查看的入口<span class="hint">这些站点脚本抓不到正文，是已知盲区</span></h3><span class="grow"></span><span class="note">${w.length} 个</span></header>
+    <table class="tbl"><thead><tr><th style="width:220px">站点</th><th>为什么抓不到</th><th></th></tr></thead><tbody>${rows}</tbody></table>
+    <div class="foot">这里没列出赛事，不代表「这些平台没有比赛」——只是自动采集覆盖不到，需要你点进去看。</div>
+  </div>`;
+}
+
+/* ── 抽屉：具体信息 ── */
+function openDrawer(id) {
+  const d = S.data;
+  let x = null;
+  for (const k of Object.keys(d.items)) {
+    const hit = d.items[k].find((i) => i.id === id);
+    if (hit) { x = hit; break; }
+  }
+  if (!x) x = (d.expired || []).find((i) => i.id === id);
+  if (!x) return;
+
+  document.getElementById('dTitle').textContent = x.name;
+
+  const warn = x.confidence && !/^已核实/.test(x.confidence);
+  document.getElementById('dBadges').innerHTML = [
+    `<span class="chip solid">${esc(x.categoryLabel)}</span>`,
+    `<span class="chip solid">${esc(x.sourceLabel)}</span>`,
+    x.region ? `<span class="chip">${x.region === 'cn' ? '国内' : '国际'}</span>` : '',
+    x.status ? `<span class="chip">${esc(x.status)}</span>` : '',
+    warn ? `<span class="chip" style="color:var(--warn);border-color:var(--warn)">⚠️ 未在官网核实</span>` : `<span class="chip" style="color:var(--ok);border-color:transparent">已核实</span>`,
+  ].join('');
+
+  const deadlineTxt = x.deadline
+    ? `<span class="mono ${x.daysLeft !== null && x.daysLeft <= 3 ? 'hot' : ''}">${esc(x.deadline)}</span> · ${esc(daysLabel(x.daysLeft))}`
+    : '未提供';
+  const reminded = x.reminded.length
+    ? x.reminded.map((r) => `<span class="chip" title="截止日 ${esc(r.deadline)}">T-${r.threshold}</span>`).join('')
+    : '<span class="chip">还没触发过提醒</span>';
+
+  const url = safeUrl(x.url);
+  document.getElementById('dBody').innerHTML = `
+    <dl class="kv">
+      <dt>实际卡人</dt><dd>${deadlineTxt}${x.deadlineIsReg ? ' <span class="chip" style="color:var(--warn)">报名截止</span>' : ''}</dd>
+      <dt>报名截止</dt><dd><span class="mono">${esc(x.regDeadline || '—')}</span></dd>
+      <dt>提交截止</dt><dd><span class="mono">${esc(x.submissionDeadline || x.deadline || '—')}</span></dd>
+      <dt>奖金</dt><dd>${esc(x.prize || '未标注')}</dd>
+      <dt>主办方</dt><dd>${esc(x.organizer || '未标注')}</dd>
+      <dt>来源</dt><dd>${esc(x.sourceLabel)}${x.alsoOn?.length ? ` <span style="color:var(--ink-3)">（同时出现在 ${esc(x.alsoOn.join('、'))}）</span>` : ''}</dd>
+      <dt>首次出现</dt><dd><span class="mono">${esc(x.firstSeen || '—')}</span></dd>
+      <dt>置信度</dt><dd>${esc(x.confidence || '自动来源，取自官方接口/页面')}</dd>
+      <dt>内部 ID</dt><dd><span class="mono" style="font-size:11.5px;color:var(--ink-3)">${esc(x.id)}</span></dd>
+    </dl>
+    <div class="sec">已触发的提醒档位</div>
+    <div class="tagbox">${reminded}</div>
+    <div class="sec">标签</div>
+    <div class="tagbox">${x.tags?.length ? x.tags.map((t) => `<span class="chip">${esc(t)}</span>`).join('') : '<span class="chip">无</span>'}</div>
+    <div class="actions">
+      ${url ? `<a class="go" href="${esc(url)}" target="_blank" rel="noreferrer"><button class="primary">打开原页面 ↗</button></a>` : ''}
+      <button id="dCopy">复制链接</button>
+      <button id="dOpenMd">看当天摘要</button>
+    </div>
+    <div class="foot" style="margin-top:18px;border-top:1px solid var(--line-soft);padding-top:12px">
+      报名前请点开原链接核对截止日与资格 —— 雷达只负责「帮你发现有新的」。
+    </div>`;
+
+  document.getElementById('drawer').classList.add('on');
+  document.getElementById('scrim').classList.add('on');
+
+  const copy = document.getElementById('dCopy');
+  if (copy) copy.onclick = async () => {
+    try { await navigator.clipboard.writeText(x.url || x.name); toast('已复制'); }
+    catch { toast('复制失败，请手动选择', true); }
+  };
+  const md = document.getElementById('dOpenMd');
+  if (md) md.onclick = () => window.open('/api/raw?f=md', '_blank');
+}
+
+function closeDrawer() {
+  document.getElementById('drawer').classList.remove('on');
+  document.getElementById('scrim').classList.remove('on');
+}
+
+/* ───────────────────────────── 交互 ───────────────────────────── */
+function wire() {
+  document.querySelectorAll('#nav a').forEach((a) => {
+    a.onclick = () => go(a.dataset.view);
+  });
+  document.querySelectorAll('[data-go]').forEach((el) => {
+    el.onclick = () => go(el.dataset.go);
+  });
+  document.querySelectorAll('.tbl tbody tr[data-id]').forEach((tr) => {
+    tr.onclick = () => openDrawer(tr.dataset.id);
+  });
+  document.querySelectorAll('[data-cat]').forEach((b) => {
+    b.onclick = () => { S.cat = b.dataset.cat; render(); };
+  });
+  document.querySelectorAll('[data-win]').forEach((b) => {
+    b.onclick = () => { S.win = b.dataset.win; render(); };
+  });
+  document.querySelectorAll('[data-prize]').forEach((b) => {
+    b.onclick = () => { S.onlyPrize = !S.onlyPrize; render(); };
+  });
+  const run = document.getElementById('btnRun');
+  if (run) run.onclick = startRun;
+}
+
+async function startRun() {
+  const run = document.getElementById('btnRun');
+  if (run) { run.disabled = true; run.textContent = '启动中…'; }
+  try {
+    const res = await fetch('/api/run', { method: 'POST' });
+    const r = await res.json();
+    if (!r.ok) throw new Error(r.error || '启动失败');
+    toast('已开始采集，约 10–15 秒');
+    document.getElementById('runWrap').innerHTML = `<div class="runbar"><span class="spin"></span>采集进行中…</div>`;
+    S.data.running = true;
+    scheduleNext();
+    setTimeout(() => load(true), 1500);
+  } catch (err) {
+    toast(err.message, true);
+    if (run) { run.disabled = false; run.textContent = '立即采集'; }
+  }
+}
+
+/* 视图切换：同时写进 URL hash，这样能收藏 / 直接打开某一页 */
+function go(view) {
+  S.view = view;
+  S.cat = 'all';
+  S.win = 'all';
+  // 日报带日期，方便直接收藏某一天
+  const hash = view === 'daily' ? `#daily/${S.reportDate || S.data?.date || ''}` : '#' + view;
+  if (location.hash !== hash) location.hash = hash;
+  render();
+}
+
+let toastTimer = null;
+function toast(msg, bad) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'toast on' + (bad ? ' bad' : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.className = 'toast' + (bad ? ' bad' : ''); }, 3200);
+}
+
+/* ───────────────────────────── 启动 ───────────────────────────── */
+(function init() {
+  // 主题
+  const saved = localStorage.getItem('radar-theme');
+  if (saved) document.documentElement.dataset.theme = saved;
+  document.getElementById('btnTheme').onclick = () => {
+    const cur = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+    document.documentElement.dataset.theme = cur;
+    localStorage.setItem('radar-theme', cur);
+  };
+
+  // 直接打开 #open / #health 这类深链；日报支持 #daily/2026-11-09
+  const h = location.hash.replace(/^#/, '');
+  const [hView, hDate] = h.split('/');
+  if (VIEWS.some((v) => v.id === hView)) S.view = hView;
+  if (hView === 'daily' && /^\d{4}-\d{2}-\d{2}$/.test(hDate || '')) S.reportDate = hDate;
+  window.addEventListener('hashchange', () => {
+    const raw = location.hash.replace(/^#/, '');
+    const [v, d] = raw.split('/');
+    if (!v || !VIEWS.some((x) => x.id === v)) return;
+    S.view = v;
+    if (v === 'daily' && /^\d{4}-\d{2}-\d{2}$/.test(d || '')) S.reportDate = d;
+    render();
+  });
+
+  // 趋势图按容器宽度 1:1 绘制，窗口变了要重画
+  let rt = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(rt);
+    rt = setTimeout(() => { if (S.view === 'trend' && S.data?.ok) render(); }, 200);
+  });
+
+  const q = document.getElementById('q');
+  let qt = null;
+  q.oninput = () => {
+    clearTimeout(qt);
+    qt = setTimeout(() => { S.q = q.value; render(); }, 160);
+  };
+  q.onkeydown = (e) => { if (e.key === 'Escape') { q.value = ''; S.q = ''; render(); } };
+
+  document.getElementById('btnRefresh').onclick = () => load();
+  document.getElementById('dClose').onclick = closeDrawer;
+  document.getElementById('scrim').onclick = closeDrawer;
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDrawer();
+    if (e.key === '/' && document.activeElement !== q) { e.preventDefault(); q.focus(); }
+  });
+
+  load();
+})();
+</script>
+</body>
+</html>
