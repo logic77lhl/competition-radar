@@ -1,8 +1,8 @@
 # 参赛机会雷达 · 2026-11-16
 
-> 采集时间 2026-11-16 00:16:34Z，耗时 6.6s。本次共 1820 条记录，其中在办且有截止日 36 条、新增 0 条、临近截止提醒 6 条。
+> 采集时间 2026-11-16 00:24:23Z，耗时 4.7s。本次共 1820 条记录，其中在办且有截止日 36 条、新增 0 条、临近截止提醒 1 条。
 
-**一句话**：没有发现新赛事；有 6 个截止日在 30 天内。
+**一句话**：没有发现新赛事；有 1 个截止日在 30 天内。
 
 > 已合并 134 条跨来源重复记录（同一赛事同时出现在多个平台）。
 
@@ -15,22 +15,6 @@
 | 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|
 | 2026-11-17 | 1 天 | [Detect root misconceptions in K–12 math solutions](https://www.kaggle.com/competitions/misconception-detection-in-k-12-student-math-workings/overview) | 大模型 / Agent | $6,000 | Co-Learn / Kaggle |
-| 2026-11-21 | 5 天 | [Decode Brains Signals in Task-Specific Settings](https://neural-interfaces26.github.io/) | 科学智能 AI4S | $20,000 | Various / Codabench |
-| 2026-11-30 | 14 天 | [Light My Cells 2 : Transmitted Light to Fluorescence Challenge](https://lightmycells2.grand-challenge.org/) | 科学智能 AI4S | — | Grand Challenge / MICCAI 社区 |
-| 2026-11-30 | 14 天 | [SafeDrive-VLA: Towards Safety in Autonomous Driving](https://www.codabench.org/competitions/18333) | 大模型 / Agent | — | Codabench |
-| 2026-11-30 | 14 天 | [Human-Aware Vision-and-Language Navigation](https://www.codabench.org/competitions/18135) | 大模型 / Agent | — | Codabench |
-| 2026-12-15 | 29 天 | [PhyRC 2027: Robot-Assisted Dressing in Simulation](https://www.codabench.org/competitions/18366) | 计算机视觉 | — | Hello Robot / Codabench |
-
-## 二、变更与状态切换
-
-**刚刚截止（不再可报名）**
-
-| 截止 | 赛事 | 来源 |
-|---|---|---|
-| 2026-11-15 | [CLEAR-EC](https://clear-ec.grand-challenge.org/) | grandchallenge |
-| 2026-11-15 | [Optimise LLM Operators & Inference Across AI Chips](https://flagos.io/race-detail-season2?id=8q4m2x7p&lang=en) | mlcontests |
-| 2026-11-14 | [Generate Synthetic Humanitarian Survey Responses](https://situatedevals.org/simulacrabench) | mlcontests |
-| 2026-11-15 | [Predict Price Movements from Limit Order Book Data](https://wundernn.io/connectome) | mlcontests |
 
 ## 在办赛事总表（按截止日升序）
 
@@ -187,17 +171,17 @@
 
 | 来源 | 状态 | 条数 | 耗时 | 说明 |
 |---|---|---|---|---|
-| Kaggle | ✅ 正常 | 762 | 6571 ms | 扫描 762 项 |
-| ML Contests | ✅ 正常 | 412 | 478 ms | 412 项（含已截止，按截止日过滤） |
-| Grand Challenge | ✅ 正常 | 264 | 3294 ms | API 返回 264 项 |
-| DataFountain | ✅ 正常 | 30 | 2666 ms | 列表页 30 条 + ID 递进探 8 个（1177–1184）补到 0 条 |
-| AIcrowd | ✅ 正常 | 18 | 1344 ms | 列表页解析 18 条 |
-| CodaLab Competitions | ✅ 正常 | 379 | 3458 ms | 列表页解析 379 条 |
-| DrivenData | ✅ 正常 | 53 | 1558 ms | 列表页解析 53 条 |
-| EvalAI | ✅ 正常 | 3 | 1909 ms | present 17 / future 1（共 18 项，跳过 15 个 2099 占位日的常设 benchmark） |
-| Devfolio | ✅ 正常 | 4 | 1617 ms | 扫到 28 场，AI 相关 4 场（关键词过滤掉 24 场） |
-| TAIKAI | ✅ 正常 | 7 | 1547 ms | 列表 20 场，AI 相关 7 场（过滤掉 13 场） |
-| lablab.ai | ❌ 失败 | 0 | 2679 ms | 页面结构变化：列表页没找到 /ai-hackathons/<slug> 链接 |
+| Kaggle | ✅ 正常 | 762 | 3204 ms | 扫描 762 项 |
+| ML Contests | ✅ 正常 | 412 | 321 ms | 412 项（含已截止，按截止日过滤） |
+| Grand Challenge | ✅ 正常 | 264 | 2260 ms | API 返回 264 项 |
+| DataFountain | ✅ 正常 | 30 | 4579 ms | 列表页 30 条 + ID 递进探 8 个（1177–1184）补到 0 条 |
+| AIcrowd | ✅ 正常 | 18 | 1443 ms | 列表页解析 18 条 |
+| CodaLab Competitions | ✅ 正常 | 379 | 4432 ms | 列表页解析 379 条 |
+| DrivenData | ✅ 正常 | 53 | 991 ms | 列表页解析 53 条 |
+| EvalAI | ✅ 正常 | 3 | 1095 ms | present 17 / future 1（共 18 项，跳过 15 个 2099 占位日的常设 benchmark） |
+| Devfolio | ✅ 正常 | 4 | 1364 ms | 扫到 28 场，AI 相关 4 场（关键词过滤掉 24 场） |
+| TAIKAI | ✅ 正常 | 7 | 1218 ms | 列表 20 场，AI 相关 7 场（过滤掉 13 场） |
+| lablab.ai | ❌ 失败 | 0 | 609 ms | 页面结构变化：列表页没找到 /ai-hackathons/<slug> 链接 |
 | 人工维护清单 | ✅ 正常 | 22 | 0 ms | curated.json 22 条（其中 14 条是第三方转述，摘要里标 ⚠️） |
 
 > 任何一个来源连续失败都要当成真问题处理：**不要以为「没新赛事」**，先看这张表。
