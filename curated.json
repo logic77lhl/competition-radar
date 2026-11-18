@@ -346,5 +346,38 @@
     "verifiedAt": "2026-10-16",
     "confidence": "部分核实（页面存在，具体截止日需自行确认）",
     "sourceUrl": "https://mp.weixin.qq.com/s/EH2nbss71J4b7fCv_hS8Pg"
+  },
+  {
+    "id": "curated:alipay-agent-emerge-2026",
+    "name": "支付宝「智能体涌现奖」2026 首轮",
+    "organizer": "支付宝 / 蚂蚁集团",
+    "domain": "生活服务智能体（Agent / 小程序），评审看「有用、有趣、有人愿意持续使用」",
+    "prize": "前 200 名各获价值 5000 元创作激励；年度最佳 1 名 100 万元（2027 Q4 评）；许愿池 5 个金点子各 2000 元",
+    "slots": 200,
+    "perSlotCny": 5000,
+    "deadline": "2026-12-06",
+    "status": "open",
+    "url": "https://abao.alipay.com/emerge",
+    "region": "cn",
+    "tags": ["agent", "product", "creator"],
+    "evidence": "官网 abao.alipay.com/emerge 2026-11-18 抓取：首轮投递 2026.09.10-12.06 零点截止，12.07-12.15 评审；「首轮比赛前 200 名，奖励价值 5000 元创作激励」；「年度最佳智能体 100 万元」；赛道：生活好帮手 / 消费新体验；云端 QMuse 对话生成即可提交，无需本地环境",
+    "verifiedAt": "2026-11-18",
+    "confidence": "已核实（官网页面原文）"
+  },
+  {
+    "id": "curated:bohrium-ai-product-weekly-4",
+    "name": "玻尔 AI 产品周赛 · 第四期",
+    "organizer": "玻尔 Bohrium（深势科技）",
+    "domain": "科研场景 AI 应用：查文献 / 读论文 / 做分析 / 画图 / 写作",
+    "prize": "本期总奖金最高 27,000 元（10 个赛道、77 道赛题 + 1 附加题）",
+    "deadline": "2026-11-25",
+    "status": "open",
+    "url": "https://www.bohrium.com",
+    "region": "cn",
+    "tags": ["ai4s", "agent", "weekly"],
+    "evidence": "公众号原文（2026-11-18 抓取 og:description）：「10个赛道、77道赛题，另设1道附加题，本期总奖金最高27,000元」「11月18日21:00—11月25日21:00（北京时间）」「线上参与，作品随时提交」。周赛系列，每周一期，名额/奖项结构未在文中给出",
+    "verifiedAt": "2026-11-18",
+    "confidence": "部分核实（公众号原文，奖项名额未核实）",
+    "sourceUrl": "https://mp.weixin.qq.com/s/RWYy-V35z5Tf4vBEX8sxFg"
   }
 ]

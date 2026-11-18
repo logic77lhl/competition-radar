@@ -1,8 +1,8 @@
 # 参赛机会雷达 · 2026-11-18
 
-> 采集时间 2026-11-18 08:10:52Z，耗时 4.7s。本次共 1821 条记录，其中在办且有截止日 36 条、新增 1 条、临近截止提醒 1 条。
+> 采集时间 2026-11-18 13:25:51Z，耗时 14.3s。本次共 1823 条记录，其中在办且有截止日 38 条、新增 2 条、临近截止提醒 2 条。
 
-**一句话**：发现 1 个此前没见过的赛事；有 1 个截止日在 30 天内。
+**一句话**：发现 2 个此前没见过的赛事；有 2 个截止日在 30 天内。
 
 > 已合并 134 条跨来源重复记录（同一赛事同时出现在多个平台）。
 
@@ -10,45 +10,44 @@
 
 > 带 **⚠️** 的条目来自第三方转述（公众号/聚合站），**尚未在官网核实**，报名前请自行确认。
 
+## ★ 可捡清单（按确定性排序）
+
+> 只看「能算出单份奖金」的在办赛事。`单份` = 一个名额能拿到的钱：写了「前 200 名各获 ¥5000」就直接取 5000；只给总奖金的按 `总奖金 ÷ 名额数` 摊。
+> 缺名额信息的**不评分**（宁缺毋滥），它们仍会出现在下面的「临近截止」里。剩余天数按紧迫度排序。
+
+| 档 | 赛事 | 单份奖金 | 名额 | 剩余 | 依据 |
+|---|---|---|---|---|---|
+| S | [支付宝「智能体涌现奖」2026 首轮](https://abao.alipay.com/emerge) | ¥5,000 | 200 | 18 天 | 单份奖金 ¥5,000 × 200 个名额 |
+
 ## 一、临近截止（该动手了）
 
 | 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|
-| 2026-11-21 | 3 天 | [Decode Brains Signals in Task-Specific Settings](https://neural-interfaces26.github.io/) | 科学智能 AI4S | $20,000 | Various / Codabench |
+| 2026-11-25 | 7 天 | [⚠️ 玻尔 AI 产品周赛 · 第四期](https://www.bohrium.com) | 科学智能 AI4S | 本期总奖金最高 27,000 元（10 个赛道、77 道赛题 + 1 附加题） | 玻尔 Bohrium（深势科技） |
+| 2026-12-06 | 18 天 | [支付宝「智能体涌现奖」2026 首轮](https://abao.alipay.com/emerge) | 大模型 / Agent | 前 200 名各获价值 5000 元创作激励；年度最佳 1 名 100 万元（2027 Q4 评）；许愿池 5 个金点子各 2000 元 | 支付宝 / 蚂蚁集团 |
 
 ## 二、新增赛事（首次出现在雷达里）
 
-| 截止 | 提交截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
-|---|---|---|---|---|---|---|
-| 2027-01-22 (报名) | 2027-01-29 | 65 天 | [Santa 2026 - The Elf Calculator](https://www.kaggle.com/competitions/santa-2026) | 强化学习 / 机器人 | USD 50,000 | Kaggle |
+| 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
+|---|---|---|---|---|---|
+| 2026-11-25 | 7 天 | [⚠️ 玻尔 AI 产品周赛 · 第四期](https://www.bohrium.com) | 科学智能 AI4S | 本期总奖金最高 27,000 元（10 个赛道、77 道赛题 + 1 附加题） | 玻尔 Bohrium（深势科技） |
+| 2026-12-06 | 18 天 | [支付宝「智能体涌现奖」2026 首轮](https://abao.alipay.com/emerge) | 大模型 / Agent | 前 200 名各获价值 5000 元创作激励；年度最佳 1 名 100 万元（2027 Q4 评）；许愿池 5 个金点子各 2000 元 | 支付宝 / 蚂蚁集团 |
 
 <details><summary>新增条目的取证线索</summary>
 
-- **Santa 2026 - The Elf Calculator**（kaggle）：160 支队伍 · holidays and cultural events/optimization/competition metric/custom metric
+- **玻尔 AI 产品周赛 · 第四期**（curated）：公众号原文（2026-11-18 抓取 og:description）：「10个赛道、77道赛题，另设1道附加题，本期总奖金最高27,000元」「11月18日21:00—11月25日21:00（北京时间）」「线上参与，作品随时提交」。周赛系列，每周一期，名额/奖项结构未在文中给出
+- **支付宝「智能体涌现奖」2026 首轮**（curated）：官网 abao.alipay.com/emerge 2026-11-18 抓取：首轮投递 2026.09.10-12.06 零点截止，12.07-12.15 评审；「首轮比赛前 200 名，奖励价值 5000 元创作激励」；「年度最佳智能体 100 万元」；赛道：生活好帮手 / 消费新体验；云端 QMuse 对话生成即可提交，无需本地环境
 
 </details>
 
-## 三、变更与状态切换
-
-**重新开放 / 重新出现**
-
-| 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
-|---|---|---|---|---|---|
-| — | — | [MONKEY challenge: Detection of inflammation in kidney biopsies](https://monkey.grand-challenge.org/) | 科学智能 AI4S | — | Grand Challenge / MICCAI 社区 |
-
-**刚刚截止（不再可报名）**
-
-| 截止 | 赛事 | 来源 |
-|---|---|---|
-| 2026-11-17 | [Detect root misconceptions in K–12 math solutions](https://www.kaggle.com/competitions/misconception-detection-in-k-12-student-math-workings/overview) | mlcontests |
-
 ## 在办赛事总表（按截止日升序）
 
-### 科学智能 AI4S（8）
+### 科学智能 AI4S（9）
 
 | 截止 | 提交截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|---|
 | 2026-11-21 | — | 3 天 | [Decode Brains Signals in Task-Specific Settings](https://neural-interfaces26.github.io/) | 科学智能 AI4S | $20,000 | Various / Codabench |
+| 2026-11-25 | — | 7 天 | [⚠️ 玻尔 AI 产品周赛 · 第四期](https://www.bohrium.com) | 科学智能 AI4S | 本期总奖金最高 27,000 元（10 个赛道、77 道赛题 + 1 附加题） | 玻尔 Bohrium（深势科技） |
 | 2026-11-26 (报名) | 2026-12-03 | 8 天 | [Google - The Gemma 4 Developer Agent Competition](https://www.kaggle.com/competitions/gemma-4-developer-agent) | 科学智能 AI4S | USD 75,000 | Google DeepMind |
 | 2026-11-30 | — | 12 天 | [Light My Cells 2 : Transmitted Light to Fluorescence Challenge](https://lightmycells2.grand-challenge.org/) | 科学智能 AI4S | — | Grand Challenge / MICCAI 社区 |
 | 2026-12-08 (报名) | 2026-12-15 | 20 天 | [Enveda CASMI 2026 - Molecule ID From Mass Spectra](https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra) | 科学智能 AI4S | USD 50,000 | Enveda |
@@ -69,7 +68,7 @@
 | 2027-02-15 | 89 天 | [Cone-beam CT reconstruction for radiation therapy challenge](https://cobra2026.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
 | 2027-04-13 | 146 天 | [PANTHER Challenge](https://panther.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
 
-### 大模型 / Agent（10）
+### 大模型 / Agent（11）
 
 | 截止 | 提交截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|---|
@@ -77,6 +76,7 @@
 | 2026-11-30 | — | 12 天 | [SafeDrive-VLA: Towards Safety in Autonomous Driving](https://www.codabench.org/competitions/18333) | 大模型 / Agent | — | Codabench |
 | 2026-11-30 | — | 12 天 | [Human-Aware Vision-and-Language Navigation](https://www.codabench.org/competitions/18135) | 大模型 / Agent | — | Codabench |
 | 2026-12-05 | — | 17 天 | [Domain-Specific Question Answering with LLMs](https://www.codabench.org/competitions/17954) | 大模型 / Agent | $20,000 | IEEE CIS / Codabench |
+| 2026-12-06 | — | 18 天 | [支付宝「智能体涌现奖」2026 首轮](https://abao.alipay.com/emerge) | 大模型 / Agent | 前 200 名各获价值 5000 元创作激励；年度最佳 1 名 100 万元（2027 Q4 评）；许愿池 5 个金点子各 2000 元 | 支付宝 / 蚂蚁集团 |
 | 2026-12-07 | — | 19 天 | [Build Speech Recognition Systems for Caribbean Voices](https://zindi.africa/competitions/caribbean-voices-hackathon) | 大模型 / Agent | $7,500 | UWI AI Innovation Centre, CIBC, Infolytics, Data Axis, CTU / Zindi |
 | 2026-12-31 | — | 43 天 | [⚠️ 知乎知学堂大模型挑战赛：大模型复杂表格识别与内容理解](https://tianchi.aliyun.com/competition/entrance/532510) | 大模型 / Agent | ￥20,000 | 知乎知学堂 × 阿里云天池 |
 | 2027-01-02 (报名) | 2027-01-09 | 45 天 | [The Pokémon Company - PTCG AI Battle Challenge Playground](https://www.kaggle.com/competitions/the-pokemon-company-ptcg-ai-battle-challenge-playground) | 大模型 / Agent | 实物奖品 (SWAG) | The Pokémon Company - PTCGABC Team |
@@ -197,18 +197,18 @@
 
 | 来源 | 状态 | 条数 | 耗时 | 说明 |
 |---|---|---|---|---|
-| Kaggle | ✅ 正常 | 763 | 2941 ms | 扫描 763 项 |
-| ML Contests | ✅ 正常 | 412 | 600 ms | 412 项（含已截止，按截止日过滤） |
-| Grand Challenge | ✅ 正常 | 264 | 2097 ms | API 返回 264 项 |
-| DataFountain | ✅ 正常 | 30 | 4619 ms | 列表页 30 条 + ID 递进探 8 个（1177–1184）补到 0 条 |
-| AIcrowd | ✅ 正常 | 18 | 996 ms | 列表页解析 18 条 |
-| CodaLab Competitions | ✅ 正常 | 379 | 4231 ms | 列表页解析 379 条 |
-| DrivenData | ✅ 正常 | 53 | 1322 ms | 列表页解析 53 条 |
-| EvalAI | ✅ 正常 | 3 | 1095 ms | present 18 / future 0（共 18 项，跳过 15 个 2099 占位日的常设 benchmark） |
-| Devfolio | ✅ 正常 | 4 | 1439 ms | 扫到 28 场，AI 相关 4 场（关键词过滤掉 24 场） |
-| TAIKAI | ✅ 正常 | 7 | 1364 ms | 列表 20 场，AI 相关 7 场（过滤掉 13 场） |
-| lablab.ai | ❌ 失败 | 0 | 483 ms | 页面结构变化：列表页没找到 /ai-hackathons/<slug> 链接 |
-| 人工维护清单 | ✅ 正常 | 22 | 0 ms | curated.json 22 条（其中 14 条是第三方转述，摘要里标 ⚠️） |
+| Kaggle | ✅ 正常 | 763 | 14148 ms | 扫描 763 项 |
+| ML Contests | ✅ 正常 | 412 | 1935 ms | 412 项（含已截止，按截止日过滤） |
+| Grand Challenge | ✅ 正常 | 264 | 5244 ms | API 返回 264 项 |
+| DataFountain | ✅ 正常 | 30 | 5664 ms | 列表页 30 条 + ID 递进探 8 个（1177–1184）补到 0 条 |
+| AIcrowd | ✅ 正常 | 18 | 4535 ms | 列表页解析 18 条 |
+| CodaLab Competitions | ✅ 正常 | 379 | 3629 ms | 列表页解析 379 条 |
+| DrivenData | ✅ 正常 | 53 | 2677 ms | 列表页解析 53 条 |
+| EvalAI | ✅ 正常 | 3 | 5464 ms | present 18 / future 0（共 18 项，跳过 15 个 2099 占位日的常设 benchmark） |
+| Devfolio | ✅ 正常 | 4 | 1743 ms | 扫到 28 场，AI 相关 4 场（关键词过滤掉 24 场） |
+| TAIKAI | ✅ 正常 | 7 | 1579 ms | 列表 20 场，AI 相关 7 场（过滤掉 13 场） |
+| lablab.ai | ❌ 失败 | 0 | 1607 ms | 页面结构变化：列表页没找到 /ai-hackathons/<slug> 链接 |
+| 人工维护清单 | ✅ 正常 | 24 | 0 ms | curated.json 24 条（其中 15 条是第三方转述，摘要里标 ⚠️） |
 
 > 任何一个来源连续失败都要当成真问题处理：**不要以为「没新赛事」**，先看这张表。
 

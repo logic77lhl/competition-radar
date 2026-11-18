@@ -22,6 +22,7 @@ import { spawn } from 'node:child_process';
 import { exec } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { ymd, dayDiff, CATEGORY_LABEL, prizeMagnitude } from '../lib/util.mjs';
+import { computeCertainty, compareCertainty } from '../lib/certainty.mjs';
 
 const PANEL_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(PANEL_DIR, '..');
@@ -69,6 +70,8 @@ function settings() {
   return {
     evergreenDays: cfg.settings?.evergreenDays ?? 365,
     ladder: cfg.settings?.reminderLadder ?? [30, 14, 7, 3, 1, 0],
+    picksWindowDays: cfg.settings?.picksWindowDays ?? 7,
+    picksMax: cfg.settings?.picksMax ?? 30,
     watchlist: cfg.watchlist || [],
   };
 }
@@ -147,6 +150,9 @@ function normalise(raw, reg, today, labels) {
     reminded,
     threshold: raw.threshold ?? null,
     wasDeadline: raw.wasDeadline || null,
+    // 确定性：优先用 radar 写进导出的那份（它能看到 evidence，更准）；
+    // 快照兜底时没有导出，就按 prize + name 就地重算（信息少一点，但不会缺字段）。
+    certainty: raw.certainty || computeCertainty({ prize: raw.prize || r.prize || '', name: raw.name || r.name || '', daysLeft }),
   };
 }
 
@@ -281,6 +287,15 @@ function buildState() {
   buckets.noDeadline.sort((a, b) => (a.sourceLabel < b.sourceLabel ? -1 : a.sourceLabel > b.sourceLabel ? 1 : 0));
   buckets.evergreen.sort(byDeadline);
 
+  // 「可捡清单」在看板这一侧重算，而不是直接用导出里的 picks：
+  //   1. 快照兜底时导出不存在，重算才不会有空视图；
+  //   2. daysLeft 是「看板当天」算的，导出里那份是采集当天算的，隔几天就会偏。
+  // 只收「能算出单份奖金」的（basis !== 'none'），缺名额的不进这张表。
+  buckets.picks = buckets.open
+    .filter((x) => x.certainty && x.certainty.basis !== 'none')
+    .sort(compareCertainty)
+    .slice(0, st.picksMax ?? 30);
+
   const healthOk = health.filter((h) => h.ok).length;
 
   // 截止压力分布（用看板当天算，不用采集那天 —— 不然「剩余天数」会一直是旧的）
@@ -324,6 +339,7 @@ function buildState() {
     categories: Object.entries(CATEGORY_LABEL).map(([key, label]) => ({ key, label, count: byCategory[key] || 0 })),
     ladder: st.ladder,
     evergreenDays: st.evergreenDays,
+    picksWindowDays: st.picksWindowDays,
     health,
     healthOk,
     healthTotal: health.length,

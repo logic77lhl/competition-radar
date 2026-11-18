@@ -18,6 +18,7 @@ import { fileURLToPath } from 'node:url';
 import { ymd, dayDiff, categorise } from './lib/util.mjs';
 import { runSource, SOURCE_PRIORITY, cleanUrl } from './lib/sources.mjs';
 import { render } from './lib/digest.mjs';
+import { computeCertainty, compareCertainty } from './lib/certainty.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const STATE = path.join(ROOT, 'state');
@@ -118,6 +119,10 @@ for (const c of curated) {
     category: (c.tags || []).includes('ai4s') ? 'ai4s' : undefined,
     description: c.domain || '',
     evidence: c.evidence || '',
+    // 结构化名额信息：curated.json 里手写的比从散文里解析可靠，computeCertainty 会优先用它
+    slots: c.slots ?? null,
+    perSlotCny: c.perSlotCny ?? null,
+    teams: c.teams ?? null,
     // 置信度只对人工条目有意义；自动来源的数据本身就是从官方接口/页面读的
     confidence: c.confidence || '',
     sourceUrl: c.sourceUrl || '',
@@ -195,6 +200,22 @@ for (const rec of records) {
 
 bucket.openWithDeadline.sort((a, b) => (a.effectiveDeadline < b.effectiveDeadline ? -1 : a.effectiveDeadline > b.effectiveDeadline ? 1 : 0));
 bucket.openNoDeadline.sort((a, b) => (a.source < b.source ? -1 : 1));
+
+// 3.5) 确定性评分
+// 分桶完成后再算：computeCertainty 需要 daysLeft（截止日口径统一之后才有）。
+// 只对「还在办」的三桶打分；已关闭的没有意义。
+for (const rec of [...bucket.openWithDeadline, ...bucket.openNoDeadline, ...bucket.evergreen]) {
+  rec.certainty = computeCertainty(rec);
+}
+
+// 「可捡清单」= 能算出单份奖金的在办赛事，按确定性排序。
+// 刻意不按「一周内截止」过滤：窗口内的只有几条时表会空着，反而看不出这套评分有没有用；
+// 天数已经在每行里标了颜色，紧的自然排前面（compareCertainty 的最后一档就是剩余天数）。
+const picksWindow = settings.picksWindowDays ?? 7;
+const picks = [...bucket.openWithDeadline]
+  .filter((r) => r.certainty && r.certainty.basis !== 'none')
+  .sort(compareCertainty)
+  .slice(0, settings.picksMax ?? 30);
 
 // 4) diff + 提醒阶梯
 const items = registry.items || {};
@@ -313,6 +334,7 @@ const counts = {
   deadlineChanges: deadlineChanges.length,
   reopened: reopened.length,
   justClosed: justClosed.length,
+  picks: picks.length,
 };
 
 const view = {
@@ -326,6 +348,7 @@ const view = {
   deadlineChanges,
   reopened,
   justClosed,
+  picks,
   openWithDeadline: bucket.openWithDeadline,
   openNoDeadline: bucket.openNoDeadline,
   evergreen: bucket.evergreen,
@@ -357,6 +380,7 @@ const slimRecord = (r) => ({
   alsoOn: r.alsoOn || [],
   threshold: r.threshold ?? null,
   wasDeadline: r.wasDeadline || null,
+  certainty: r.certainty || null,
 });
 
 const exportView = {
@@ -371,6 +395,7 @@ const exportView = {
   deadlineChanges: deadlineChanges.map(slimRecord),
   reopened: reopened.map(slimRecord),
   justClosed: justClosed.map(slimRecord),
+  picks: picks.map(slimRecord),
   open: bucket.openWithDeadline.map(slimRecord),
   noDeadline: bucket.openNoDeadline.map(slimRecord),
   evergreen: bucket.evergreen.map(slimRecord),

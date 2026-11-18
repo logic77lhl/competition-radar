@@ -336,6 +336,7 @@ const S = {
 const VIEWS = [
   { id: 'overview', label: '总览' },
   { id: 'daily', label: '每日日报' },
+  { id: 'picks', label: '可捡清单', key: 'picks' },
   { id: 'soon', label: '临近截止', key: 'reminders' },
   { id: 'new', label: '新增赛事', key: 'newItems' },
   { id: 'open', label: '在办总表', key: 'open' },
@@ -458,6 +459,7 @@ function render() {
   const v = S.view;
   if (v === 'overview') renderOverview();
   else if (v === 'daily') renderDaily();
+  else if (v === 'picks') renderPicks();
   else if (v === 'soon') renderTable(d.items.reminders, { title: '临近截止', hint: `${d.ladder[0]} 天内到期`, sortable: true });
   else if (v === 'new') renderTable(d.items.newItems, { title: '新增赛事', hint: '台账里 firstSeen = 今天（当天首次出现，重跑不变）', sortable: true, empty: '今天没有首次出现的赛事 —— 不是采集失败（看「来源健康」）' });
   else if (v === 'open') renderTable(d.items.open, { title: '在办总表', hint: '按实际卡人的截止日升序', sortable: true, showFilters: true });
@@ -742,6 +744,57 @@ function listHTML(items, title, hint) {
         <td style="width:88px"><span class="src">${esc(x.sourceLabel)}</span></td>
       </tr>`).join('')}</tbody></table>
   </div>`;
+}
+
+/* ── 本周可捡（按确定性排序） ── */
+function tierStyle(t) {
+  const c = t === 'S' ? 'var(--ok)' : t === 'A' ? 'var(--accent)' : t === 'B' ? 'var(--warn)' : 'var(--ink-3)';
+  const bg = t === 'S' ? 'var(--ok-soft)' : t === 'A' ? 'var(--accent-soft)' : t === 'B' ? 'var(--warn-soft)' : 'var(--surface-2)';
+  return `background:${bg};color:${c};border-radius:6px;padding:2px 8px;font:600 12px var(--mono);display:inline-block;min-width:18px;text-align:center`;
+}
+
+function renderPicks() {
+  const items = S.data?.items?.picks || [];
+  const win = S.data?.picksWindowDays ?? 7;
+  const head = `<div class="box">
+    <header><h3>可捡清单<span class="hint">按确定性排序 · 只看能算出单份奖金的 · 剩余天数已按紧迫度着色</span></h3>
+      <span class="grow"></span><span class="note">${items.length} 条</span></header>
+    <div style="padding:10px 14px;color:var(--ink-2);font-size:12.5px;line-height:1.75;border-bottom:1px solid var(--line-soft)">
+      <b>单份</b> = 一个名额能拿到的钱：写了「前 200 名各获 ¥5000」就直接取 5000；只给总奖金的按「总奖金 ÷ 名额数」摊。<br>
+      档位：<b>S</b> ≥¥5000 · <b>A</b> ≥¥2000 · <b>B</b> ≥¥500 · <b>C</b> &lt;¥500。
+      <span style="color:var(--ink-3)">缺名额信息的<b>不评分</b>（宁缺毋滥）—— 它们仍在「临近截止」里。</span>
+    </div>`;
+
+  if (!items.length) {
+    document.getElementById('view').innerHTML =
+      head +
+      `<div class="empty"><div class="t">这一周没有可评分的</div><div>不是采集失败：当前在办赛事里没有「${win} 天内截止 + 名额/单份奖金明确」的条目。给 curated.json 补上 <code>slots</code> 或写清「前 N 名各获 ¥X」就能进这张表。</div></div></div>`;
+    return;
+  }
+
+  const rows = items
+    .map((x) => {
+      const c = x.certainty || {};
+      const url = safeUrl(x.url);
+      return `<tr data-id="${esc(x.id)}"${url ? ` data-url="${esc(url)}"` : ''}>
+      <td style="width:52px"><span style="${tierStyle(c.tier)}">${esc(c.tier || '—')}</span></td>
+      <td class="date" style="width:100px">${esc(x.deadline || '—')}${x.deadlineIsReg ? '<span class="reg" title="真正卡人的是报名截止">报名</span>' : ''}</td>
+      <td style="width:86px"><span class="days ${dayClass(x.daysLeft)}">${esc(daysLabel(x.daysLeft))}</span></td>
+      <td><div class="nm">${esc(x.name)}${url ? '<span class="ext">↗</span>' : ''}</div>
+        <div class="sub">${esc(c.note || '')}</div></td>
+      <td class="money" style="width:110px">${c.perSlot ? '¥' + fmtInt(c.perSlot) : '—'}</td>
+      <td style="width:70px;font:12px var(--mono);color:var(--ink-2)">${c.slots ? fmtInt(c.slots) : '—'}</td>
+      <td style="width:170px" class="org" title="${esc(x.organizer || '')}">${esc(x.organizer || '—')}</td>
+    </tr>`;
+    })
+    .join('');
+
+  document.getElementById('view').innerHTML =
+    head +
+    `<table class="tbl"><thead><tr>
+      <th style="width:52px">档</th><th style="width:100px">截止</th><th style="width:86px">剩余</th>
+      <th>赛事 / 依据</th><th style="width:110px">单份奖金</th><th style="width:70px">名额</th><th style="width:170px">主办</th>
+    </tr></thead><tbody>${rows}</tbody></table></div>`;
 }
 
 /* ── 带筛选的表格页 ── */
