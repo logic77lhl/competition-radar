@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-18T13:25:51.857Z",
+  "updatedAt": "2026-11-18T13:46:34.093Z",
   "items": {
     "curated:kesuan-zhyao-2026": {
       "id": "curated:kesuan-zhyao-2026",
@@ -23242,8 +23242,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "beginner",
+        "tabular",
         "manufacturing",
         "binary classification",
         "multiclass classification",
@@ -23270,8 +23270,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "binary classification",
+        "tabular",
         "auc"
       ],
       "reminded": {},
@@ -23295,10 +23295,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "binary classification",
         "tabular",
         "beginner",
         "health",
+        "binary classification",
         "roc auc score"
       ],
       "reminded": {},
@@ -23322,8 +23322,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "binary classification",
+        "tabular",
         "auc"
       ],
       "reminded": {},
@@ -23347,9 +23347,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "regression",
         "tabular",
         "beginner",
+        "regression",
         "mean absolute error"
       ],
       "reminded": {},
@@ -23373,9 +23373,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "regression",
         "tabular",
         "banking",
-        "regression",
         "rmse"
       ],
       "reminded": {},
@@ -23399,8 +23399,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "regression",
         "tabular",
+        "regression",
         "rmse"
       ],
       "reminded": {},
@@ -23424,8 +23424,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "forestry",
         "multiclass classification",
+        "forestry",
         "categorizationaccuracy"
       ],
       "reminded": {},
@@ -23472,10 +23472,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "multiclass classification",
         "tabular",
         "time series analysis",
         "beginner",
+        "multiclass classification",
         "log loss"
       ],
       "reminded": {},
@@ -23499,10 +23499,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "regression",
         "beginner",
         "tabular",
         "earth science",
-        "regression",
         "median absolute error"
       ],
       "reminded": {},
@@ -23526,9 +23526,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "animals",
         "multiclass classification",
         "tabular",
-        "animals",
         "multiclassloss"
       ],
       "reminded": {},
@@ -43854,8 +43854,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
+        "beginner",
         "roc auc score"
       ],
       "reminded": {
@@ -44812,6 +44812,7 @@
       ],
       "reminded": {
         "2026-11-25": [
+          14,
           7
         ]
       },
