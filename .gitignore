@@ -11,3 +11,6 @@ state/*.log
 node_modules/
 .DS_Store
 Thumbs.db
+
+# 文章抽取的草稿，人工 accept 前不进仓库
+curated.draft.json

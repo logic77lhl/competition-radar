@@ -311,25 +311,56 @@ competition-radar/
 ## 九、拿到一篇公众号 / 聚合站文章怎么办
 
 赛事信息大量流在微信公众号里（例如「【10月比赛合集】27场AI大奖赛」这类 CompHub 转述稿），
-而公众号对无头抓取会甩验证页。这里的处理流程是固定三步，工具都在 `tools/`：
+而公众号对无头抓取会甩验证页。
+
+**一条命令走完**：
 
 ```powershell
-# 1) 抓正文（浏览器 UA + referer 能绕过验证页；页面里塞了几 MB base64 图片，抓完是 3MB 属正常）
-node tools\fetch-wechat-article.mjs <文章URL>
-# 2) 抽出纯文本 + 外链，落到 notes\
-node tools\parse-wechat-article.mjs
-# 3) 把文章里那些雷达抓不到的赛事（天池/Zindi/…）逐个去官网核实
-node tools\verify-article-entries.mjs
+node tools\ingest-article.mjs <文章URL>
 ```
+
+它做四件事：抓正文 → 以日期为锚点切块抠条目 → 逐个去官网核实 → 出 `curated.draft.json`。
+**不做判断**：哪些是广告、日期指报名还是提交，仍然要人过一遍草稿。
+
+```powershell
+node tools\ingest-article.mjs <url> --no-verify     # 不逐个抓官网（快，但全是「未核实」）
+node tools\ingest-article.mjs --accept              # 只合并「部分核实」的
+node tools\ingest-article.mjs --accept --accept-unverified   # 连未核实的一起合并
+```
+
+产物：
+- `notes/<日期>-<标题>.txt` —— 正文留档，可复查、可 diff
+- `curated.draft.json` —— 待人工 accept 的条目（**不进仓库**）
 
 **核实结论决定它进哪里**：
 
-- 官网能读到的 → 写进 `curated.json`，`confidence` 标「已核实」或「部分核实」；
-- 官网是纯前端渲染、读不到的（**天池就是这一类**）→ 也写进 `curated.json`，但 `confidence`
+- 官网能读到的 → 进 `curated.json`，`confidence` 标「部分核实」或「已核实」；
+- 官网是纯前端渲染、读不到的（**天池就是这一类**）→ 也能进，但 `confidence`
   必须写「未核实（第三方转述）」，摘要里会挂 ⚠️；
 - 两边都没有的 → **不写**。
 
-这条流程已经跑过一次，见 `notes/2026-10-16-公众号-10月比赛合集-27场.txt`。
+### 微信正文抓不到时的两条退路（2026-11-18 实测）
+
+微信现在对**任何** UA 都返回 JS 壳：`MicroMessenger`、`Baiduspider`、`Googlebot` 全试过，
+2.8 MB 的 HTML 里没有 `id="js_content"`，正文在客户端渲染。所以：
+
+1. **`og:description` 兜底**（工具已内置）——它通常带日期、奖金、参赛链接。
+   单赛事文章（周赛通知这类）足够抠出 1 条，名字取文章标题。
+   局限：多赛事合集文章里，描述只有摘要，抠不出逐条信息。
+2. **浏览器另存为 HTML** —— 打开文章 → 另存为 → `node tools/ingest-article.mjs <本地文件路径>`。
+   这条路能拿到完整正文，多赛事合集必须走它。
+
+> 早先 README 写的「浏览器 UA + referer 能绕过验证页」**已经不成立了**，别再按那个试。
+
+### 三个底层探针（保留，排查用）
+
+```powershell
+node tools\fetch-wechat-article.mjs     # 试几种 UA，看哪种能拿到正文
+node tools\parse-wechat-article.mjs     # 从保存的 html 里抽文本 + 外链
+node tools\verify-article-entries.mjs   # 逐条去官网核实（改 targets 数组）
+```
+
+**这套流程已经跑过一次**，见 `notes/2026-10-16-公众号-10月比赛合集-27场.txt`。
 它当时暴露了两个真问题，都已修掉：
 
 1. **漏赛事**：文章里的 DataFountain「6G/B6G 多用户 MIMO」（1176）不在雷达里 ——
