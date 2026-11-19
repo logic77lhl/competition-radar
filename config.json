@@ -89,6 +89,13 @@
       "home": "https://www.aibetas.com/competition-calendar",
       "note": "国内 AIGC / 应用创作赛聚合（地方政府、文旅、创业公司主办）。**服务端渲染**，列表结构稳定，不需要逆向 XHR。聚合站转述，字段以官网为准，摘要里标 ⚠️。"
     },
+    "jingsai": {
+      "enabled": true,
+      "label": "我爱竞赛网",
+      "region": "cn",
+      "home": "https://www.52jingsai.com/bisai/keji/keji/",
+      "note": "国内最大的高校/社会竞赛聚合站。只取科技大赛 / IT应用开发 / 创业大赛三个栏目。列表页只有标题，**截止日在详情页正文**（「报名截止时间：2026年11月5日」），所以每栏目抓前 8 条详情，并发 3。"
+    },
     "lablab": {
       "enabled": true,
       "label": "lablab.ai",

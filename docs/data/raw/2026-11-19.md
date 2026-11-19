@@ -1,10 +1,10 @@
 # 参赛机会雷达 · 2026-11-19
 
-> 采集时间 2026-11-19 00:50:18Z，耗时 4.5s。本次共 1833 条记录，其中在办且有截止日 48 条、新增 0 条、临近截止提醒 1 条。
+> 采集时间 2026-11-19 02:06:05Z，耗时 13.3s。本次共 1854 条记录，其中在办且有截止日 52 条、新增 0 条、临近截止提醒 1 条。
 
 **一句话**：没有发现新赛事；有 1 个截止日在 30 天内。
 
-> 已合并 134 条跨来源重复记录（同一赛事同时出现在多个平台）。
+> 已合并 137 条跨来源重复记录（同一赛事同时出现在多个平台）。
 
 > 日期一律是**北京时间**。「截止」列取「报名截止 / 提交截止」里**更早的那个** —— 标 `(报名)` 表示真正卡人的是报名截止，错过后面的提交截止就没意义了。
 
@@ -18,6 +18,7 @@
 | 档 | 赛事 | 单份奖金 | 名额 | 剩余 | 依据 |
 |---|---|---|---|---|---|
 | S | [支付宝「智能体涌现奖」2026 首轮](https://abao.alipay.com/emerge) | ¥5,000 | 200 | 17 天 | 单份奖金 ¥5,000 × 200 个名额 |
+| C | [2026年陕西省图书馆文创设计大赛](https://www.52jingsai.com/article-24155-1.html) | ¥61 | 33 | 50 天 | ¥2,026 ÷ 33 个名额 = ¥61/名额 |
 
 ### 有奖金，但缺名额信息（不评分）
 
@@ -48,7 +49,7 @@
 
 | 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|
-| 2026-11-20 | 1 天 | [⚠️ 2026山东文旅AIGC视频创作大赛](https://www.aibetas.com/aigc_events/shandong-aigc-video-competition-2026) | 综合 | 总奖金5万元 | aibetas |
+| 2026-11-20 | 1 天 | [第十届中国·舟山全球海洋经济创业创新大赛](https://www.52jingsai.com/article-24148-1.html) | 综合 | — | jingsai |
 
 ## 在办赛事总表（按截止日升序）
 
@@ -109,10 +110,11 @@
 | 2027-01-22 (报名) | 2027-01-29 | 64 天 | [Santa 2026 - The Elf Calculator](https://www.kaggle.com/competitions/santa-2026) | 强化学习 / 机器人 | USD 50,000 | Kaggle |
 | 2027-07-12 (报名) | 2027-07-19 | 235 天 | [Squares in Squares](https://www.kaggle.com/competitions/squares-in-squares) | 强化学习 / 机器人 | USD 50,000 | Kaggle |
 
-### 综合（16）
+### 综合（20）
 
 | 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|
+| 2026-11-20 | 1 天 | [第十届中国·舟山全球海洋经济创业创新大赛](https://www.52jingsai.com/article-24148-1.html) | 综合 | — | jingsai |
 | 2026-11-20 | 1 天 | [⚠️ 2026山东文旅AIGC视频创作大赛](https://www.aibetas.com/aigc_events/shandong-aigc-video-competition-2026) | 综合 | 总奖金5万元 | aibetas |
 | 2026-11-22 | 3 天 | [⚠️ LibTV宝藏画布发现计划](https://www.aibetas.com/aigc_events/libtv-treasure-canvas-discovery-plan) | 综合 | 6.8万元现金奖池 | aibetas |
 | 2026-11-22 | 3 天 | [⚠️ 鲸锐AI创作大赛](https://www.aibetas.com/aigc_events/608) | 综合 | 1000万元奖金池 | aibetas |
@@ -126,9 +128,12 @@
 | 2026-12-10 | 21 天 | [⚠️ 2026“数字武当杯”AI应用创新大赛](https://www.aibetas.com/aigc_events/digital-wudang-cup-ai-innovation-2026) | 综合 | 12万元奖金池 | aibetas |
 | 2026-12-27 | 38 天 | [ETHChiangmai & Longevity Hackathon 2026](https://chiangmai.devfolio.co/) | 综合 | — | devfolio |
 | 2026-12-31 | 42 天 | [Predict Cross-sectional Equity Returns](https://hub.crunchdao.com/competitions/datacrunch-2) | 综合 | $52,000 | Crunch Capital / CrunchDAO |
+| 2026-12-31 | 42 天 | [第三届“金种子杯”大学生创业大赛](https://www.52jingsai.com/article-24151-1.html) | 综合 | — | jingsai |
 | 2027-01-04 | 46 天 | [haxfinity](https://haxfinity.devfolio.co/) | 综合 | — | devfolio |
+| 2027-01-08 | 50 天 | [2026年陕西省图书馆文创设计大赛](https://www.52jingsai.com/article-24155-1.html) | 综合 | 奖金激励，33个获奖席位 赛程安排如下： 活动启动： 2026年10月19日 作品征 | jingsai |
 | 2027-01-09 | 51 天 | [CLIP2 - The 2nd Cadenza Lyrics Intelligibility Prediction Challenge](https://eval.ai/web/challenges/challenge-page/2703/overview) | 综合 | — | Cadenza Project Team |
 | 2027-01-16 | 58 天 | [Techacks 5.0](https://techacks05.devfolio.co/) | 综合 | — | devfolio |
+| 2027-01-31 | 73 天 | [天津礼物第二届文创设计大赛](https://www.52jingsai.com/article-24156-1.html) | 综合 | — | jingsai |
 
 ### 在列表页出现、但来源未提供截止日
 
@@ -155,6 +160,17 @@
 | [REFUGE](https://refuge.grand-challenge.org/) | 医疗健康 | 平台状态 OPEN |
 | [HC18](https://hc18.grand-challenge.org/) | 医疗健康 | 平台状态 OPEN |
 | [ANHIR](https://anhir.grand-challenge.org/) | 医疗健康 | 平台状态 OPEN |
+
+**jingsai**：共 8 条，下表只列前 6 条
+
+| 赛事 | 方向 | 线索 |
+|---|---|---|
+| [【11月20日截止，免费答题领证书】2026年全国大学生科技知识竞赛报名通知](https://www.52jingsai.com/article-23677-1.html) | 综合 | 我爱竞赛网 · 科技大赛 列表 + 详情页（正文没写报名截止） |
+| [关于举办第四届“声华杯”声学技术大赛的通知](https://www.52jingsai.com/article-23809-1.html) | 综合 | 我爱竞赛网 · 科技大赛 列表 + 详情页（正文没写报名截止） |
+| [【11月21日全国统考，Office办公技能证书】工信部工业文化发展中心颁发，真题模拟，线上考试](https://www.52jingsai.com/article-18776-1.html) | 综合 | 我爱竞赛网 · IT应用开发 列表 + 详情页（正文没写报名截止） |
+| [关于举办第五届全国高校国产软件应用与设计创新大赛的通知（1号通知）](https://www.52jingsai.com/article-23679-1.html) | 综合 | 我爱竞赛网 · IT应用开发 列表 + 详情页（正文没写报名截止） |
+| [2026第二届全国青少年智能无人系统应用大赛](https://www.52jingsai.com/article-23660-1.html) | 综合 | 我爱竞赛网 · IT应用开发 列表 + 详情页（正文没写报名截止） |
+| [甘肃省第五届青年生态文明创新创业大赛](https://www.52jingsai.com/article-24207-1.html) | 综合 | 我爱竞赛网 · 创业大赛 列表 + 详情页（正文没写报名截止） |
 
 **drivendata**：共 7 条，下表只列前 6 条
 
@@ -217,18 +233,19 @@
 
 | 来源 | 状态 | 条数 | 耗时 | 说明 |
 |---|---|---|---|---|
-| Kaggle | ✅ 正常 | 763 | 2044 ms | 扫描 763 项 |
-| ML Contests | ✅ 正常 | 412 | 142 ms | 412 项（含已截止，按截止日过滤） |
-| Grand Challenge | ✅ 正常 | 264 | 1628 ms | API 返回 264 项 |
-| DataFountain | ✅ 正常 | 30 | 4409 ms | 列表页 30 条 + ID 递进探 8 个（1177–1184）补到 0 条 |
-| AIcrowd | ✅ 正常 | 18 | 596 ms | 列表页解析 18 条 |
-| CodaLab Competitions | ✅ 正常 | 379 | 2736 ms | 列表页解析 379 条 |
-| DrivenData | ✅ 正常 | 53 | 981 ms | 列表页解析 53 条 |
-| EvalAI | ✅ 正常 | 3 | 564 ms | present 18 / future 0（共 18 项，跳过 15 个 2099 占位日的常设 benchmark） |
-| Devfolio | ✅ 正常 | 4 | 1135 ms | 扫到 28 场，AI 相关 4 场（关键词过滤掉 24 场） |
-| TAIKAI | ✅ 正常 | 7 | 848 ms | 列表 20 场，AI 相关 7 场（过滤掉 13 场） |
-| AIBetas 竞赛日历 | ✅ 正常 | 10 | 1959 ms | 竞赛日历解析 10 条（聚合站转述，字段以官网为准） |
-| lablab.ai | ❌ 失败 | 0 | 463 ms | 页面结构变化：列表页没找到 /ai-hackathons/<slug> 链接 |
+| Kaggle | ✅ 正常 | 763 | 6595 ms | 扫描 763 项 |
+| ML Contests | ✅ 正常 | 412 | 900 ms | 412 项（含已截止，按截止日过滤） |
+| Grand Challenge | ✅ 正常 | 264 | 3466 ms | API 返回 264 项 |
+| DataFountain | ✅ 正常 | 30 | 2929 ms | 列表页 30 条 + ID 递进探 8 个（1177–1184）补到 0 条 |
+| AIcrowd | ✅ 正常 | 18 | 1194 ms | 列表页解析 18 条 |
+| CodaLab Competitions | ✅ 正常 | 379 | 4494 ms | 列表页解析 379 条 |
+| DrivenData | ✅ 正常 | 53 | 3736 ms | 列表页解析 53 条 |
+| EvalAI | ✅ 正常 | 3 | 1758 ms | present 18 / future 0（共 18 项，跳过 15 个 2099 占位日的常设 benchmark） |
+| Devfolio | ✅ 正常 | 4 | 3727 ms | 扫到 28 场，AI 相关 4 场（关键词过滤掉 24 场） |
+| TAIKAI | ✅ 正常 | 7 | 1639 ms | 列表 20 场，AI 相关 7 场（过滤掉 13 场） |
+| AIBetas 竞赛日历 | ✅ 正常 | 10 | 9478 ms | 竞赛日历 10 条 + 全部赛事列表补 0 条（聚合站转述，字段以官网为准） |
+| 我爱竞赛网 | ✅ 正常 | 24 | 3405 ms | 科技大赛 列表 26 条 / 抓详情 8 条；IT应用开发 列表 28 条 / 抓详情 8 条；创业大赛 列表 33 条 / 抓详情 8 条 |
+| lablab.ai | ❌ 失败 | 0 | 1386 ms | 页面结构变化：列表页没找到 /ai-hackathons/<slug> 链接 |
 | 人工维护清单 | ✅ 正常 | 24 | 0 ms | curated.json 24 条（其中 15 条是第三方转述，摘要里标 ⚠️） |
 
 > 任何一个来源连续失败都要当成真问题处理：**不要以为「没新赛事」**，先看这张表。
