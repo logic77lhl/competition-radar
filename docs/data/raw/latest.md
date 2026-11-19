@@ -1,8 +1,8 @@
-# 参赛机会雷达 · 2026-11-18
+# 参赛机会雷达 · 2026-11-19
 
-> 采集时间 2026-11-18 14:28:02Z，耗时 5.7s。本次共 1823 条记录，其中在办且有截止日 38 条、新增 0 条、临近截止提醒 1 条。
+> 采集时间 2026-11-19 00:49:37Z，耗时 6.7s。本次共 1833 条记录，其中在办且有截止日 48 条、新增 0 条、临近截止提醒 3 条。
 
-**一句话**：没有发现新赛事；有 1 个截止日在 30 天内。
+**一句话**：没有发现新赛事；有 3 个截止日在 30 天内。
 
 > 已合并 134 条跨来源重复记录（同一赛事同时出现在多个平台）。
 
@@ -13,17 +13,44 @@
 ## ★ 可捡清单（按确定性排序）
 
 > 只看「能算出单份奖金」的在办赛事。`单份` = 一个名额能拿到的钱：写了「前 200 名各获 ¥5000」就直接取 5000；只给总奖金的按 `总奖金 ÷ 名额数` 摊。
-> 缺名额信息的**不评分**（宁缺毋滥），它们仍会出现在下面的「临近截止」里。剩余天数按紧迫度排序。
+> 缺名额信息的**不评分**（宁缺毋滥），它们在下面单列一区。剩余天数按紧迫度排序。
 
 | 档 | 赛事 | 单份奖金 | 名额 | 剩余 | 依据 |
 |---|---|---|---|---|---|
-| S | [支付宝「智能体涌现奖」2026 首轮](https://abao.alipay.com/emerge) | ¥5,000 | 200 | 18 天 | 单份奖金 ¥5,000 × 200 个名额 |
+| S | [支付宝「智能体涌现奖」2026 首轮](https://abao.alipay.com/emerge) | ¥5,000 | 200 | 17 天 | 单份奖金 ¥5,000 × 200 个名额 |
+
+### 有奖金，但缺名额信息（不评分）
+
+| 总奖金 | 赛事 | 剩余 | 来源 |
+|---|---|---|---|
+| ¥10,000,000 | [⚠️ 鲸锐AI创作大赛](https://www.aibetas.com/aigc_events/608) | 3 天 | aibetas |
+| ¥2,880,000 | [Google - Agent Harness on Physical-Engineering's Last Exam](https://www.kaggle.com/competitions/physical-engineerings-last-exam) | 48 天 | kaggle |
+| ¥1,080,000 | [Google Quantum AI - Verifiable Quantum Circuit Compilation](https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation) | 56 天 | kaggle |
+| ¥720,000 | [NFL Big Data Bowl 2027](https://www.kaggle.com/competitions/nfl-big-data-bowl-2027) | 49 天 | kaggle |
+| ¥540,000 | [Google - The Gemma 4 Developer Agent Competition](https://www.kaggle.com/competitions/gemma-4-developer-agent) | 7 天 | kaggle |
+| ¥500,000 | [⚠️ OpenLET 具身智能挑战赛](https://tianchi.aliyun.com/competition/entrance/532515) | 42 天 | curated |
+| ¥374,400 | [Predict Cross-sectional Equity Returns](https://hub.crunchdao.com/competitions/datacrunch-2) | 42 天 | mlcontests |
+| ¥360,000 | [Enveda CASMI 2026 - Molecule ID From Mass Spectra](https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra) | 19 天 | kaggle |
+| ¥360,000 | [Name That LLM](https://www.kaggle.com/competitions/name-that-llm) | 49 天 | kaggle |
+| ¥360,000 | [Santa 2026 - The Elf Calculator](https://www.kaggle.com/competitions/santa-2026) | 64 天 | kaggle |
+| ¥360,000 | [Squares in Squares](https://www.kaggle.com/competitions/squares-in-squares) | 235 天 | kaggle |
+| ¥144,000 | [Decode Brains Signals in Task-Specific Settings](https://neural-interfaces26.github.io/) | 2 天 | mlcontests |
+| ¥144,000 | [Domain-Specific Question Answering with LLMs](https://www.codabench.org/competitions/17954) | 16 天 | mlcontests |
+| ¥120,000 | [⚠️ 2026“数字武当杯”AI应用创新大赛](https://www.aibetas.com/aigc_events/digital-wudang-cup-ai-innovation-2026) | 21 天 | aibetas |
+| ¥68,000 | [⚠️ LibTV宝藏画布发现计划](https://www.aibetas.com/aigc_events/libtv-treasure-canvas-discovery-plan) | 3 天 | aibetas |
+| ¥54,000 | [Build Speech Recognition Systems for Caribbean Voices](https://zindi.africa/competitions/caribbean-voices-hackathon) | 18 天 | mlcontests |
+| ¥50,000 | [⚠️ 2026山东文旅AIGC视频创作大赛](https://www.aibetas.com/aigc_events/shandong-aigc-video-competition-2026) | 1 天 | aibetas |
+| ¥30,000 | [⚠️ 伊春市丰林县首届AI创意视频大赛](https://www.aibetas.com/aigc_events/fenglin-county-ai-creative-video-competition-2026) | 11 天 | aibetas |
+| ¥30,000 | [⚠️ 湖南青年AI短视频创作大赛](https://www.aibetas.com/aigc_events/hunan-youth-ai-short-video-competition-2026) | 11 天 | aibetas |
+| ¥27,000 | [⚠️ 玻尔 AI 产品周赛 · 第四期](https://www.bohrium.com) | 6 天 | curated |
 
 ## 一、临近截止（该动手了）
 
 | 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|
-| 2026-11-25 | 7 天 | [⚠️ 玻尔 AI 产品周赛 · 第四期](https://www.bohrium.com) | 科学智能 AI4S | 本期总奖金最高 27,000 元（10 个赛道、77 道赛题 + 1 附加题） | 玻尔 Bohrium（深势科技） |
+| 2026-11-20 | 1 天 | [⚠️ 2026山东文旅AIGC视频创作大赛](https://www.aibetas.com/aigc_events/shandong-aigc-video-competition-2026) | 综合 | 总奖金5万元 | aibetas |
+| 2026-11-22 | 3 天 | [⚠️ LibTV宝藏画布发现计划](https://www.aibetas.com/aigc_events/libtv-treasure-canvas-discovery-plan) | 综合 | 6.8万元现金奖池 | aibetas |
+| 2026-11-22 | 3 天 | [⚠️ 鲸锐AI创作大赛](https://www.aibetas.com/aigc_events/608) | 综合 | 1000万元奖金池 | aibetas |
 
 ## 在办赛事总表（按截止日升序）
 
@@ -31,69 +58,79 @@
 
 | 截止 | 提交截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|---|
-| 2026-11-21 | — | 3 天 | [Decode Brains Signals in Task-Specific Settings](https://neural-interfaces26.github.io/) | 科学智能 AI4S | $20,000 | Various / Codabench |
-| 2026-11-25 | — | 7 天 | [⚠️ 玻尔 AI 产品周赛 · 第四期](https://www.bohrium.com) | 科学智能 AI4S | 本期总奖金最高 27,000 元（10 个赛道、77 道赛题 + 1 附加题） | 玻尔 Bohrium（深势科技） |
-| 2026-11-26 (报名) | 2026-12-03 | 8 天 | [Google - The Gemma 4 Developer Agent Competition](https://www.kaggle.com/competitions/gemma-4-developer-agent) | 科学智能 AI4S | USD 75,000 | Google DeepMind |
-| 2026-11-30 | — | 12 天 | [Light My Cells 2 : Transmitted Light to Fluorescence Challenge](https://lightmycells2.grand-challenge.org/) | 科学智能 AI4S | — | Grand Challenge / MICCAI 社区 |
-| 2026-12-08 (报名) | 2026-12-15 | 20 天 | [Enveda CASMI 2026 - Molecule ID From Mass Spectra](https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra) | 科学智能 AI4S | USD 50,000 | Enveda |
-| 2027-01-06 | — | 49 天 | [Google - Agent Harness on Physical-Engineering's Last Exam](https://www.kaggle.com/competitions/physical-engineerings-last-exam) | 科学智能 AI4S | USD 400,000 | Google |
-| 2027-01-14 (报名) | 2027-01-21 | 57 天 | [Google Quantum AI - Verifiable Quantum Circuit Compilation](https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation) | 科学智能 AI4S | USD 150,000 | Google Quantum AI |
-| 2027-01-16 | — | 59 天 | [2026 Genomes to Fields (G2F) Maize Genotype x Environment Prediction Competition](https://eval.ai/web/challenges/challenge-page/2742/overview) | 科学智能 AI4S | — | G2F_GxE |
-| 2027-02-17 | — | 91 天 | [Predict Cognitive Outcomes from Digital Clock Drawings](https://www.synapse.org/Synapse:syn68634259/wiki/633407) | 科学智能 AI4S | — | Sage Bionetworks / Synapse |
+| 2026-11-21 | — | 2 天 | [Decode Brains Signals in Task-Specific Settings](https://neural-interfaces26.github.io/) | 科学智能 AI4S | $20,000 | Various / Codabench |
+| 2026-11-25 | — | 6 天 | [⚠️ 玻尔 AI 产品周赛 · 第四期](https://www.bohrium.com) | 科学智能 AI4S | 本期总奖金最高 27,000 元（10 个赛道、77 道赛题 + 1 附加题） | 玻尔 Bohrium（深势科技） |
+| 2026-11-26 (报名) | 2026-12-03 | 7 天 | [Google - The Gemma 4 Developer Agent Competition](https://www.kaggle.com/competitions/gemma-4-developer-agent) | 科学智能 AI4S | USD 75,000 | Google DeepMind |
+| 2026-11-30 | — | 11 天 | [Light My Cells 2 : Transmitted Light to Fluorescence Challenge](https://lightmycells2.grand-challenge.org/) | 科学智能 AI4S | — | Grand Challenge / MICCAI 社区 |
+| 2026-12-08 (报名) | 2026-12-15 | 19 天 | [Enveda CASMI 2026 - Molecule ID From Mass Spectra](https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra) | 科学智能 AI4S | USD 50,000 | Enveda |
+| 2027-01-06 | — | 48 天 | [Google - Agent Harness on Physical-Engineering's Last Exam](https://www.kaggle.com/competitions/physical-engineerings-last-exam) | 科学智能 AI4S | USD 400,000 | Google |
+| 2027-01-14 (报名) | 2027-01-21 | 56 天 | [Google Quantum AI - Verifiable Quantum Circuit Compilation](https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation) | 科学智能 AI4S | USD 150,000 | Google Quantum AI |
+| 2027-01-16 | — | 58 天 | [2026 Genomes to Fields (G2F) Maize Genotype x Environment Prediction Competition](https://eval.ai/web/challenges/challenge-page/2742/overview) | 科学智能 AI4S | — | G2F_GxE |
+| 2027-02-17 | — | 90 天 | [Predict Cognitive Outcomes from Digital Clock Drawings](https://www.synapse.org/Synapse:syn68634259/wiki/633407) | 科学智能 AI4S | — | Sage Bionetworks / Synapse |
 
 ### 医疗健康（7）
 
 | 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|
-| 2026-12-07 | 19 天 | [Observing What Models Learn](https://owl.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
-| 2026-12-30 | 42 天 | [TrackRad: Real-time tumor tracking for MRI-guided radiotherapy](https://trackrad2025.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
-| 2026-12-31 | 43 天 | [Ischemic Stroke Lesion Segmentation Challenge 2024](https://isles-24.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
-| 2026-12-31 | 43 天 | [Lung Nodule Volumetry 2026 Challenge](https://lunovo26.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
-| 2026-12-31 | 43 天 | [TopBrain Segmentation Challenge Version 2](https://topbrain2026.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
-| 2027-02-15 | 89 天 | [Cone-beam CT reconstruction for radiation therapy challenge](https://cobra2026.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
-| 2027-04-13 | 146 天 | [PANTHER Challenge](https://panther.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
+| 2026-12-07 | 18 天 | [Observing What Models Learn](https://owl.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
+| 2026-12-30 | 41 天 | [TrackRad: Real-time tumor tracking for MRI-guided radiotherapy](https://trackrad2025.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
+| 2026-12-31 | 42 天 | [Ischemic Stroke Lesion Segmentation Challenge 2024](https://isles-24.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
+| 2026-12-31 | 42 天 | [Lung Nodule Volumetry 2026 Challenge](https://lunovo26.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
+| 2026-12-31 | 42 天 | [TopBrain Segmentation Challenge Version 2](https://topbrain2026.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
+| 2027-02-15 | 88 天 | [Cone-beam CT reconstruction for radiation therapy challenge](https://cobra2026.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
+| 2027-04-13 | 145 天 | [PANTHER Challenge](https://panther.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
 
 ### 大模型 / Agent（11）
 
 | 截止 | 提交截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|---|
-| 2026-11-20 | — | 2 天 | [Language-Conditioned Visual Navigation](https://www.codabench.org/competitions/18185) | 大模型 / Agent | $2,800 | Codabench |
-| 2026-11-30 | — | 12 天 | [SafeDrive-VLA: Towards Safety in Autonomous Driving](https://www.codabench.org/competitions/18333) | 大模型 / Agent | — | Codabench |
-| 2026-11-30 | — | 12 天 | [Human-Aware Vision-and-Language Navigation](https://www.codabench.org/competitions/18135) | 大模型 / Agent | — | Codabench |
-| 2026-12-05 | — | 17 天 | [Domain-Specific Question Answering with LLMs](https://www.codabench.org/competitions/17954) | 大模型 / Agent | $20,000 | IEEE CIS / Codabench |
-| 2026-12-06 | — | 18 天 | [支付宝「智能体涌现奖」2026 首轮](https://abao.alipay.com/emerge) | 大模型 / Agent | 前 200 名各获价值 5000 元创作激励；年度最佳 1 名 100 万元（2027 Q4 评）；许愿池 5 个金点子各 2000 元 | 支付宝 / 蚂蚁集团 |
-| 2026-12-07 | — | 19 天 | [Build Speech Recognition Systems for Caribbean Voices](https://zindi.africa/competitions/caribbean-voices-hackathon) | 大模型 / Agent | $7,500 | UWI AI Innovation Centre, CIBC, Infolytics, Data Axis, CTU / Zindi |
-| 2026-12-31 | — | 43 天 | [⚠️ 知乎知学堂大模型挑战赛：大模型复杂表格识别与内容理解](https://tianchi.aliyun.com/competition/entrance/532510) | 大模型 / Agent | ￥20,000 | 知乎知学堂 × 阿里云天池 |
-| 2027-01-02 (报名) | 2027-01-09 | 45 天 | [The Pokémon Company - PTCG AI Battle Challenge Playground](https://www.kaggle.com/competitions/the-pokemon-company-ptcg-ai-battle-challenge-playground) | 大模型 / Agent | 实物奖品 (SWAG) | The Pokémon Company - PTCGABC Team |
-| 2027-01-07 (报名) | 2027-01-15 | 50 天 | [Name That LLM](https://www.kaggle.com/competitions/name-that-llm) | 大模型 / Agent | USD 50,000 | Kaggle |
-| 2027-01-14 | — | 57 天 | [Brain-to-Text Benchmark '24](https://eval.ai/web/challenges/challenge-page/2099/overview) | 大模型 / Agent | — | Brain-to-Text 2024 |
-| 2027-05-24 | — | 187 天 | [⚠️ CCL25-Eval 任务2：第三届汉语框架语义解析评测（打榜赛）](https://tianchi.aliyun.com/competition/entrance/532338) | 大模型 / Agent | ￥5,000 | 中国计算语言学大会（CCL）× 阿里云天池 |
+| 2026-11-20 | — | 1 天 | [Language-Conditioned Visual Navigation](https://www.codabench.org/competitions/18185) | 大模型 / Agent | $2,800 | Codabench |
+| 2026-11-30 | — | 11 天 | [SafeDrive-VLA: Towards Safety in Autonomous Driving](https://www.codabench.org/competitions/18333) | 大模型 / Agent | — | Codabench |
+| 2026-11-30 | — | 11 天 | [Human-Aware Vision-and-Language Navigation](https://www.codabench.org/competitions/18135) | 大模型 / Agent | — | Codabench |
+| 2026-12-05 | — | 16 天 | [Domain-Specific Question Answering with LLMs](https://www.codabench.org/competitions/17954) | 大模型 / Agent | $20,000 | IEEE CIS / Codabench |
+| 2026-12-06 | — | 17 天 | [支付宝「智能体涌现奖」2026 首轮](https://abao.alipay.com/emerge) | 大模型 / Agent | 前 200 名各获价值 5000 元创作激励；年度最佳 1 名 100 万元（2027 Q4 评）；许愿池 5 个金点子各 2000 元 | 支付宝 / 蚂蚁集团 |
+| 2026-12-07 | — | 18 天 | [Build Speech Recognition Systems for Caribbean Voices](https://zindi.africa/competitions/caribbean-voices-hackathon) | 大模型 / Agent | $7,500 | UWI AI Innovation Centre, CIBC, Infolytics, Data Axis, CTU / Zindi |
+| 2026-12-31 | — | 42 天 | [⚠️ 知乎知学堂大模型挑战赛：大模型复杂表格识别与内容理解](https://tianchi.aliyun.com/competition/entrance/532510) | 大模型 / Agent | ￥20,000 | 知乎知学堂 × 阿里云天池 |
+| 2027-01-02 (报名) | 2027-01-09 | 44 天 | [The Pokémon Company - PTCG AI Battle Challenge Playground](https://www.kaggle.com/competitions/the-pokemon-company-ptcg-ai-battle-challenge-playground) | 大模型 / Agent | 实物奖品 (SWAG) | The Pokémon Company - PTCGABC Team |
+| 2027-01-07 (报名) | 2027-01-15 | 49 天 | [Name That LLM](https://www.kaggle.com/competitions/name-that-llm) | 大模型 / Agent | USD 50,000 | Kaggle |
+| 2027-01-14 | — | 56 天 | [Brain-to-Text Benchmark '24](https://eval.ai/web/challenges/challenge-page/2099/overview) | 大模型 / Agent | — | Brain-to-Text 2024 |
+| 2027-05-24 | — | 186 天 | [⚠️ CCL25-Eval 任务2：第三届汉语框架语义解析评测（打榜赛）](https://tianchi.aliyun.com/competition/entrance/532338) | 大模型 / Agent | ￥5,000 | 中国计算语言学大会（CCL）× 阿里云天池 |
 
 ### 计算机视觉（1）
 
 | 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|
-| 2026-12-15 | 27 天 | [PhyRC 2027: Robot-Assisted Dressing in Simulation](https://www.codabench.org/competitions/18366) | 计算机视觉 | — | Hello Robot / Codabench |
+| 2026-12-15 | 26 天 | [PhyRC 2027: Robot-Assisted Dressing in Simulation](https://www.codabench.org/competitions/18366) | 计算机视觉 | — | Hello Robot / Codabench |
 
 ### 强化学习 / 机器人（4）
 
 | 截止 | 提交截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|---|
-| 2026-12-31 | — | 43 天 | [⚠️ OpenLET 具身智能挑战赛](https://tianchi.aliyun.com/competition/entrance/532515) | 强化学习 / 机器人 | ￥500,000 | 阿里云天池 |
-| 2027-01-07 | — | 50 天 | [NFL Big Data Bowl 2027](https://www.kaggle.com/competitions/nfl-big-data-bowl-2027) | 强化学习 / 机器人 | USD 100,000 | The National Football League |
-| 2027-01-22 (报名) | 2027-01-29 | 65 天 | [Santa 2026 - The Elf Calculator](https://www.kaggle.com/competitions/santa-2026) | 强化学习 / 机器人 | USD 50,000 | Kaggle |
-| 2027-07-12 (报名) | 2027-07-19 | 236 天 | [Squares in Squares](https://www.kaggle.com/competitions/squares-in-squares) | 强化学习 / 机器人 | USD 50,000 | Kaggle |
+| 2026-12-31 | — | 42 天 | [⚠️ OpenLET 具身智能挑战赛](https://tianchi.aliyun.com/competition/entrance/532515) | 强化学习 / 机器人 | ￥500,000 | 阿里云天池 |
+| 2027-01-07 | — | 49 天 | [NFL Big Data Bowl 2027](https://www.kaggle.com/competitions/nfl-big-data-bowl-2027) | 强化学习 / 机器人 | USD 100,000 | The National Football League |
+| 2027-01-22 (报名) | 2027-01-29 | 64 天 | [Santa 2026 - The Elf Calculator](https://www.kaggle.com/competitions/santa-2026) | 强化学习 / 机器人 | USD 50,000 | Kaggle |
+| 2027-07-12 (报名) | 2027-07-19 | 235 天 | [Squares in Squares](https://www.kaggle.com/competitions/squares-in-squares) | 强化学习 / 机器人 | USD 50,000 | Kaggle |
 
-### 综合（6）
+### 综合（16）
 
 | 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|
-| 2026-12-01 | 13 天 | [Predicting Credit Card Fraud](https://www.kaggle.com/competitions/playground-series-s6e11) | 综合 | 实物奖品 (SWAG) | Kaggle |
-| 2026-12-27 | 39 天 | [ETHChiangmai & Longevity Hackathon 2026](https://chiangmai.devfolio.co/) | 综合 | — | devfolio |
-| 2026-12-31 | 43 天 | [Predict Cross-sectional Equity Returns](https://hub.crunchdao.com/competitions/datacrunch-2) | 综合 | $52,000 | Crunch Capital / CrunchDAO |
-| 2027-01-04 | 47 天 | [haxfinity](https://haxfinity.devfolio.co/) | 综合 | — | devfolio |
-| 2027-01-09 | 52 天 | [CLIP2 - The 2nd Cadenza Lyrics Intelligibility Prediction Challenge](https://eval.ai/web/challenges/challenge-page/2703/overview) | 综合 | — | Cadenza Project Team |
-| 2027-01-16 | 59 天 | [Techacks 5.0](https://techacks05.devfolio.co/) | 综合 | — | devfolio |
+| 2026-11-20 | 1 天 | [⚠️ 2026山东文旅AIGC视频创作大赛](https://www.aibetas.com/aigc_events/shandong-aigc-video-competition-2026) | 综合 | 总奖金5万元 | aibetas |
+| 2026-11-22 | 3 天 | [⚠️ LibTV宝藏画布发现计划](https://www.aibetas.com/aigc_events/libtv-treasure-canvas-discovery-plan) | 综合 | 6.8万元现金奖池 | aibetas |
+| 2026-11-22 | 3 天 | [⚠️ 鲸锐AI创作大赛](https://www.aibetas.com/aigc_events/608) | 综合 | 1000万元奖金池 | aibetas |
+| 2026-11-30 | 11 天 | [⚠️ 伊春市丰林县首届AI创意视频大赛](https://www.aibetas.com/aigc_events/fenglin-county-ai-creative-video-competition-2026) | 综合 | 最高3万元 | aibetas |
+| 2026-11-30 | 11 天 | [⚠️ 湖南青年AI短视频创作大赛](https://www.aibetas.com/aigc_events/hunan-youth-ai-short-video-competition-2026) | 综合 | 最高3万元 | aibetas |
+| 2026-12-01 | 12 天 | [Predicting Credit Card Fraud](https://www.kaggle.com/competitions/playground-series-s6e11) | 综合 | 实物奖品 (SWAG) | Kaggle |
+| 2026-12-01 | 12 天 | [⚠️ AI+∞开发者创作大赛第三期·AI造游戏](https://www.aibetas.com/aigc_events/ai-infinity-game-developer-competition-3) | 综合 | 最高1.5万元 | aibetas |
+| 2026-12-03 | 14 天 | [⚠️ “泰州有戏·剧创未来”泰州首届AI漫剧创作大赛](https://www.aibetas.com/aigc_events/taizhou-ai-comic-competition-2026) | 综合 | 最高1万元 | aibetas |
+| 2026-12-03 | 14 天 | [⚠️ “AI视界·海丝新程”2026年泉州市短视频比赛](https://www.aibetas.com/aigc_events/quanzhou-ai-maritime-silk-road-short-video-competition-2026) | 综合 | 最高奖金2000元 | aibetas |
+| 2026-12-06 | 17 天 | [⚠️ “这就是深圳”第3季短视频征集](https://www.aibetas.com/aigc_events/612) | 综合 | — | aibetas |
+| 2026-12-10 | 21 天 | [⚠️ 2026“数字武当杯”AI应用创新大赛](https://www.aibetas.com/aigc_events/digital-wudang-cup-ai-innovation-2026) | 综合 | 12万元奖金池 | aibetas |
+| 2026-12-27 | 38 天 | [ETHChiangmai & Longevity Hackathon 2026](https://chiangmai.devfolio.co/) | 综合 | — | devfolio |
+| 2026-12-31 | 42 天 | [Predict Cross-sectional Equity Returns](https://hub.crunchdao.com/competitions/datacrunch-2) | 综合 | $52,000 | Crunch Capital / CrunchDAO |
+| 2027-01-04 | 46 天 | [haxfinity](https://haxfinity.devfolio.co/) | 综合 | — | devfolio |
+| 2027-01-09 | 51 天 | [CLIP2 - The 2nd Cadenza Lyrics Intelligibility Prediction Challenge](https://eval.ai/web/challenges/challenge-page/2703/overview) | 综合 | — | Cadenza Project Team |
+| 2027-01-16 | 58 天 | [Techacks 5.0](https://techacks05.devfolio.co/) | 综合 | — | devfolio |
 
 ### 在列表页出现、但来源未提供截止日
 
@@ -154,27 +191,27 @@
 
 | 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|
-| 2030-01-01 | 1140 天 | [Titanic - Machine Learning from Disaster](https://www.kaggle.com/competitions/titanic) | 计算机视觉 | 无奖金（练习赛） | Kaggle |
-| 2030-01-01 | 1140 天 | [House Prices - Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) | 综合 | 无奖金（练习赛） | Kaggle |
-| 2030-01-02 | 1141 天 | [Housing Prices Competition for Kaggle Learn Users](https://www.kaggle.com/competitions/home-data-for-ml-course) | 综合 | 无奖金（练习赛） | Kaggle |
-| 2030-01-01 | 1140 天 | [Spaceship Titanic](https://www.kaggle.com/competitions/spaceship-titanic) | 计算机视觉 | 无奖金（练习赛） | Kaggle |
-| 2030-01-01 | 1140 天 | [Digit Recognizer](https://www.kaggle.com/competitions/digit-recognizer) | 计算机视觉 | 无奖金（练习赛） | Kaggle |
-| 2030-07-01 | 1321 天 | [Store Sales - Time Series Forecasting](https://www.kaggle.com/competitions/store-sales-time-series-forecasting) | 综合 | 无奖金（练习赛） | Kaggle |
-| 2030-01-01 | 1140 天 | [Natural Language Processing with Disaster Tweets](https://www.kaggle.com/competitions/nlp-getting-started) | 大模型 / Agent | 无奖金（练习赛） | Kaggle |
-| 2030-07-02 | 1322 天 | [LLM Classification Finetuning](https://www.kaggle.com/competitions/llm-classification-finetuning) | 大模型 / Agent | 无奖金（练习赛） | Kaggle |
-| 2030-01-01 | 1140 天 | [Connect X](https://www.kaggle.com/competitions/connectx) | 综合 | 无奖金（练习赛） | Kaggle |
-| 2030-06-04 | 1294 天 | [Petals to the Metal - Flower Classification on TPU](https://www.kaggle.com/competitions/tpu-getting-started) | 计算机视觉 | 无奖金（练习赛） | Kaggle |
-| 2030-07-02 | 1322 天 | [Contradictory, My Dear Watson](https://www.kaggle.com/competitions/contradictory-my-dear-watson) | 大模型 / Agent | 无奖金（练习赛） | Kaggle |
-| 2028-01-01 | 409 天 | [STOIC2021 - COVID-19 AI Challenge](https://stoic2021.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
-| 2028-09-20 | 672 天 | [SynthRAD2023](https://synthrad2023.grand-challenge.org/) | 医疗健康 | Publication, Speaking Engagement | Grand Challenge / MICCAI 社区 |
-| 2060-12-31 | 12462 天 | [Multi-Modality Abdominal Multi-Organ Segmentation Challenge 2022](https://amos22.grand-challenge.org/) | 医疗健康 | Monetary, Publication, Speaking Engagement | Grand Challenge / MICCAI 社区 |
-| 2028-03-16 | 484 天 | [Robust Non-rigid Registration Challenge for Expansion Microscopy](https://rnr-exm.grand-challenge.org/) | 医疗健康 | Publication, Speaking Engagement | Grand Challenge / MICCAI 社区 |
-| 2027-12-31 | 408 天 | [SPIDER](https://spider.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
-| 2033-10-15 | 2523 天 | [Foundation Model Prompting for Medical Image Classification](https://medfm2023.grand-challenge.org/) | 医疗健康 | Monetary, Publication, Speaking Engagement | Grand Challenge / MICCAI 社区 |
-| 2028-09-30 | 682 天 | [ToothFairy2: Multi-Structure Segmentation in CBCT Volumes](https://toothfairy2.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
-| 2030-03-16 | 1214 天 | [SynthRAD2025](https://synthrad2025.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
-| 2030-04-01 | 1230 天 | [PUMA: Panoptic segmentation of nUclei and tissue in MelanomA](https://puma.grand-challenge.org/) | 科学智能 AI4S | — | Grand Challenge / MICCAI 社区 |
-| 2030-12-31 | 1504 天 | [ToothFairy3: Multi-Class Segmentation in CBCT Volumes](https://toothfairy3.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
+| 2030-01-01 | 1139 天 | [Titanic - Machine Learning from Disaster](https://www.kaggle.com/competitions/titanic) | 计算机视觉 | 无奖金（练习赛） | Kaggle |
+| 2030-01-01 | 1139 天 | [House Prices - Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) | 综合 | 无奖金（练习赛） | Kaggle |
+| 2030-01-02 | 1140 天 | [Housing Prices Competition for Kaggle Learn Users](https://www.kaggle.com/competitions/home-data-for-ml-course) | 综合 | 无奖金（练习赛） | Kaggle |
+| 2030-01-01 | 1139 天 | [Spaceship Titanic](https://www.kaggle.com/competitions/spaceship-titanic) | 计算机视觉 | 无奖金（练习赛） | Kaggle |
+| 2030-01-01 | 1139 天 | [Digit Recognizer](https://www.kaggle.com/competitions/digit-recognizer) | 计算机视觉 | 无奖金（练习赛） | Kaggle |
+| 2030-07-01 | 1320 天 | [Store Sales - Time Series Forecasting](https://www.kaggle.com/competitions/store-sales-time-series-forecasting) | 综合 | 无奖金（练习赛） | Kaggle |
+| 2030-01-01 | 1139 天 | [Natural Language Processing with Disaster Tweets](https://www.kaggle.com/competitions/nlp-getting-started) | 大模型 / Agent | 无奖金（练习赛） | Kaggle |
+| 2030-07-02 | 1321 天 | [LLM Classification Finetuning](https://www.kaggle.com/competitions/llm-classification-finetuning) | 大模型 / Agent | 无奖金（练习赛） | Kaggle |
+| 2030-01-01 | 1139 天 | [Connect X](https://www.kaggle.com/competitions/connectx) | 综合 | 无奖金（练习赛） | Kaggle |
+| 2030-06-04 | 1293 天 | [Petals to the Metal - Flower Classification on TPU](https://www.kaggle.com/competitions/tpu-getting-started) | 计算机视觉 | 无奖金（练习赛） | Kaggle |
+| 2030-07-02 | 1321 天 | [Contradictory, My Dear Watson](https://www.kaggle.com/competitions/contradictory-my-dear-watson) | 大模型 / Agent | 无奖金（练习赛） | Kaggle |
+| 2028-01-01 | 408 天 | [STOIC2021 - COVID-19 AI Challenge](https://stoic2021.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
+| 2028-09-20 | 671 天 | [SynthRAD2023](https://synthrad2023.grand-challenge.org/) | 医疗健康 | Publication, Speaking Engagement | Grand Challenge / MICCAI 社区 |
+| 2060-12-31 | 12461 天 | [Multi-Modality Abdominal Multi-Organ Segmentation Challenge 2022](https://amos22.grand-challenge.org/) | 医疗健康 | Monetary, Publication, Speaking Engagement | Grand Challenge / MICCAI 社区 |
+| 2028-03-16 | 483 天 | [Robust Non-rigid Registration Challenge for Expansion Microscopy](https://rnr-exm.grand-challenge.org/) | 医疗健康 | Publication, Speaking Engagement | Grand Challenge / MICCAI 社区 |
+| 2027-12-31 | 407 天 | [SPIDER](https://spider.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
+| 2033-10-15 | 2522 天 | [Foundation Model Prompting for Medical Image Classification](https://medfm2023.grand-challenge.org/) | 医疗健康 | Monetary, Publication, Speaking Engagement | Grand Challenge / MICCAI 社区 |
+| 2028-09-30 | 681 天 | [ToothFairy2: Multi-Structure Segmentation in CBCT Volumes](https://toothfairy2.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
+| 2030-03-16 | 1213 天 | [SynthRAD2025](https://synthrad2025.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
+| 2030-04-01 | 1229 天 | [PUMA: Panoptic segmentation of nUclei and tissue in MelanomA](https://puma.grand-challenge.org/) | 科学智能 AI4S | — | Grand Challenge / MICCAI 社区 |
+| 2030-12-31 | 1503 天 | [ToothFairy3: Multi-Class Segmentation in CBCT Volumes](https://toothfairy3.grand-challenge.org/) | 医疗健康 | — | Grand Challenge / MICCAI 社区 |
 
 </details>
 
@@ -182,17 +219,18 @@
 
 | 来源 | 状态 | 条数 | 耗时 | 说明 |
 |---|---|---|---|---|
-| Kaggle | ✅ 正常 | 763 | 3379 ms | 扫描 763 项 |
-| ML Contests | ✅ 正常 | 412 | 139 ms | 412 项（含已截止，按截止日过滤） |
-| Grand Challenge | ✅ 正常 | 264 | 1473 ms | API 返回 264 项 |
-| DataFountain | ✅ 正常 | 30 | 5548 ms | 列表页 30 条 + ID 递进探 8 个（1177–1184）补到 0 条 |
-| AIcrowd | ✅ 正常 | 18 | 923 ms | 列表页解析 18 条 |
-| CodaLab Competitions | ✅ 正常 | 379 | 2463 ms | 列表页解析 379 条 |
-| DrivenData | ✅ 正常 | 53 | 721 ms | 列表页解析 53 条 |
-| EvalAI | ✅ 正常 | 3 | 675 ms | present 18 / future 0（共 18 项，跳过 15 个 2099 占位日的常设 benchmark） |
-| Devfolio | ✅ 正常 | 4 | 1098 ms | 扫到 28 场，AI 相关 4 场（关键词过滤掉 24 场） |
-| TAIKAI | ✅ 正常 | 7 | 1215 ms | 列表 20 场，AI 相关 7 场（过滤掉 13 场） |
-| lablab.ai | ❌ 失败 | 0 | 373 ms | 页面结构变化：列表页没找到 /ai-hackathons/<slug> 链接 |
+| Kaggle | ✅ 正常 | 763 | 6174 ms | 扫描 763 项 |
+| ML Contests | ✅ 正常 | 412 | 1650 ms | 412 项（含已截止，按截止日过滤） |
+| Grand Challenge | ✅ 正常 | 264 | 3241 ms | API 返回 264 项 |
+| DataFountain | ✅ 正常 | 30 | 2817 ms | 列表页 30 条 + ID 递进探 8 个（1177–1184）补到 0 条 |
+| AIcrowd | ✅ 正常 | 18 | 1320 ms | 列表页解析 18 条 |
+| CodaLab Competitions | ✅ 正常 | 379 | 3626 ms | 列表页解析 379 条 |
+| DrivenData | ✅ 正常 | 53 | 1354 ms | 列表页解析 53 条 |
+| EvalAI | ✅ 正常 | 3 | 3915 ms | present 18 / future 0（共 18 项，跳过 15 个 2099 占位日的常设 benchmark） |
+| Devfolio | ✅ 正常 | 4 | 2075 ms | 扫到 28 场，AI 相关 4 场（关键词过滤掉 24 场） |
+| TAIKAI | ✅ 正常 | 7 | 1129 ms | 列表 20 场，AI 相关 7 场（过滤掉 13 场） |
+| AIBetas 竞赛日历 | ✅ 正常 | 10 | 3263 ms | 竞赛日历解析 10 条（聚合站转述，字段以官网为准） |
+| lablab.ai | ❌ 失败 | 0 | 1719 ms | 页面结构变化：列表页没找到 /ai-hackathons/<slug> 链接 |
 | 人工维护清单 | ✅ 正常 | 24 | 0 ms | curated.json 24 条（其中 15 条是第三方转述，摘要里标 ⚠️） |
 
 > 任何一个来源连续失败都要当成真问题处理：**不要以为「没新赛事」**，先看这张表。

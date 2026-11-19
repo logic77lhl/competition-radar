@@ -828,6 +828,47 @@ function renderPicks() {
     `<table class="tbl"><thead><tr>
       <th style="width:52px">档</th><th style="width:100px">截止</th><th style="width:86px">剩余</th>
       <th>赛事 / 依据</th><th style="width:110px">单份奖金</th><th style="width:70px">名额</th><th style="width:170px">主办</th>
+    </tr></thead><tbody>${rows}</tbody></table></div>` +
+    renderPrizeOnly();
+}
+
+/**
+ * 有奖金但缺名额的条目单独列一区。
+ *
+ * 为什么要单独列：可捡清单只收「能算出单份奖金」的，缺名额的不评分（宁缺毋滥）。
+ * 但如果这些条目在页面上彻底看不见，就会误以为「雷达漏了」——
+ * 玻尔周赛那次就是这样：它在雷达里，只是进不了榜。
+ * 这里按奖金从大到小排，既是「看看有没有漏掉的大赛」，也是一份「该去补名额」的清单。
+ */
+function renderPrizeOnly() {
+  const all = S.data?.items?.open || [];
+  const items = all
+    .filter((x) => x.certainty && x.certainty.basis === 'none' && x.certainty.prizeCny > 0)
+    .sort((a, b) => b.certainty.prizeCny - a.certainty.prizeCny)
+    .slice(0, 40);
+  if (!items.length) return '';
+
+  const rows = items
+    .map((x) => {
+      const c = x.certainty || {};
+      const url = safeUrl(x.url);
+      return `<tr data-id="${esc(x.id)}"${url ? ` data-url="${esc(url)}"` : ''}>
+      <td class="money" style="width:110px">¥${fmtInt(c.prizeCny)}</td>
+      <td class="date" style="width:100px">${esc(x.deadline || '—')}</td>
+      <td style="width:86px"><span class="days ${dayClass(x.daysLeft)}">${esc(daysLabel(x.daysLeft))}</span></td>
+      <td><div class="nm">${esc(x.name)}${url ? '<span class="ext">↗</span>' : ''}</div>
+        <div class="sub">${esc(x.prize || '')}</div></td>
+      <td style="width:150px" class="org">${esc(x.sourceLabel || '')}</td>
+    </tr>`;
+    })
+    .join('');
+
+  return `<div class="box" style="margin-top:14px">
+    <header><h3>有奖金，但缺名额信息<span class="hint">不评分，所以不进上面的榜 —— 补上名额就能进</span></h3>
+      <span class="grow"></span><span class="note">${items.length} 条</span></header>
+    <table class="tbl"><thead><tr>
+      <th style="width:110px">总奖金</th><th style="width:100px">截止</th><th style="width:86px">剩余</th>
+      <th>赛事</th><th style="width:150px">来源</th>
     </tr></thead><tbody>${rows}</tbody></table></div>`;
 }
 

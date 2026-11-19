@@ -153,7 +153,8 @@ pwsh -NoProfile -File .\unregister-task.ps1          # 停掉（采集数据保�
 | **Devfolio** | 页面内嵌 `__NEXT_DATA__`（react-query 缓存） | 全球黑客松。`open/upcoming/featured/past` 四组，带起止时间、报名人数、时区；主题在 `h.themes[].theme.name` 里（不是 `tags`） | ✅ 4 条（扫 25 场，AI 相关 4 场） |
 | **TAIKAI** | `__NEXT_DATA__` 里的 Apollo 规范化缓存 | 欧洲黑客松。`ROOT_QUERY` 只存 `__ref`，组织/币种/行业各是一条 ref，要自己解。**列表不返回任何日期**，只有 `isClosed` → 按「未标截止」处理 | ✅ 7 条（20 场里 AI 相关 7 场，当前全已关闭） |
 | **lablab.ai** | 列表页取 `/ai-hackathons/<slug>` + 详情页内嵌 JSON-LD `Event` | AI 黑客松，更新最快。标题和起止日都在详情页的 JSON-LD 里（Next.js App Router 的 flight 流，要先拼 `self.__next_f.push`） | ✅ 12 条（每次最多抓 20 个详情页） |
-| **人工维护清单** | `curated.json` | 逐个抓页面核实过的国内赛事（含 AI4S 专项）；第三方转述的标 ⚠️ | ✅ 22 条 |
+| **人工维护清单** | `curated.json` | 逐个抓页面核实过的国内赛事（含 AI4S 专项）；第三方转述的标 ⚠️ | ✅ 24 条 |
+| **AIBetas 竞赛日历** | 列表页 HTML（**服务端渲染**） | 国内 AIGC / 应用创作赛（地方政府、文旅、创业公司主办）。`article.competition-calendar-agenda-item` 结构稳定，标题里带奖金、日期块给截止日 | ✅ 10 条（聚合站转述，标 ⚠️） |
 | CTFtime | JSON API | 网络安全 CTF 赛历 | ⏸ 默认关闭（与 AI 无关） |
 
 ### 抓不到的（摘要里会列出入口让你人工看）
@@ -487,3 +488,12 @@ node tools\why-no-picks.mjs --json   # 机器可读
 `picksMax` 控制清单长度。`picksWindowDays` 目前只用于空态文案提示
 （清单本身不按窗口过滤 —— 窗口内的只有几条时表会空着，反而看不出评分有没有用；
 紧迫度靠每行「剩余天数」的颜色表达）。
+
+### 缺名额的条目单独列一区（别让人以为漏采了）
+
+可捡清单只收「能算出单份奖金」的，缺名额的不评分。但如果这些条目在页面上**彻底看不见**，
+就会误以为「雷达漏了」—— 玻尔周赛那次就是这样：它在雷达里，只是进不了榜。
+
+所以摘要和看板都多了一个 **「有奖金，但缺名额信息（不评分）」** 分区，
+按总奖金降序，既是「看看有没有漏掉的大赛」，也是一份「该去补名额」的清单。
+看板显示前 40 条，摘要显示前 20 条。

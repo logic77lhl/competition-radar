@@ -82,6 +82,13 @@
       "home": "https://taikai.network/en/hackathons",
       "note": "欧洲黑客松平台。__NEXT_DATA__ 里是 Apollo 规范化缓存（ROOT_QUERY 只存 ref，要自己解）。列表 20 场，只有 isClosed，**不返回任何日期** —— 所以按「未标截止」处理。"
     },
+    "aibetas": {
+      "enabled": true,
+      "label": "AIBetas 竞赛日历",
+      "region": "cn",
+      "home": "https://www.aibetas.com/competition-calendar",
+      "note": "国内 AIGC / 应用创作赛聚合（地方政府、文旅、创业公司主办）。**服务端渲染**，列表结构稳定，不需要逆向 XHR。聚合站转述，字段以官网为准，摘要里标 ⚠️。"
+    },
     "lablab": {
       "enabled": true,
       "label": "lablab.ai",
