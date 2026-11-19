@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-19T00:49:37.190Z",
+  "updatedAt": "2026-11-19T00:50:18.754Z",
   "items": {
     "curated:kesuan-zhyao-2026": {
       "id": "curated:kesuan-zhyao-2026",
@@ -44873,6 +44873,7 @@
       ],
       "reminded": {
         "2026-11-20": [
+          30,
           14,
           7,
           3,
