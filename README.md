@@ -126,17 +126,43 @@ pwsh -NoProfile -File .\register-task.ps1 -Time 08:30
 pwsh -NoProfile -File .\unregister-task.ps1          # 停掉（采集数据保留）
 ```
 
-## 四、退出码（别把故障当「今天没新赛事」）
+## 四、退出码与质量门禁（别把故障当「今天没新赛事」）
 
 | 码 | 含义 |
 |---|---|
 | 0 | 正常 |
-| 2 | **所有**启用的来源都失败了 —— 这是真故障，摘要不可信 |
+| 2 | 质量门禁未通过 —— 真故障，站点停发、保留昨天的数据 |
 | 1 | 未预期异常 |
 | 3 | 找不到 Node 运行时 |
 
-部分来源失败时退出码仍是 0，但**摘要里的「来源健康」表会红**。
-这张表就是用来防止「静默失败」的：任何一个源连续失败都要当问题处理。
+质量门禁在采集结束后判定，满足任一条件即退出码 2：
+
+- 启用来源的 `ok/total < 60%`（分母小于 3 时不按比例判，避免 1/2 被冤枉）；
+- 当日记录数 < 前 7 天中位数的 50%（基线缺失时只走比例判断）。
+
+这补上了原来「只有全失败才停发」的漏洞：11-09 / 11-14 / 11-15 那几天 10 个源挂了、
+只抓到 22 条记录，旧逻辑照样发布「正常日报」；现在会被拦下。
+「所有启用来源全失败」作为硬闸门保留，任何配置都不能关掉。
+
+门禁失败时：采集产物、`state/out/latest.quality.json` 与 `history.jsonl` 照常落盘并作为
+GitHub Actions artifact 上传（便于排查），但**不部署站点**。
+阈值在 `config.json` 的 `settings.quality` 里可调。
+
+**上线前先回放校准**（只读，不改状态）：
+
+```powershell
+node tools\replay-quality.mjs            # 回放 history.jsonl 最近 90 天，列出被拦/通过的日子
+node tools\replay-quality.mjs --index    # 用 docs/data/index.json 回放
+node tools\replay-quality.mjs --json     # 机器可读
+```
+
+当前回放结果：32 天里只拦 11-09 / 11-14 / 11-15 三天，正常日无误杀。
+
+**回归测试**（零依赖，Node 22+ 自带）：
+
+```powershell
+npm test    # node --test，钉死门禁边界与日期/去重等纯函数
+```
 
 ## 五、数据来源（实测状态，2026-11-10）
 
@@ -265,6 +291,7 @@ competition-radar/
   lib/sources.mjs      12 个来源适配器 + 跨来源优先级表 + 黑客松关键词过滤
   lib/digest.mjs       五段式摘要（markdown + 自包含 HTML）
   lib/certainty.mjs    确定性评分：解析奖金/名额/队伍数 → 单份奖金 → S/A/B/C 分档
+  lib/quality.mjs      采集质量门禁（纯函数）：来源健康比例 + 记录数基线，判定是否停发
   config.json          开关、参数、人工查看入口清单
   curated.json         人工核实过的赛事
   run-daily.ps1        计划任务调用的包装器（找 node → 跑 → 落盘 → 通知）
@@ -276,6 +303,9 @@ competition-radar/
   install-autostart.cmd / uninstall-autostart.cmd   开机自启 + 桌面快捷方式
   notes/               公众号/文章原文的抽取结果（留证）
   tools/               公众号抓取与解析、文章条目核实、通知诊断、why-no-picks 诊断
+                       replay-quality.mjs（质量门禁历史回放，只读）
+  test/                node --test 回归测试（质量门禁边界）
+  package.json         npm test / npm run replay:quality
   state/               运行期状态
     registry.json        历史台账（firstSeen / lastSeen / 报名+提交截止 / 已提醒档位 / 置信度）
     source-state.json    来源水位线（目前只有 DataFountain 的 ID 探到哪了）
@@ -404,6 +434,7 @@ DSH 本身有一个 `schedule` 插件（`schedule_create` 支持 `daily` / `cron
 | 看板隐藏启动 | `wscript launch-hidden.vbs` 拉起后 node 无窗口、`MainWindowTitle` 为空、7865 监听正常，日志落 `state/panel.log` |
 | 新增来源（2026-11-10） | EvalAI 3 / Devfolio 4 / TAIKAI 7 / lablab 12 条，12/12 源正常；总记录 1805 → 1831，在办 36 → 43 |
 | 采集提速（同日） | Kaggle `pageSize` 100→500（8 页→2 页）、lablab 12 个详情页一次并发、全局并发 3→6；墙钟 18.2s → 10.1s |
+| 质量门禁回放（2026-11-24） | 32 天历史里只拦 11-09 / 11-14 / 11-15（2/8~2/12 源、22 条），正常日无误杀；`npm test` 8/8 通过；门禁失败时退出码 2 且 `quality.json` 落盘 |
 
 ---
 

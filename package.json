@@ -1,0 +1,11 @@
+{
+  "name": "competition-radar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "每天自动采集在办的 AI / AI4S 竞赛，只报变化；GitHub Pages 发布看板",
+  "scripts": {
+    "test": "node --test",
+    "replay:quality": "node tools/replay-quality.mjs"
+  }
+}

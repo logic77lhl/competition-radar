@@ -10,7 +10,7 @@
  *   node radar.mjs --dry-run              # 不写任何状态，摘要另存 .dryrun 后缀
  *   node radar.mjs --quiet
  *
- * 退出码：0 正常；2 所有启用的来源都失败（这是真故障，不能当成「没有新赛事」）；1 未预期异常。
+ * 退出码：0 正常；2 质量门禁未通过（含"所有来源都失败"，这是真故障，不能当成「没有新赛事」）；1 未预期异常。
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -19,6 +19,7 @@ import { ymd, dayDiff, categorise } from './lib/util.mjs';
 import { runSource, SOURCE_PRIORITY, cleanUrl } from './lib/sources.mjs';
 import { render } from './lib/digest.mjs';
 import { computeCertainty, compareCertainty } from './lib/certainty.mjs';
+import { computeQuality, DEFAULT_QUALITY_CONFIG } from './lib/quality.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const STATE = path.join(ROOT, 'state');
@@ -451,14 +452,34 @@ if (!DRY) {
   );
 }
 
-const logLine = `[${new Date().toISOString()}] date=${DATE} dry=${DRY} total=${counts.total} open=${counts.openWithDeadline} new=${counts.newItems} reminders=${counts.reminders} sources_ok=${health.filter((h) => h.ok).length}/${health.length} ms=${Date.now() - t0}`;
+// 6.5) 质量门禁：把「数据看起来正常但其实全挂」拦下来，别让站点发布假日报。
+// 注意：门禁判定用的是**写入 history 之前**的历史，避免把当天失败数据算进基线；
+// 而 history 本身照常写（哪怕门禁失败）—— 失败当天也要留下证据，便于回放和排查。
+const historyRows = (() => {
+  try {
+    return fs.readFileSync(path.join(STATE, 'history.jsonl'), 'utf8').split(/\r?\n/).filter(Boolean).map((line) => JSON.parse(line));
+  } catch {
+    return [];
+  }
+})();
+const quality = computeQuality(
+  { date: DATE, total: counts.total, health },
+  historyRows,
+  { config: { ...DEFAULT_QUALITY_CONFIG, ...(settings.quality || {}) } },
+);
+const qualityFile = path.join(OUT, `${DATE}${suffix}.quality.json`);
+writeJson(qualityFile, { date: DATE, generatedAt: view.generatedAt, ...quality });
+if (!DRY) writeJson(path.join(OUT, 'latest.quality.json'), { date: DATE, generatedAt: view.generatedAt, ...quality });
+
+const logLine = `[${new Date().toISOString()}] date=${DATE} dry=${DRY} total=${counts.total} open=${counts.openWithDeadline} new=${counts.newItems} reminders=${counts.reminders} sources_ok=${health.filter((h) => h.ok).length}/${health.length} quality=${quality.passed ? 'PASS' : 'FAIL'} ms=${Date.now() - t0}`;
 fs.appendFileSync(path.join(LOG, `${DATE.slice(0, 7)}.log`), logLine + '\n', 'utf8');
 if (!QUIET) console.log(logLine);
 if (!QUIET) console.log(`摘要：${path.join(OUT, `${DATE}${suffix}.md`)}`);
+if (!QUIET) console.log(`质量门禁：${quality.passed ? 'PASS' : 'FAIL'}（${qualityFile}）`);
 
-const enabledFailed = health.filter((h) => h.id !== 'curated' && !h.ok).length;
-if (enabledFailed === health.length - 1) {
-  console.error('所有启用的来源都失败了——这是真故障，不是「没有新赛事」。');
+if (!quality.passed) {
+  // 退出码 2：真故障，workflow 应停在这步不部署，站点保留昨天的数据。
+  console.error('质量门禁未通过，停止发布：' + quality.reasons.join('；'));
   process.exit(2);
 }
 process.exit(0);

@@ -38,15 +38,32 @@ jobs:
         with:
           node-version: 22
 
-      # 退出码 2 = 所有来源都失败。这一步失败就不要往下走，
+      # 退出码 2 = 质量门禁未通过（含所有来源都失败）。这一步失败就不要往下走，
       # 宁可站点停在昨天，也不要发布一份「今天没有新赛事」的假数据。
+      # 但先上传证据（quality.json / 摘要 / 台账），便于排查为什么被拦。
       - name: 采集
+        id: collect
         run: node radar.mjs
 
       - name: 导出静态站点
+        if: steps.collect.outcome == 'success'
         run: node tools/export-static.mjs
 
+      - name: 上传采集证据（含门禁失败时）
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: radar-evidence-${{ github.run_id }}
+          path: |
+            state/out/*.quality.json
+            state/out/latest.md
+            state/history.jsonl
+            state/log
+          if-no-files-found: warn
+          retention-days: 14
+
       - name: 提交台账与站点
+        if: steps.collect.outcome == 'success'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -59,10 +76,12 @@ jobs:
           fi
 
       - uses: actions/configure-pages@v5
+        if: steps.collect.outcome == 'success'
         with:
           enablement: true
 
       - uses: actions/upload-pages-artifact@v3
+        if: steps.collect.outcome == 'success'
         with:
           path: docs
 

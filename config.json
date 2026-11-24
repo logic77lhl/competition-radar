@@ -3,8 +3,15 @@
     "horizonDays": 150,
     "evergreenDays": 365,
     "reminderLadder": [30, 14, 7, 3, 1, 0],
-  "picksWindowDays": 7,
-  "picksMax": 30,
+    "picksWindowDays": 7,
+    "picksMax": 30,
+    "quality": {
+      "enabled": true,
+      "minOkRatio": 0.6,
+      "minRecordsRatio": 0.5,
+      "minTotalForRatio": 3,
+      "baselineDays": 7
+    },
     "kaggleMaxPages": 12,
     "timeoutMs": 25000,
     "retries": 2,
