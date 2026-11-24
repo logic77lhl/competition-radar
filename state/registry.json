@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-24T07:20:19.162Z",
+  "updatedAt": "2026-11-24T10:39:45.531Z",
   "items": {
     "curated:kesuan-zhyao-2026": {
       "id": "curated:kesuan-zhyao-2026",
@@ -91,8 +91,8 @@
       "tags": [
         "medicine",
         "computer vision",
-        "image",
         "text",
+        "image",
         "image classification",
         "roc auc score"
       ],
@@ -465,8 +465,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
+        "beginner",
         "roc auc score"
       ],
       "reminded": {
@@ -657,8 +657,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "artificial intelligence",
-        "coding"
+        "coding",
+        "artificial intelligence"
       ],
       "reminded": {
         "2026-11-13": [
@@ -968,8 +968,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "artificial intelligence",
         "coding",
+        "artificial intelligence",
         "custom metric"
       ],
       "reminded": {
@@ -1192,8 +1192,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "football",
         "sports",
+        "football",
         "data analytics"
       ],
       "reminded": {
@@ -11822,9 +11822,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "history",
         "image text recognition",
         "image segmentation",
+        "history",
         "dicefbeta"
       ],
       "reminded": {},
@@ -11875,8 +11875,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "nlp",
-        "adversarial learning"
+        "adversarial learning",
+        "nlp"
       ],
       "reminded": {},
       "closedReported": true
@@ -11899,11 +11899,11 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "brazil",
-        "south america",
         "geospatial analysis",
         "computer vision",
-        "deep learning"
+        "deep learning",
+        "brazil",
+        "south america"
       ],
       "reminded": {},
       "closedReported": true
@@ -11926,9 +11926,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "games",
+        "reinforcement learning",
         "artificial intelligence",
-        "reinforcement learning"
+        "games"
       ],
       "reminded": {},
       "closedReported": true
@@ -11977,8 +11977,8 @@
       "confidence": "",
       "tags": [
         "history",
-        "image segmentation",
         "segmentation",
+        "image segmentation",
         "custom metric"
       ],
       "reminded": {},
@@ -12026,8 +12026,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "healthcare",
         "image",
+        "healthcare",
         "crps"
       ],
       "reminded": {},
@@ -12076,9 +12076,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "research",
         "benchmark",
-        "personal benchmark"
+        "personal benchmark",
+        "research"
       ],
       "reminded": {},
       "closedReported": true
@@ -12102,8 +12102,8 @@
       "confidence": "",
       "tags": [
         "water bodies",
-        "image",
         "multiclass classification",
+        "image",
         "custom metric"
       ],
       "reminded": {},
@@ -12179,8 +12179,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "image",
         "multiclass classification",
+        "image",
         "multiclassloss"
       ],
       "reminded": {},
@@ -12204,8 +12204,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "earth and nature",
         "image",
+        "earth and nature",
         "custom metric"
       ],
       "reminded": {},
@@ -12255,8 +12255,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
-        "text"
+        "text",
+        "tabular"
       ],
       "reminded": {},
       "closedReported": true
@@ -12279,8 +12279,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "languages",
         "artificial intelligence",
+        "languages",
         "text generation"
       ],
       "reminded": {},
@@ -12327,8 +12327,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "manufacturing",
         "image",
+        "manufacturing",
         "dice"
       ],
       "reminded": {},
@@ -12354,8 +12354,8 @@
       "tags": [
         "education",
         "binary classification",
-        "primary and secondary schools",
         "text generation",
+        "primary and secondary schools",
         "roc auc score"
       ],
       "reminded": {},
@@ -12379,9 +12379,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "deep learning",
         "pre-trained model",
         "general knowledge and reasoning",
+        "deep learning",
         "custom metric"
       ],
       "reminded": {},
@@ -12405,8 +12405,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "banking",
         "tabular",
+        "banking",
         "custom metric"
       ],
       "reminded": {},
@@ -12456,8 +12456,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "finance",
         "tabular",
+        "finance",
         "meancolumnwisemae"
       ],
       "reminded": {},
@@ -12580,11 +12580,11 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "classification",
         "text",
-        "social networks",
         "text classification",
+        "social networks",
         "english",
+        "classification",
         "custom metric"
       ],
       "reminded": {},
@@ -12631,8 +12631,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "marketing",
         "tabular",
+        "marketing",
         "binary classification",
         "auc"
       ],
@@ -12657,8 +12657,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "languages",
         "text conversation",
+        "languages",
         "log loss"
       ],
       "reminded": {},
@@ -12757,8 +12757,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "multiclass classification",
         "video classification",
+        "multiclass classification",
         "custom metric"
       ],
       "reminded": {},
@@ -12806,9 +12806,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "genetics",
-        "biotechnology",
         "tabular",
+        "biotechnology",
+        "genetics",
         "custom metric"
       ],
       "reminded": {},
@@ -12859,8 +12859,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "healthcare",
         "image",
+        "healthcare",
         "dice"
       ],
       "reminded": {},
@@ -12935,10 +12935,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "biotechnology",
+        "chemistry",
         "video games",
         "biology",
-        "chemistry",
-        "biotechnology",
         "regression",
         "mean absolute error"
       ],
@@ -12963,8 +12963,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "image",
         "binary classification",
+        "image",
         "quadraticweightedkappa"
       ],
       "reminded": {},
@@ -12988,8 +12988,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "internet",
         "image",
+        "internet",
         "custom metric"
       ],
       "reminded": {},
@@ -13084,9 +13084,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "model comparison",
         "healthcare",
-        "health",
-        "model comparison"
+        "health"
       ],
       "reminded": {},
       "closedReported": true
@@ -13110,10 +13110,10 @@
       "confidence": "",
       "tags": [
         "reinforcement learning",
-        "tpu",
+        "coding",
         "ml ethics",
         "text generation",
-        "coding"
+        "tpu"
       ],
       "reminded": {},
       "closedReported": true
@@ -13136,10 +13136,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
-        "text",
+        "multimodal",
         "bigquery",
-        "multimodal"
+        "text",
+        "tabular"
       ],
       "reminded": {},
       "closedReported": true
@@ -13231,9 +13231,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "football",
+        "tabular",
         "data analytics",
-        "tabular"
+        "football"
       ],
       "reminded": {},
       "closedReported": true
@@ -13324,9 +13324,9 @@
       "confidence": "",
       "tags": [
         "nlp",
-        "text generation",
+        "video text",
         "video generation",
-        "video text"
+        "text generation"
       ],
       "reminded": {},
       "closedReported": true
@@ -13349,9 +13349,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "exploratory data analysis",
         "football",
-        "sports",
-        "exploratory data analysis"
+        "sports"
       ],
       "reminded": {},
       "closedReported": true
@@ -13424,11 +13424,11 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "binary classification",
+        "image",
+        "cancer",
         "global",
         "neural networks",
-        "image",
-        "binary classification",
-        "cancer",
         "custom metric"
       ],
       "reminded": {},
@@ -13452,8 +13452,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "health",
         "computer vision",
+        "health",
         "image segmentation",
         "custom metric"
       ],
@@ -13478,10 +13478,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "artificial intelligence",
-        "tabular",
         "text",
         "multiclass classification",
+        "artificial intelligence",
+        "tabular",
         "categorizationaccuracy"
       ],
       "reminded": {},
@@ -13505,9 +13505,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "health",
         "football",
-        "sports",
-        "health"
+        "sports"
       ],
       "reminded": {},
       "closedReported": true
@@ -13530,8 +13530,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "biology",
         "agriculture",
+        "biology",
         "r2 score"
       ],
       "reminded": {},
@@ -13555,8 +13555,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "football",
         "sports",
+        "football",
         "crps"
       ],
       "reminded": {},
@@ -13582,8 +13582,8 @@
       "tags": [
         "video games",
         "biology",
-        "chemistry",
         "biotechnology",
+        "chemistry",
         "regression",
         "custom metric"
       ],
@@ -13608,11 +13608,11 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "video games",
-        "biology",
+        "regression",
         "chemistry",
         "biotechnology",
-        "regression",
+        "biology",
+        "video games",
         "custom metric"
       ],
       "reminded": {},
@@ -13661,9 +13661,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "biology",
         "image",
         "object detection",
+        "biology",
         "custom metric"
       ],
       "reminded": {},
@@ -13735,8 +13735,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "banking",
         "tabular",
+        "banking",
         "auc"
       ],
       "reminded": {},
@@ -13761,9 +13761,9 @@
       "confidence": "",
       "tags": [
         "research",
+        "deep learning",
         "artificial intelligence",
         "computer science",
-        "deep learning",
         "mean absolute error"
       ],
       "reminded": {},
@@ -13810,8 +13810,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "banking",
         "tabular",
+        "banking",
         "binary classification",
         "auc"
       ],
@@ -13836,8 +13836,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "nlp",
         "text",
+        "nlp",
         "custom metric"
       ],
       "reminded": {},
@@ -13886,10 +13886,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "biology",
-        "computer vision",
         "image",
         "object detection",
+        "computer vision",
+        "biology",
         "custom metric"
       ],
       "reminded": {},
@@ -13938,8 +13938,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "health",
         "tabular",
+        "health",
         "binary classification",
         "weightedmulticlassloss"
       ],
@@ -13964,9 +13964,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "binary classification",
         "banking",
         "tabular",
-        "binary classification",
         "auc"
       ],
       "reminded": {},
@@ -13990,8 +13990,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "finance",
         "banking",
+        "finance",
         "rmsle"
       ],
       "reminded": {},
@@ -14017,8 +14017,8 @@
       "tags": [
         "biology",
         "computer vision",
-        "image",
         "video",
+        "image",
         "object detection",
         "custom metric"
       ],
@@ -14068,9 +14068,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "health",
-        "time series analysis",
         "multiclass classification",
+        "time series analysis",
+        "health",
         "cohen kappa score"
       ],
       "reminded": {},
@@ -14120,9 +14120,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "education",
-        "classification",
         "text classification",
+        "classification",
+        "education",
         "custom metric"
       ],
       "reminded": {},
@@ -14171,8 +14171,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "banking",
         "tabular",
+        "banking",
         "multiclass classification",
         "map@{k}"
       ],
@@ -14197,9 +14197,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "biology",
-        "health",
         "image",
+        "health",
+        "biology",
         "dice"
       ],
       "reminded": {},
@@ -14249,8 +14249,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "forestry",
         "image",
+        "forestry",
         "fscorebetamicro"
       ],
       "reminded": {},
@@ -14298,9 +14298,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "primary and secondary schools",
         "education",
         "nlp",
-        "primary and secondary schools",
         "custom metric"
       ],
       "reminded": {},
@@ -14349,8 +14349,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "binary classification",
+        "tabular",
         "fscoremacro"
       ],
       "reminded": {},
@@ -14374,8 +14374,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "education",
         "nlp",
+        "education",
         "primary and secondary schools",
         "mean squared error"
       ],
@@ -14400,9 +14400,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "primary and secondary schools",
         "education",
         "nlp",
-        "primary and secondary schools",
         "map@{k}"
       ],
       "reminded": {},
@@ -14426,9 +14426,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "nlp",
         "text",
         "primary and secondary schools",
+        "nlp",
         "multiclassloss"
       ],
       "reminded": {},
@@ -14452,8 +14452,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "education",
         "nlp",
+        "education",
         "primary and secondary schools",
         "map@{k}"
       ],
@@ -14478,9 +14478,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "primary and secondary schools",
         "education",
         "tabular",
-        "primary and secondary schools",
         "fscorebetamicro"
       ],
       "reminded": {},
@@ -14506,8 +14506,8 @@
       "tags": [
         "audio",
         "automatic speech recognition",
-        "speech-to-text",
         "bengali",
+        "speech-to-text",
         "word error rate"
       ],
       "reminded": {},
@@ -14581,9 +14581,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "earth science",
-        "physics",
         "signal processing",
+        "physics",
+        "earth science",
         "mae"
       ],
       "reminded": {},
@@ -14631,9 +14631,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "regression",
         "banking",
         "tabular",
-        "regression",
         "rmse"
       ],
       "reminded": {},
@@ -14657,10 +14657,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "earth and nature",
         "animals",
-        "multilabel classification",
+        "earth and nature",
         "audio event classification",
+        "multilabel classification",
         "custom metric"
       ],
       "reminded": {},
@@ -14684,8 +14684,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "basketball",
         "sports",
+        "basketball",
         "mse"
       ],
       "reminded": {},
@@ -14709,8 +14709,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "optimization",
         "holidays and cultural events",
+        "optimization",
         "custom metric"
       ],
       "reminded": {},
@@ -14734,9 +14734,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "weather and climate",
-        "image",
         "binary classification",
+        "image",
+        "weather and climate",
         "logloss"
       ],
       "reminded": {},
@@ -14785,9 +14785,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "golf",
-        "artificial intelligence",
         "neural networks",
+        "artificial intelligence",
+        "golf",
         "optimization",
         "custom metric"
       ],
@@ -14812,8 +14812,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "recommender systems",
         "retail and shopping",
+        "recommender systems",
         "map@{k}"
       ],
       "reminded": {},
@@ -14864,10 +14864,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "research",
         "healthcare",
-        "signal processing",
+        "research",
         "tabular",
+        "signal processing",
         "kullback leibler divergence"
       ],
       "reminded": {},
@@ -14891,9 +14891,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "energy",
-        "time series analysis",
         "tabular",
+        "time series analysis",
+        "energy",
         "mae"
       ],
       "reminded": {},
@@ -14943,9 +14943,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "history",
-        "text",
         "translation",
+        "text",
+        "history",
         "custom metric"
       ],
       "reminded": {},
@@ -14994,8 +14994,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "health",
         "time series analysis",
+        "health",
         "custom metric"
       ],
       "reminded": {},
@@ -15044,8 +15044,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "business",
         "tabular",
+        "business",
         "auc"
       ],
       "reminded": {},
@@ -15094,10 +15094,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "earth and nature",
         "animals",
-        "multilabel classification",
+        "earth and nature",
         "audio event classification",
+        "multilabel classification",
         "custom metric"
       ],
       "reminded": {},
@@ -15121,8 +15121,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "chemistry",
         "binary classification",
+        "chemistry",
         "custom metric"
       ],
       "reminded": {},
@@ -15146,8 +15146,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "football",
         "sports",
+        "football",
         "custom metric"
       ],
       "reminded": {},
@@ -15197,9 +15197,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "computer vision",
-        "image",
         "binary classification",
+        "image",
+        "computer vision",
         "custom metric"
       ],
       "reminded": {},
@@ -15273,8 +15273,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "binary classification",
         "image classification",
+        "binary classification",
         "probfscorebetamicro"
       ],
       "reminded": {},
@@ -15348,10 +15348,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "games",
-        "board games",
-        "artificial intelligence",
         "regression",
+        "board games",
+        "games",
+        "artificial intelligence",
         "mean squared error"
       ],
       "reminded": {},
@@ -15398,8 +15398,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "image",
         "multilabel classification",
+        "image",
         "mcauc"
       ],
       "reminded": {},
@@ -15448,10 +15448,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "education",
-        "medicine",
-        "nlp",
         "text",
+        "nlp",
+        "medicine",
+        "education",
         "custom metric"
       ],
       "reminded": {},
@@ -15475,8 +15475,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "health",
         "medicine",
+        "health",
         "time series analysis",
         "custom metric"
       ],
@@ -15501,10 +15501,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "biology",
         "time series analysis",
         "classification",
         "deep learning",
+        "biology",
         "transfer learning",
         "custom metric"
       ],
@@ -15580,8 +15580,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "classification",
         "image",
+        "classification",
         "balanced accuracy score"
       ],
       "reminded": {},
@@ -15605,8 +15605,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "art",
         "nlp",
+        "art",
         "image generator",
         "custom metric"
       ],
@@ -15631,8 +15631,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "healthcare",
         "image",
+        "healthcare",
         "custom metric"
       ],
       "reminded": {},
@@ -15681,8 +15681,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "image",
         "text",
+        "image",
         "image-to-text",
         "meancosinesimilarity"
       ],
@@ -15707,10 +15707,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "audio",
+        "multiclass classification",
         "animals",
         "environment",
-        "multiclass classification",
-        "audio",
         "custom metric"
       ],
       "reminded": {},
@@ -15761,9 +15761,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "medicine",
         "multilabel classification",
         "image classification",
+        "medicine",
         "custom metric"
       ],
       "reminded": {},
@@ -15812,9 +15812,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "marketing",
-        "tabular",
         "multiclass classification",
+        "tabular",
+        "marketing",
         "map@{k}"
       ],
       "reminded": {},
@@ -15863,8 +15863,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "basketball",
         "sports",
+        "basketball",
         "mse"
       ],
       "reminded": {},
@@ -15888,8 +15888,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "image",
         "multiclass classification",
+        "image",
         "custom metric"
       ],
       "reminded": {},
@@ -15913,8 +15913,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "health",
         "image segmentation",
+        "health",
         "custom metric"
       ],
       "reminded": {},
@@ -15938,8 +15938,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "multiclass classification",
         "audio",
+        "multiclass classification",
         "custom metric"
       ],
       "reminded": {},
@@ -16013,8 +16013,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "computer vision",
         "image",
+        "computer vision",
         "custom metric"
       ],
       "reminded": {},
@@ -16136,8 +16136,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "optimization",
         "holidays and cultural events",
+        "optimization",
         "custom metric"
       ],
       "reminded": {},
@@ -16161,10 +16161,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "multimodal",
+        "regression",
         "astronomy",
         "intermediate",
-        "regression",
-        "multimodal",
         "custom metric"
       ],
       "reminded": {},
@@ -16211,8 +16211,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "finance",
         "tabular",
+        "finance",
         "wmae"
       ],
       "reminded": {},
@@ -16287,10 +16287,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "earth science",
-        "atmospheric science",
         "physics",
         "artificial intelligence",
+        "atmospheric science",
+        "earth science",
         "regression",
         "r2 score"
       ],
@@ -16315,11 +16315,11 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "artificial intelligence",
-        "tpu",
         "retrieval/ranking",
         "graph",
         "graph neural network",
+        "tpu",
+        "artificial intelligence",
         "custom metric"
       ],
       "reminded": {},
@@ -16345,8 +16345,8 @@
       "tags": [
         "education",
         "computer vision",
-        "image",
         "primary and secondary schools",
+        "image",
         "custom metric"
       ],
       "reminded": {},
@@ -16370,8 +16370,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "science and technology",
         "nlp",
+        "science and technology",
         "custom metric"
       ],
       "reminded": {},
@@ -16493,9 +16493,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "sports",
+        "tabular",
         "data analytics",
-        "tabular"
+        "sports"
       ],
       "reminded": {},
       "closedReported": true
@@ -16542,8 +16542,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "regression",
+        "tabular",
         "rmse"
       ],
       "reminded": {},
@@ -16616,8 +16616,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "classification",
         "image",
+        "classification",
         "fscoremacro"
       ],
       "reminded": {},
@@ -16765,9 +16765,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "banking",
-        "tabular",
         "binary classification",
+        "tabular",
+        "banking",
         "logloss"
       ],
       "reminded": {},
@@ -16841,8 +16841,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "recommender systems",
         "retail and shopping",
+        "recommender systems",
         "weightedrecall@{k}"
       ],
       "reminded": {},
@@ -16866,9 +16866,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "retail and shopping",
         "image",
         "text",
-        "retail and shopping",
         "custom metric"
       ],
       "reminded": {},
@@ -16892,8 +16892,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "regression",
+        "tabular",
         "rmse"
       ],
       "reminded": {},
@@ -16943,9 +16943,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "healthcare",
-        "image",
         "binary classification",
+        "image",
+        "healthcare",
         "auc"
       ],
       "reminded": {},
@@ -16994,8 +16994,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "medicine",
         "image",
+        "medicine",
         "custom metric"
       ],
       "reminded": {},
@@ -17043,9 +17043,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "binary classification",
         "manufacturing",
         "tabular",
-        "binary classification",
         "matthewscorrelationcoefficient"
       ],
       "reminded": {},
@@ -17092,9 +17092,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "tabular",
         "transportation",
         "automobiles and vehicles",
-        "tabular",
         "image",
         "custom metric"
       ],
@@ -17119,9 +17119,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "computer vision",
         "image",
         "binary classification",
+        "computer vision",
         "weightedmeancolumnwiselogloss"
       ],
       "reminded": {},
@@ -17170,8 +17170,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "regression",
+        "tabular",
         "rmsle"
       ],
       "reminded": {},
@@ -17219,9 +17219,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "online communities",
         "survey analysis",
-        "data analytics",
-        "online communities"
+        "data analytics"
       ],
       "reminded": {},
       "closedReported": true
@@ -17244,8 +17244,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "survey analysis",
         "data analytics",
+        "survey analysis",
         "online communities"
       ],
       "reminded": {},
@@ -17269,9 +17269,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "online communities",
         "survey analysis",
-        "data analytics",
-        "online communities"
+        "data analytics"
       ],
       "reminded": {},
       "closedReported": true
@@ -17319,8 +17319,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "text",
         "binary classification",
+        "text",
         "custom metric"
       ],
       "reminded": {},
@@ -17367,9 +17367,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "automobiles and vehicles",
-        "tabular",
         "regression",
+        "tabular",
+        "automobiles and vehicles",
         "r2score"
       ],
       "reminded": {},
@@ -17393,8 +17393,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "energy",
         "tabular",
+        "energy",
         "rmsle"
       ],
       "reminded": {},
@@ -17442,10 +17442,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "linguistics",
-        "internet",
-        "tabular",
         "text",
+        "linguistics",
+        "tabular",
+        "internet",
         "logloss"
       ],
       "reminded": {},
@@ -17469,9 +17469,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "housing",
-        "banking",
         "tabular",
+        "banking",
+        "housing",
         "regression",
         "rmsle"
       ],
@@ -17664,9 +17664,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "recommender systems",
-        "tabular",
         "hotels and accommodations",
+        "tabular",
+        "recommender systems",
         "map@{k}"
       ],
       "reminded": {},
@@ -17715,8 +17715,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "nlp",
         "text",
+        "nlp",
         "pearsoncorrelationcoefficient"
       ],
       "reminded": {},
@@ -17741,8 +17741,8 @@
       "confidence": "",
       "tags": [
         "tabular",
-        "image",
         "text",
+        "image",
         "rmse"
       ],
       "reminded": {},
@@ -17790,10 +17790,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "demographics",
-        "mobile and wireless",
         "tabular",
         "multiclass classification",
+        "mobile and wireless",
+        "demographics",
         "multiclassloss"
       ],
       "reminded": {},
@@ -17817,9 +17817,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "public health",
-        "biology",
         "biotechnology",
+        "biology",
+        "public health",
         "covid19",
         "custom metric"
       ],
@@ -17869,8 +17869,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "animals",
         "image",
+        "animals",
         "map@{k}"
       ],
       "reminded": {},
@@ -17919,8 +17919,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "medicine",
         "image",
+        "medicine",
         "dice3dhausdorff"
       ],
       "reminded": {},
@@ -18065,9 +18065,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "genetics",
-        "biotechnology",
         "tabular",
+        "biotechnology",
+        "genetics",
         "custom metric"
       ],
       "reminded": {},
@@ -18139,8 +18139,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "astronomy",
         "tabular",
+        "astronomy",
         "weightedmulticlassloss"
       ],
       "reminded": {},
@@ -18214,8 +18214,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "internet",
         "tabular",
+        "internet",
         "map@{k}"
       ],
       "reminded": {},
@@ -18239,8 +18239,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "astronomy",
         "signal processing",
+        "astronomy",
         "auc"
       ],
       "reminded": {},
@@ -18264,8 +18264,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "basketball",
         "sports",
+        "basketball",
         "logloss"
       ],
       "reminded": {},
@@ -18315,8 +18315,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "computer vision",
         "image",
+        "computer vision",
         "custom metric"
       ],
       "reminded": {},
@@ -18390,8 +18390,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "image",
         "multiclass classification",
+        "image",
         "multilabel classification",
         "custom metric"
       ],
@@ -18416,8 +18416,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "automobiles and vehicles",
         "image",
+        "automobiles and vehicles",
         "dice"
       ],
       "reminded": {},
@@ -18537,9 +18537,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "football",
-        "sports",
         "video",
+        "sports",
+        "football",
         "custom metric"
       ],
       "reminded": {},
@@ -18611,8 +18611,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "image",
         "multiclass classification",
+        "image",
         "fscorebetamicro"
       ],
       "reminded": {},
@@ -18659,9 +18659,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "water bodies",
-        "animals",
         "image",
+        "animals",
+        "water bodies",
         "mcrmse"
       ],
       "reminded": {},
@@ -18802,9 +18802,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "text",
         "languages",
         "linguistics",
-        "text",
         "categorizationaccuracy"
       ],
       "reminded": {},
@@ -18851,8 +18851,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "languages",
         "linguistics",
+        "languages",
         "text",
         "categorizationaccuracy"
       ],
@@ -18900,9 +18900,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "tabular",
         "basketball",
         "sports",
-        "tabular",
         "logloss"
       ],
       "reminded": {},
@@ -18951,9 +18951,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "multiclass classification",
         "literature",
         "linguistics",
-        "multiclass classification",
         "multiclassloss"
       ],
       "reminded": {},
@@ -19003,8 +19003,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "environment",
         "pollution",
+        "environment",
         "geospatial analysis"
       ],
       "reminded": {},
@@ -19103,8 +19103,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "binary classification",
+        "tabular",
         "auc"
       ],
       "reminded": {},
@@ -19128,8 +19128,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "internet",
         "tabular",
+        "internet",
         "quadraticweightedkappa"
       ],
       "reminded": {},
@@ -19272,9 +19272,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "covid19",
         "education",
-        "data analytics",
-        "covid19"
+        "data analytics"
       ],
       "reminded": {},
       "closedReported": true
@@ -19369,9 +19369,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "internet",
-        "text",
         "multiclass classification",
+        "text",
+        "internet",
         "custom metric"
       ],
       "reminded": {},
@@ -19443,8 +19443,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "internet",
         "text",
+        "internet",
         "custom metric"
       ],
       "reminded": {},
@@ -19491,8 +19491,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "astronomy",
         "signal processing",
+        "astronomy",
         "numpy",
         "auc"
       ],
@@ -19517,9 +19517,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "animals",
-        "audio",
         "tensorflow",
+        "audio",
+        "animals",
         "weightedlabelrankingaverageprecision"
       ],
       "reminded": {},
@@ -19570,8 +19570,8 @@
       "confidence": "",
       "tags": [
         "physics",
-        "tabular",
         "binary classification",
+        "tabular",
         "custom metric"
       ],
       "reminded": {},
@@ -19595,8 +19595,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "basketball",
         "sports",
+        "basketball",
         "logloss"
       ],
       "reminded": {},
@@ -19621,8 +19621,8 @@
       "confidence": "",
       "tags": [
         "genetics",
-        "text",
         "multiclass classification",
+        "text",
         "multiclassloss"
       ],
       "reminded": {},
@@ -19646,10 +19646,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "history",
-        "image",
         "multiclass classification",
+        "image",
         "japan",
+        "history",
         "custom metric"
       ],
       "reminded": {},
@@ -19673,8 +19673,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "people",
-        "education"
+        "education",
+        "people"
       ],
       "reminded": {},
       "closedReported": true
@@ -19746,10 +19746,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "research",
-        "biology",
-        "classification",
         "image",
+        "classification",
+        "biology",
+        "research",
         "categorizationaccuracy"
       ],
       "reminded": {},
@@ -19846,8 +19846,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "atmospheric science",
         "image",
+        "atmospheric science",
         "dice"
       ],
       "reminded": {},
@@ -19921,10 +19921,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "medicine",
-        "computer vision",
-        "classification",
         "image",
+        "medicine",
+        "classification",
+        "computer vision",
         "weightedmulticlassloss"
       ],
       "reminded": {},
@@ -19948,10 +19948,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "research",
-        "mobile and wireless",
-        "signal processing",
         "geospatial analysis",
+        "signal processing",
+        "mobile and wireless",
+        "research",
         "tabular",
         "custom metric"
       ],
@@ -19976,8 +19976,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "environment",
         "audio",
+        "environment",
         "weightedcategorizationaccuracy"
       ],
       "reminded": {},
@@ -20049,11 +20049,11 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "research",
+        "tabular",
         "mobile and wireless",
         "signal processing",
         "geospatial analysis",
-        "tabular",
+        "research",
         "custom metric"
       ],
       "reminded": {},
@@ -20124,9 +20124,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "image",
         "water bodies",
         "animals",
-        "image",
         "multiclassloss"
       ],
       "reminded": {},
@@ -20452,9 +20452,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "biology",
-        "medicine",
         "tabular",
+        "medicine",
+        "biology",
         "mae"
       ],
       "reminded": {},
@@ -20619,8 +20619,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "environment",
         "audio",
+        "environment",
         "fscorebetamicro"
       ],
       "reminded": {},
@@ -20668,8 +20668,8 @@
       "confidence": "",
       "tags": [
         "internet",
-        "tabular",
         "text",
+        "tabular",
         "auc"
       ],
       "reminded": {},
@@ -21691,10 +21691,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "housing",
         "tabular",
-        "text",
         "multiclass classification",
+        "text",
+        "housing",
         "multiclassloss"
       ],
       "reminded": {},
@@ -21744,10 +21744,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "geography",
-        "internet",
         "tabular",
         "multiclass classification",
+        "internet",
+        "geography",
         "map@{k}"
       ],
       "reminded": {},
@@ -21771,8 +21771,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "multiclass classification",
+        "tabular",
         "multiclassloss"
       ],
       "reminded": {},
@@ -21796,9 +21796,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "internet",
         "tabular",
         "binary classification",
+        "internet",
         "auc"
       ],
       "reminded": {},
@@ -21823,8 +21823,8 @@
       "confidence": "",
       "tags": [
         "internet",
-        "tabular",
         "multiclass classification",
+        "tabular",
         "multiclassloss"
       ],
       "reminded": {},
@@ -21946,8 +21946,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "covid19",
+        "tabular",
         "mcrmsle"
       ],
       "reminded": {},
@@ -21971,8 +21971,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "computer vision",
         "image",
+        "computer vision",
         "custom metric"
       ],
       "reminded": {},
@@ -22091,8 +22091,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "computer vision",
         "image",
+        "computer vision",
         "map@{k}"
       ],
       "reminded": {},
@@ -22210,8 +22210,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "basketball",
         "tabular",
+        "basketball",
         "logloss"
       ],
       "reminded": {},
@@ -22310,8 +22310,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "covid19",
+        "tabular",
         "mcrmsle"
       ],
       "reminded": {},
@@ -22335,10 +22335,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "weather and climate",
-        "beginner",
-        "time series analysis",
         "tabular",
+        "weather and climate",
+        "time series analysis",
+        "beginner",
         "roc auc score"
       ],
       "reminded": {},
@@ -22387,8 +22387,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
+        "beginner",
         "accuracy score"
       ],
       "reminded": {},
@@ -22437,8 +22437,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
+        "beginner",
         "mean squared log error"
       ],
       "reminded": {},
@@ -22487,8 +22487,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
+        "beginner",
         "roc auc score"
       ],
       "reminded": {},
@@ -22537,8 +22537,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
+        "beginner",
         "mean squared error"
       ],
       "reminded": {},
@@ -22562,8 +22562,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "finance",
         "beginner",
+        "finance",
         "tabular",
         "roc auc score"
       ],
@@ -22613,10 +22613,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "banking",
-        "beginner",
         "tabular",
         "binary classification",
+        "beginner",
+        "banking",
         "roc auc score"
       ],
       "reminded": {},
@@ -22642,8 +22642,8 @@
       "tags": [
         "beginner",
         "time series analysis",
-        "tabular",
         "multiclass classification",
+        "tabular",
         "accuracy score"
       ],
       "reminded": {},
@@ -22667,8 +22667,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
+        "beginner",
         "roc auc score"
       ],
       "reminded": {},
@@ -22742,8 +22742,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
+        "beginner",
         "roc auc score"
       ],
       "reminded": {},
@@ -22792,8 +22792,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
+        "beginner",
         "mean squared error"
       ],
       "reminded": {},
@@ -22818,8 +22818,8 @@
       "confidence": "",
       "tags": [
         "cycling",
-        "time series analysis",
         "tabular",
+        "time series analysis",
         "rmsle"
       ],
       "reminded": {},
@@ -22843,9 +22843,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "time series analysis",
         "tabular",
+        "beginner",
         "mean squared error"
       ],
       "reminded": {},
@@ -22942,9 +22942,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
-        "logistic regression",
         "tabular",
+        "logistic regression",
+        "beginner",
         "r2 score"
       ],
       "reminded": {},
@@ -22994,9 +22994,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
-        "time series analysis",
         "tabular",
+        "time series analysis",
+        "beginner",
         "accuracy score"
       ],
       "reminded": {},
@@ -23020,9 +23020,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "education",
         "beginner",
         "tabular",
+        "education",
         "accuracy score"
       ],
       "reminded": {},
@@ -23046,8 +23046,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
+        "beginner",
         "map@{k}"
       ],
       "reminded": {},
@@ -23097,8 +23097,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
+        "beginner",
         "mean squared error"
       ],
       "reminded": {},
@@ -23123,8 +23123,8 @@
       "confidence": "",
       "tags": [
         "beginner",
-        "time series analysis",
         "tabular",
+        "time series analysis",
         "matthews corrcoef"
       ],
       "reminded": {},
@@ -23149,9 +23149,9 @@
       "confidence": "",
       "tags": [
         "beginner",
-        "tabular",
         "regression",
         "insurance",
+        "tabular",
         "rmsle"
       ],
       "reminded": {},
@@ -23175,9 +23175,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "crime",
-        "tabular",
         "multiclass classification",
+        "tabular",
+        "crime",
         "multiclassloss"
       ],
       "reminded": {},
@@ -23201,8 +23201,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "binary classification",
+        "tabular",
         "auc"
       ],
       "reminded": {},
@@ -23226,9 +23226,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
         "binary classification",
+        "beginner",
         "roc auc score"
       ],
       "reminded": {},
@@ -23252,11 +23252,11 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "manufacturing",
         "beginner",
-        "tabular",
-        "binary classification",
+        "manufacturing",
         "multiclass classification",
+        "binary classification",
+        "tabular",
         "mcauc"
       ],
       "reminded": {},
@@ -23305,10 +23305,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "binary classification",
+        "tabular",
         "health",
         "beginner",
-        "tabular",
-        "binary classification",
         "roc auc score"
       ],
       "reminded": {},
@@ -23357,9 +23357,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
         "regression",
+        "beginner",
         "mean absolute error"
       ],
       "reminded": {},
@@ -23384,8 +23384,8 @@
       "confidence": "",
       "tags": [
         "banking",
-        "tabular",
         "regression",
+        "tabular",
         "rmse"
       ],
       "reminded": {},
@@ -23434,8 +23434,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "forestry",
         "multiclass classification",
+        "forestry",
         "categorizationaccuracy"
       ],
       "reminded": {},
@@ -23483,8 +23483,8 @@
       "confidence": "",
       "tags": [
         "beginner",
-        "time series analysis",
         "tabular",
+        "time series analysis",
         "multiclass classification",
         "log loss"
       ],
@@ -23509,10 +23509,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "earth science",
-        "beginner",
-        "tabular",
         "regression",
+        "tabular",
+        "beginner",
+        "earth science",
         "median absolute error"
       ],
       "reminded": {},
@@ -23562,8 +23562,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "image",
         "multiclass classification",
+        "image",
         "multiclassloss"
       ],
       "reminded": {},
@@ -23587,8 +23587,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "time series analysis",
         "tabular",
+        "time series analysis",
         "smape"
       ],
       "reminded": {},
@@ -23612,10 +23612,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "tabular",
+        "beginner",
         "animals",
         "health",
-        "beginner",
-        "tabular",
         "multiclass classification",
         "f1 score"
       ],
@@ -23665,8 +23665,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "logistic regression",
         "tabular",
+        "logistic regression",
         "binary classification",
         "auc"
       ],
@@ -23691,8 +23691,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "tabular",
         "regression",
+        "tabular",
         "rmse"
       ],
       "reminded": {},
@@ -23716,9 +23716,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "robotics",
-        "signal processing",
         "tabular",
+        "signal processing",
+        "robotics",
         "categorizationaccuracy"
       ],
       "reminded": {},
@@ -23767,10 +23767,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "animals",
-        "beginner",
-        "tabular",
         "regression",
+        "tabular",
+        "beginner",
+        "animals",
         "mean absolute error"
       ],
       "reminded": {},
@@ -23819,9 +23819,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "text",
-        "multiclass classification",
         "food",
+        "multiclass classification",
+        "text",
         "categorizationaccuracy"
       ],
       "reminded": {},
@@ -27215,9 +27215,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "research",
-        "biology",
         "medicine",
+        "biology",
+        "research",
         "image",
         "custom metric"
       ],
@@ -43809,9 +43809,9 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "math",
         "optimization",
         "mathematics",
-        "math",
         "custom metric"
       ],
       "reminded": {
@@ -43837,8 +43837,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "physics",
         "computer science",
+        "physics",
         "custom metric"
       ],
       "reminded": {
@@ -43864,8 +43864,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "beginner",
         "tabular",
+        "beginner",
         "roc auc score"
       ],
       "reminded": {
@@ -43993,10 +43993,10 @@
       "region": "intl",
       "confidence": "",
       "tags": [
+        "agentic",
         "engineering",
         "nlp",
-        "model comparison",
-        "agentic"
+        "model comparison"
       ],
       "reminded": {
         "2027-01-06": []
@@ -44481,13 +44481,13 @@
       "url": "https://lablab.ai/ai-hackathons/amd-developer-hackathon-act-iii",
       "organizer": "lablab.ai",
       "firstSeen": "2026-11-10",
-      "lastSeen": "2026-11-11",
+      "lastSeen": "2026-11-24",
       "deadline": "2026-10-18",
       "regDeadline": null,
       "effectiveDeadline": "2026-10-18",
       "deadlineIsReg": false,
       "prize": "",
-      "status": "closed",
+      "status": "open",
       "category": "general",
       "region": "intl",
       "confidence": "",
@@ -44496,7 +44496,7 @@
         "ai"
       ],
       "reminded": {},
-      "closedReported": true
+      "closedReported": false
     },
     "lablab:wearedevelopers-hackathon": {
       "id": "lablab:wearedevelopers-hackathon",
@@ -44529,13 +44529,13 @@
       "url": "https://lablab.ai/ai-hackathons/assemblyai-voice-agent-hackathon",
       "organizer": "lablab.ai",
       "firstSeen": "2026-11-10",
-      "lastSeen": "2026-11-11",
+      "lastSeen": "2026-11-24",
       "deadline": "2026-09-30",
       "regDeadline": null,
       "effectiveDeadline": "2026-09-30",
       "deadlineIsReg": false,
       "prize": "",
-      "status": "closed",
+      "status": "open",
       "category": "llm-agent",
       "region": "intl",
       "confidence": "",
@@ -44544,7 +44544,7 @@
         "ai"
       ],
       "reminded": {},
-      "closedReported": true
+      "closedReported": false
     },
     "lablab:ibm-bob-2-hackathon": {
       "id": "lablab:ibm-bob-2-hackathon",
@@ -44553,13 +44553,13 @@
       "url": "https://lablab.ai/ai-hackathons/ibm-bob-2-hackathon",
       "organizer": "lablab.ai",
       "firstSeen": "2026-11-10",
-      "lastSeen": "2026-11-11",
+      "lastSeen": "2026-11-24",
       "deadline": "2026-09-27",
       "regDeadline": null,
       "effectiveDeadline": "2026-09-27",
       "deadlineIsReg": false,
       "prize": "",
-      "status": "closed",
+      "status": "open",
       "category": "general",
       "region": "intl",
       "confidence": "",
@@ -44568,7 +44568,7 @@
         "ai"
       ],
       "reminded": {},
-      "closedReported": true
+      "closedReported": false
     },
     "lablab:ai-infra-summit-hackathon": {
       "id": "lablab:ai-infra-summit-hackathon",
@@ -44577,13 +44577,13 @@
       "url": "https://lablab.ai/ai-hackathons/ai-infra-summit-hackathon",
       "organizer": "lablab.ai",
       "firstSeen": "2026-11-10",
-      "lastSeen": "2026-11-11",
+      "lastSeen": "2026-11-24",
       "deadline": "2026-09-17",
       "regDeadline": null,
       "effectiveDeadline": "2026-09-17",
       "deadlineIsReg": false,
       "prize": "",
-      "status": "closed",
+      "status": "open",
       "category": "general",
       "region": "intl",
       "confidence": "",
@@ -44592,7 +44592,7 @@
         "ai"
       ],
       "reminded": {},
-      "closedReported": true
+      "closedReported": false
     },
     "lablab:alpaca-ai-trading-agents-hackathon": {
       "id": "lablab:alpaca-ai-trading-agents-hackathon",
@@ -44601,13 +44601,13 @@
       "url": "https://lablab.ai/ai-hackathons/alpaca-ai-trading-agents-hackathon",
       "organizer": "lablab.ai",
       "firstSeen": "2026-11-10",
-      "lastSeen": "2026-11-11",
+      "lastSeen": "2026-11-24",
       "deadline": "2026-09-04",
       "regDeadline": null,
       "effectiveDeadline": "2026-09-04",
       "deadlineIsReg": false,
       "prize": "",
-      "status": "closed",
+      "status": "open",
       "category": "general",
       "region": "intl",
       "confidence": "",
@@ -44616,7 +44616,7 @@
         "ai"
       ],
       "reminded": {},
-      "closedReported": true
+      "closedReported": false
     },
     "lablab:nativebuilder-build-without-limits": {
       "id": "lablab:nativebuilder-build-without-limits",
@@ -44625,13 +44625,13 @@
       "url": "https://lablab.ai/ai-hackathons/nativebuilder-build-without-limits",
       "organizer": "lablab.ai",
       "firstSeen": "2026-11-10",
-      "lastSeen": "2026-11-11",
+      "lastSeen": "2026-11-24",
       "deadline": "2026-08-10",
       "regDeadline": null,
       "effectiveDeadline": "2026-08-10",
       "deadlineIsReg": false,
       "prize": "",
-      "status": "closed",
+      "status": "open",
       "category": "general",
       "region": "intl",
       "confidence": "",
@@ -44640,7 +44640,7 @@
         "ai"
       ],
       "reminded": {},
-      "closedReported": true
+      "closedReported": false
     },
     "lablab:amd-developer-hackathon-act-ii": {
       "id": "lablab:amd-developer-hackathon-act-ii",
@@ -44649,13 +44649,13 @@
       "url": "https://lablab.ai/ai-hackathons/amd-developer-hackathon-act-ii",
       "organizer": "lablab.ai",
       "firstSeen": "2026-11-10",
-      "lastSeen": "2026-11-11",
+      "lastSeen": "2026-11-24",
       "deadline": "2026-07-13",
       "regDeadline": null,
       "effectiveDeadline": "2026-07-13",
       "deadlineIsReg": false,
       "prize": "",
-      "status": "closed",
+      "status": "open",
       "category": "general",
       "region": "intl",
       "confidence": "",
@@ -44664,7 +44664,7 @@
         "ai"
       ],
       "reminded": {},
-      "closedReported": true
+      "closedReported": false
     },
     "lablab:qualcomm-x-meta-executorch-hackathon": {
       "id": "lablab:qualcomm-x-meta-executorch-hackathon",
@@ -44697,13 +44697,13 @@
       "url": "https://lablab.ai/ai-hackathons/band-of-agents-hackathon",
       "organizer": "lablab.ai",
       "firstSeen": "2026-11-10",
-      "lastSeen": "2026-11-11",
+      "lastSeen": "2026-11-24",
       "deadline": "2026-06-19",
       "regDeadline": null,
       "effectiveDeadline": "2026-06-19",
       "deadlineIsReg": false,
       "prize": "",
-      "status": "closed",
+      "status": "open",
       "category": "general",
       "region": "intl",
       "confidence": "",
@@ -44712,7 +44712,7 @@
         "ai"
       ],
       "reminded": {},
-      "closedReported": true
+      "closedReported": false
     },
     "mlcontests:https://www.codabench.org/competitions/18366": {
       "id": "mlcontests:https://www.codabench.org/competitions/18366",
@@ -44792,8 +44792,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "optimization",
         "holidays and cultural events",
+        "optimization",
         "competition metric",
         "custom metric"
       ],
@@ -45927,6 +45927,7 @@
       ],
       "reminded": {
         "2026-11-30": [
+          14,
           7
         ]
       },
@@ -45980,8 +45981,8 @@
       "region": "intl",
       "confidence": "",
       "tags": [
-        "games",
         "agentic",
+        "games",
         "custom metric"
       ],
       "reminded": {
@@ -46009,6 +46010,270 @@
       "tags": [
         "cn-contest",
         "chuangye"
+      ],
+      "reminded": {},
+      "closedReported": false
+    },
+    "lablab:milan-ai-week-hackathon": {
+      "id": "lablab:milan-ai-week-hackathon",
+      "source": "lablab",
+      "name": "AI Agent Olympics Hackathon",
+      "url": "https://lablab.ai/ai-hackathons/milan-ai-week-hackathon",
+      "organizer": "lablab.ai",
+      "firstSeen": "2026-11-24",
+      "lastSeen": "2026-11-24",
+      "deadline": null,
+      "regDeadline": null,
+      "effectiveDeadline": null,
+      "deadlineIsReg": false,
+      "prize": "",
+      "status": "open",
+      "category": "llm-agent",
+      "region": "intl",
+      "confidence": "",
+      "tags": [
+        "hackathon",
+        "ai"
+      ],
+      "reminded": {},
+      "closedReported": false
+    },
+    "lablab:ibm-bob-hackathon": {
+      "id": "lablab:ibm-bob-hackathon",
+      "source": "lablab",
+      "name": "IBM Bob Hackathon",
+      "url": "https://lablab.ai/ai-hackathons/ibm-bob-hackathon",
+      "organizer": "lablab.ai",
+      "firstSeen": "2026-11-24",
+      "lastSeen": "2026-11-24",
+      "deadline": null,
+      "regDeadline": null,
+      "effectiveDeadline": null,
+      "deadlineIsReg": false,
+      "prize": "",
+      "status": "open",
+      "category": "general",
+      "region": "intl",
+      "confidence": "",
+      "tags": [
+        "hackathon",
+        "ai"
+      ],
+      "reminded": {},
+      "closedReported": false
+    },
+    "lablab:amd-developer": {
+      "id": "lablab:amd-developer",
+      "source": "lablab",
+      "name": "AMD Developer Hackathon",
+      "url": "https://lablab.ai/ai-hackathons/amd-developer",
+      "organizer": "lablab.ai",
+      "firstSeen": "2026-11-24",
+      "lastSeen": "2026-11-24",
+      "deadline": null,
+      "regDeadline": null,
+      "effectiveDeadline": null,
+      "deadlineIsReg": false,
+      "prize": "",
+      "status": "open",
+      "category": "general",
+      "region": "intl",
+      "confidence": "",
+      "tags": [
+        "hackathon",
+        "ai"
+      ],
+      "reminded": {},
+      "closedReported": false
+    },
+    "lablab:deriv-ai-talent-sprint": {
+      "id": "lablab:deriv-ai-talent-sprint",
+      "source": "lablab",
+      "name": "Deriv AI Talent Sprint",
+      "url": "https://lablab.ai/ai-hackathons/deriv-ai-talent-sprint",
+      "organizer": "lablab.ai",
+      "firstSeen": "2026-11-24",
+      "lastSeen": "2026-11-24",
+      "deadline": null,
+      "regDeadline": null,
+      "effectiveDeadline": null,
+      "deadlineIsReg": false,
+      "prize": "",
+      "status": "open",
+      "category": "general",
+      "region": "intl",
+      "confidence": "",
+      "tags": [
+        "hackathon",
+        "ai"
+      ],
+      "reminded": {},
+      "closedReported": false
+    },
+    "lablab:agentic-ai-hackathon-ibm-watsonx-orchestrate": {
+      "id": "lablab:agentic-ai-hackathon-ibm-watsonx-orchestrate",
+      "source": "lablab",
+      "name": "Agentic AI Hackathon with IBM watsonx Orchestrate",
+      "url": "https://lablab.ai/ai-hackathons/agentic-ai-hackathon-ibm-watsonx-orchestrate",
+      "organizer": "lablab.ai",
+      "firstSeen": "2026-11-24",
+      "lastSeen": "2026-11-24",
+      "deadline": null,
+      "regDeadline": null,
+      "effectiveDeadline": null,
+      "deadlineIsReg": false,
+      "prize": "",
+      "status": "open",
+      "category": "llm-agent",
+      "region": "intl",
+      "confidence": "",
+      "tags": [
+        "hackathon",
+        "ai"
+      ],
+      "reminded": {},
+      "closedReported": false
+    },
+    "lablab:ai-genesis": {
+      "id": "lablab:ai-genesis",
+      "source": "lablab",
+      "name": "AI Genesis",
+      "url": "https://lablab.ai/ai-hackathons/ai-genesis",
+      "organizer": "lablab.ai",
+      "firstSeen": "2026-11-24",
+      "lastSeen": "2026-11-24",
+      "deadline": null,
+      "regDeadline": null,
+      "effectiveDeadline": null,
+      "deadlineIsReg": false,
+      "prize": "",
+      "status": "open",
+      "category": "general",
+      "region": "intl",
+      "confidence": "",
+      "tags": [
+        "hackathon",
+        "ai"
+      ],
+      "reminded": {},
+      "closedReported": false
+    },
+    "lablab:internet-of-agents": {
+      "id": "lablab:internet-of-agents",
+      "source": "lablab",
+      "name": "The INTERNET OF AGENTS HACKATHON @SOLANA SKYLINE",
+      "url": "https://lablab.ai/ai-hackathons/internet-of-agents",
+      "organizer": "lablab.ai",
+      "firstSeen": "2026-11-24",
+      "lastSeen": "2026-11-24",
+      "deadline": null,
+      "regDeadline": null,
+      "effectiveDeadline": null,
+      "deadlineIsReg": false,
+      "prize": "",
+      "status": "open",
+      "category": "general",
+      "region": "intl",
+      "confidence": "",
+      "tags": [
+        "hackathon",
+        "ai"
+      ],
+      "reminded": {},
+      "closedReported": false
+    },
+    "lablab:raise-your-hack": {
+      "id": "lablab:raise-your-hack",
+      "source": "lablab",
+      "name": "RAISE YOUR HACK",
+      "url": "https://lablab.ai/ai-hackathons/raise-your-hack",
+      "organizer": "lablab.ai",
+      "firstSeen": "2026-11-24",
+      "lastSeen": "2026-11-24",
+      "deadline": null,
+      "regDeadline": null,
+      "effectiveDeadline": null,
+      "deadlineIsReg": false,
+      "prize": "",
+      "status": "open",
+      "category": "general",
+      "region": "intl",
+      "confidence": "",
+      "tags": [
+        "hackathon",
+        "ai"
+      ],
+      "reminded": {},
+      "closedReported": false
+    },
+    "lablab:code-craft-ai-x-dev-hackathon": {
+      "id": "lablab:code-craft-ai-x-dev-hackathon",
+      "source": "lablab",
+      "name": "Trae AI IDE: Zero Limits Hackathon",
+      "url": "https://lablab.ai/ai-hackathons/code-craft-ai-x-dev-hackathon",
+      "organizer": "lablab.ai",
+      "firstSeen": "2026-11-24",
+      "lastSeen": "2026-11-24",
+      "deadline": null,
+      "regDeadline": null,
+      "effectiveDeadline": null,
+      "deadlineIsReg": false,
+      "prize": "",
+      "status": "open",
+      "category": "general",
+      "region": "intl",
+      "confidence": "",
+      "tags": [
+        "hackathon",
+        "ai"
+      ],
+      "reminded": {},
+      "closedReported": false
+    },
+    "lablab:gemini-ai-hackathon": {
+      "id": "lablab:gemini-ai-hackathon",
+      "source": "lablab",
+      "name": "Gemini AI Hackathon",
+      "url": "https://lablab.ai/ai-hackathons/gemini-ai-hackathon",
+      "organizer": "lablab.ai",
+      "firstSeen": "2026-11-24",
+      "lastSeen": "2026-11-24",
+      "deadline": null,
+      "regDeadline": null,
+      "effectiveDeadline": null,
+      "deadlineIsReg": false,
+      "prize": "",
+      "status": "open",
+      "category": "general",
+      "region": "intl",
+      "confidence": "",
+      "tags": [
+        "hackathon",
+        "ai"
+      ],
+      "reminded": {},
+      "closedReported": false
+    },
+    "lablab:anthropic-ai-hackathon": {
+      "id": "lablab:anthropic-ai-hackathon",
+      "source": "lablab",
+      "name": "Anthropic AI Hackathon",
+      "url": "https://lablab.ai/ai-hackathons/anthropic-ai-hackathon",
+      "organizer": "lablab.ai",
+      "firstSeen": "2026-11-24",
+      "lastSeen": "2026-11-24",
+      "deadline": null,
+      "regDeadline": null,
+      "effectiveDeadline": null,
+      "deadlineIsReg": false,
+      "prize": "",
+      "status": "open",
+      "category": "general",
+      "region": "intl",
+      "confidence": "",
+      "tags": [
+        "hackathon",
+        "ai"
       ],
       "reminded": {},
       "closedReported": false

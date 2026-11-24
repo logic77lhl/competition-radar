@@ -1,8 +1,8 @@
 # 参赛机会雷达 · 2026-11-24
 
-> 采集时间 2026-11-24 07:20:19Z，耗时 8.9s。本次共 1858 条记录，其中在办且有截止日 53 条、新增 4 条、临近截止提醒 6 条。
+> 采集时间 2026-11-24 10:39:45Z，耗时 13.6s。本次共 1876 条记录，其中在办且有截止日 52 条、新增 11 条、临近截止提醒 1 条。
 
-**一句话**：发现 4 个此前没见过的赛事；有 6 个截止日在 30 天内。
+**一句话**：发现 11 个此前没见过的赛事；有 1 个截止日在 30 天内。
 
 > 已合并 137 条跨来源重复记录（同一赛事同时出现在多个平台）。
 
@@ -48,32 +48,56 @@
 
 ## 一、临近截止（该动手了）
 
-| 截止 | 提交截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
-|---|---|---|---|---|---|---|
-| 2026-11-25 | — | 1 天 | [⚠️ 玻尔 AI 产品周赛 · 第四期](https://www.bohrium.com) | 科学智能 AI4S | 本期总奖金最高 27,000 元（10 个赛道、77 道赛题 + 1 附加题） | 玻尔 Bohrium（深势科技） |
-| 2026-11-30 | — | 6 天 | [2026浙江省巾帼科技创新创业大赛报名通道正式开启！](https://www.52jingsai.com/article-24196-1.html) | 综合 | — | jingsai |
-| 2026-12-01 | — | 7 天 | [Predicting Credit Card Fraud](https://www.kaggle.com/competitions/playground-series-s6e11) | 综合 | 实物奖品 (SWAG) | Kaggle |
-| 2026-12-01 | — | 7 天 | [⚠️ AI+∞开发者创作大赛第三期·AI造游戏](https://www.aibetas.com/aigc_events/ai-infinity-game-developer-competition-3) | 综合 | 最高1.5万元 | aibetas |
-| 2026-12-04 | — | 10 天 | [UDAYA 2.O](https://udaya-2-o.devfolio.co/) | 综合 | — | devfolio |
-| 2026-12-08 (报名) | 2026-12-15 | 14 天 | [Enveda CASMI 2026 - Molecule ID From Mass Spectra](https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra) | 科学智能 AI4S | USD 50,000 | Enveda |
+| 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
+|---|---|---|---|---|---|
+| 2026-11-30 | 6 天 | [2026浙江省巾帼科技创新创业大赛报名通道正式开启！](https://www.52jingsai.com/article-24196-1.html) | 综合 | — | jingsai |
 
 ## 二、新增赛事（首次出现在雷达里）
 
-| 截止 | 提交截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
-|---|---|---|---|---|---|---|
-| 2026-11-30 | — | 6 天 | [2026浙江省巾帼科技创新创业大赛报名通道正式开启！](https://www.52jingsai.com/article-24196-1.html) | 综合 | — | jingsai |
-| 2026-12-04 | — | 10 天 | [UDAYA 2.O](https://udaya-2-o.devfolio.co/) | 综合 | — | devfolio |
-| 2027-02-23 (报名) | 2027-03-02 | 91 天 | [Generalist Gaming Agent](https://www.kaggle.com/competitions/generalist-gaming-agent) | 科学智能 AI4S | USD 50,000 | GARC (Generalist Agent Research Collective) |
-| — | — | — | [2026江苏创青春“人工智能+住房城乡建设”创新创业大赛](https://www.52jingsai.com/article-24206-1.html) | 综合 | — | jingsai |
+| 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
+|---|---|---|---|---|---|
+| — | — | [AI Agent Olympics Hackathon](https://lablab.ai/ai-hackathons/milan-ai-week-hackathon) | 大模型 / Agent | — | lablab.ai |
+| — | — | [IBM Bob Hackathon](https://lablab.ai/ai-hackathons/ibm-bob-hackathon) | 综合 | — | lablab.ai |
+| — | — | [AMD Developer Hackathon](https://lablab.ai/ai-hackathons/amd-developer) | 综合 | — | lablab.ai |
+| — | — | [Deriv AI Talent Sprint](https://lablab.ai/ai-hackathons/deriv-ai-talent-sprint) | 综合 | — | lablab.ai |
+| — | — | [Agentic AI Hackathon with IBM watsonx Orchestrate](https://lablab.ai/ai-hackathons/agentic-ai-hackathon-ibm-watsonx-orchestrate) | 大模型 / Agent | — | lablab.ai |
+| — | — | [AI Genesis](https://lablab.ai/ai-hackathons/ai-genesis) | 综合 | — | lablab.ai |
+| — | — | [The INTERNET OF AGENTS HACKATHON @SOLANA SKYLINE](https://lablab.ai/ai-hackathons/internet-of-agents) | 综合 | — | lablab.ai |
+| — | — | [RAISE YOUR HACK](https://lablab.ai/ai-hackathons/raise-your-hack) | 综合 | — | lablab.ai |
+| — | — | [Trae AI IDE: Zero Limits Hackathon](https://lablab.ai/ai-hackathons/code-craft-ai-x-dev-hackathon) | 综合 | — | lablab.ai |
+| — | — | [Gemini AI Hackathon](https://lablab.ai/ai-hackathons/gemini-ai-hackathon) | 综合 | — | lablab.ai |
+| — | — | [Anthropic AI Hackathon](https://lablab.ai/ai-hackathons/anthropic-ai-hackathon) | 综合 | — | lablab.ai |
 
 <details><summary>新增条目的取证线索</summary>
 
-- **2026浙江省巾帼科技创新创业大赛报名通道正式开启！**（jingsai）：我爱竞赛网 · 创业大赛 列表 + 详情页「截止时间：2026年11月30日」
-- **UDAYA 2.O**（devfolio）：0 人报名 · 线下 · 时区 Asia/Calcutta · 主题 Design/AI
-- **Generalist Gaming Agent**（kaggle）：44 支队伍 · games/agentic/custom metric
-- **2026江苏创青春“人工智能+住房城乡建设”创新创业大赛**（jingsai）：我爱竞赛网 · 创业大赛 列表 + 详情页（正文没写报名截止）
+- **AI Agent Olympics Hackathon**（lablab）：详情页没解析到 JSON-LD，标题取自 h1
+- **IBM Bob Hackathon**（lablab）：详情页没解析到 JSON-LD，标题取自 h1
+- **AMD Developer Hackathon**（lablab）：详情页没解析到 JSON-LD，标题取自 h1
+- **Deriv AI Talent Sprint**（lablab）：详情页没解析到 JSON-LD，标题取自 h1
+- **Agentic AI Hackathon with IBM watsonx Orchestrate**（lablab）：详情页没解析到 JSON-LD，标题取自 h1
+- **AI Genesis**（lablab）：详情页没解析到 JSON-LD，标题取自 h1
+- **The INTERNET OF AGENTS HACKATHON @SOLANA SKYLINE**（lablab）：详情页没解析到 JSON-LD，标题取自 h1
+- **RAISE YOUR HACK**（lablab）：详情页没解析到 JSON-LD，标题取自 h1
+- **Trae AI IDE: Zero Limits Hackathon**（lablab）：详情页没解析到 JSON-LD，标题取自 h1
+- **Gemini AI Hackathon**（lablab）：详情页没解析到 JSON-LD，标题取自 h1
+- **Anthropic AI Hackathon**（lablab）：详情页没解析到 JSON-LD，标题取自 h1
 
 </details>
+
+## 三、变更与状态切换
+
+**重新开放 / 重新出现**
+
+| 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
+|---|---|---|---|---|---|
+| — | — | [AMD Developer Hackathon: ACT III](https://lablab.ai/ai-hackathons/amd-developer-hackathon-act-iii) | 综合 | — | lablab.ai |
+| — | — | [AssemblyAI - Voice Agent Hackathon](https://lablab.ai/ai-hackathons/assemblyai-voice-agent-hackathon) | 大模型 / Agent | — | lablab.ai |
+| — | — | [IBM Bob 2.0 hackathon](https://lablab.ai/ai-hackathons/ibm-bob-2-hackathon) | 综合 | — | lablab.ai |
+| — | — | [AI Infra Summit Hackathon](https://lablab.ai/ai-hackathons/ai-infra-summit-hackathon) | 综合 | — | lablab.ai |
+| — | — | [Alpaca AI Trading Agents Hackathon](https://lablab.ai/ai-hackathons/alpaca-ai-trading-agents-hackathon) | 综合 | — | lablab.ai |
+| — | — | [AI Factory](https://lablab.ai/ai-hackathons/nativebuilder-build-without-limits) | 综合 | — | lablab.ai |
+| — | — | [AMD Developer Hackathon: ACT II](https://lablab.ai/ai-hackathons/amd-developer-hackathon-act-ii) | 综合 | — | lablab.ai |
+| — | — | [Band of Agents Hackathon](https://lablab.ai/ai-hackathons/band-of-agents-hackathon) | 综合 | — | lablab.ai |
 
 ## 在办赛事总表（按截止日升序）
 
@@ -133,7 +157,7 @@
 | 2027-01-22 (报名) | 2027-01-29 | 59 天 | [Santa 2026 - The Elf Calculator](https://www.kaggle.com/competitions/santa-2026) | 强化学习 / 机器人 | USD 50,000 | Kaggle |
 | 2027-07-12 (报名) | 2027-07-19 | 230 天 | [Squares in Squares](https://www.kaggle.com/competitions/squares-in-squares) | 强化学习 / 机器人 | USD 50,000 | Kaggle |
 
-### 综合（22）
+### 综合（21）
 
 | 截止 | 剩余 | 赛事 | 方向 | 奖金 | 主办 / 来源 |
 |---|---|---|---|---|---|
@@ -146,7 +170,6 @@
 | 2026-12-01 | 7 天 | [⚠️ AI+∞开发者创作大赛第三期·AI造游戏](https://www.aibetas.com/aigc_events/ai-infinity-game-developer-competition-3) | 综合 | 最高1.5万元 | aibetas |
 | 2026-12-03 | 9 天 | [⚠️ “泰州有戏·剧创未来”泰州首届AI漫剧创作大赛](https://www.aibetas.com/aigc_events/taizhou-ai-comic-competition-2026) | 综合 | 最高1万元 | aibetas |
 | 2026-12-03 | 9 天 | [⚠️ “AI视界·海丝新程”2026年泉州市短视频比赛](https://www.aibetas.com/aigc_events/quanzhou-ai-maritime-silk-road-short-video-competition-2026) | 综合 | 最高奖金2000元 | aibetas |
-| 2026-12-04 | 10 天 | [UDAYA 2.O](https://udaya-2-o.devfolio.co/) | 综合 | — | devfolio |
 | 2026-12-06 | 12 天 | [⚠️ “这就是深圳”第3季短视频征集](https://www.aibetas.com/aigc_events/612) | 综合 | — | aibetas |
 | 2026-12-09 | 15 天 | [⚠️ SHEIN AI创新挑战赛](https://www.aibetas.com/aigc_events/shein-ai-innovation-challenge-2026) | 综合 | 10万元 | aibetas |
 | 2026-12-10 | 16 天 | [⚠️ 2026“数字武当杯”AI应用创新大赛](https://www.aibetas.com/aigc_events/digital-wudang-cup-ai-innovation-2026) | 综合 | 12万元奖金池 | aibetas |
@@ -185,6 +208,17 @@
 | [REFUGE](https://refuge.grand-challenge.org/) | 医疗健康 | 平台状态 OPEN |
 | [HC18](https://hc18.grand-challenge.org/) | 医疗健康 | 平台状态 OPEN |
 | [ANHIR](https://anhir.grand-challenge.org/) | 医疗健康 | 平台状态 OPEN |
+
+**lablab**：共 19 条，下表只列前 6 条
+
+| 赛事 | 方向 | 线索 |
+|---|---|---|
+| [AMD Developer Hackathon: ACT III](https://lablab.ai/ai-hackathons/amd-developer-hackathon-act-iii) | 综合 | 详情页没解析到 JSON-LD，标题取自 h1 |
+| [AssemblyAI - Voice Agent Hackathon](https://lablab.ai/ai-hackathons/assemblyai-voice-agent-hackathon) | 大模型 / Agent | 详情页没解析到 JSON-LD，标题取自 h1 |
+| [IBM Bob 2.0 hackathon](https://lablab.ai/ai-hackathons/ibm-bob-2-hackathon) | 综合 | 详情页没解析到 JSON-LD，标题取自 h1 |
+| [AI Infra Summit Hackathon](https://lablab.ai/ai-hackathons/ai-infra-summit-hackathon) | 综合 | 详情页没解析到 JSON-LD，标题取自 h1 |
+| [Alpaca AI Trading Agents Hackathon](https://lablab.ai/ai-hackathons/alpaca-ai-trading-agents-hackathon) | 综合 | 详情页没解析到 JSON-LD，标题取自 h1 |
+| [AI Factory](https://lablab.ai/ai-hackathons/nativebuilder-build-without-limits) | 综合 | 详情页没解析到 JSON-LD，标题取自 h1 |
 
 **jingsai**：共 9 条，下表只列前 6 条
 
@@ -258,19 +292,19 @@
 
 | 来源 | 状态 | 条数 | 耗时 | 说明 |
 |---|---|---|---|---|
-| Kaggle | ✅ 正常 | 764 | 2616 ms | 扫描 764 项 |
-| ML Contests | ✅ 正常 | 413 | 337 ms | 413 项（含已截止，按截止日过滤） |
-| Grand Challenge | ✅ 正常 | 264 | 2205 ms | API 返回 264 项 |
-| DataFountain | ✅ 正常 | 30 | 4435 ms | 列表页 30 条 + ID 递进探 8 个（1177–1184）补到 0 条 |
-| AIcrowd | ✅ 正常 | 18 | 1007 ms | 列表页解析 18 条 |
-| CodaLab Competitions | ✅ 正常 | 379 | 3612 ms | 列表页解析 379 条 |
-| DrivenData | ✅ 正常 | 53 | 702 ms | 列表页解析 53 条 |
-| EvalAI | ✅ 正常 | 3 | 609 ms | present 18 / future 0（共 18 项，跳过 15 个 2099 占位日的常设 benchmark） |
-| Devfolio | ✅ 正常 | 5 | 1277 ms | 扫到 28 场，AI 相关 5 场（关键词过滤掉 23 场） |
-| TAIKAI | ✅ 正常 | 7 | 1475 ms | 列表 20 场，AI 相关 7 场（过滤掉 13 场） |
-| AIBetas 竞赛日历 | ✅ 正常 | 11 | 5652 ms | 竞赛日历 10 条 + 全部赛事列表补 1 条（聚合站转述，字段以官网为准） |
-| 我爱竞赛网 | ✅ 正常 | 24 | 6520 ms | 科技大赛 列表 26 条 / 抓详情 8 条；IT应用开发 列表 28 条 / 抓详情 8 条；创业大赛 列表 27 条 / 抓详情 8 条 |
-| lablab.ai | ❌ 失败 | 0 | 767 ms | 页面结构变化：列表页没找到 /ai-hackathons/<slug> 链接 |
+| Kaggle | ✅ 正常 | 764 | 3262 ms | 扫描 764 项 |
+| ML Contests | ✅ 正常 | 413 | 229 ms | 413 项（含已截止，按截止日过滤） |
+| Grand Challenge | ✅ 正常 | 264 | 2038 ms | API 返回 264 项 |
+| DataFountain | ✅ 正常 | 30 | 4475 ms | 列表页 30 条 + ID 递进探 8 个（1177–1184）补到 0 条 |
+| AIcrowd | ✅ 正常 | 18 | 1353 ms | 列表页解析 18 条 |
+| CodaLab Competitions | ✅ 正常 | 379 | 4303 ms | 列表页解析 379 条 |
+| DrivenData | ✅ 正常 | 53 | 786 ms | 列表页解析 53 条 |
+| EvalAI | ✅ 正常 | 3 | 1037 ms | present 18 / future 0（共 18 项，跳过 15 个 2099 占位日的常设 benchmark） |
+| Devfolio | ✅ 正常 | 4 | 1240 ms | 扫到 28 场，AI 相关 4 场（关键词过滤掉 24 场） |
+| TAIKAI | ✅ 正常 | 7 | 1346 ms | 列表 20 场，AI 相关 7 场（过滤掉 13 场） |
+| AIBetas 竞赛日历 | ✅ 正常 | 11 | 11427 ms | 竞赛日历 10 条 + 全部赛事列表补 1 条（聚合站转述，字段以官网为准） |
+| 我爱竞赛网 | ✅ 正常 | 24 | 9362 ms | 科技大赛 列表 26 条 / 抓详情 8 条；IT应用开发 列表 28 条 / 抓详情 8 条；创业大赛 列表 27 条 / 抓详情 8 条 |
+| lablab.ai | ✅ 正常 | 19 | 3046 ms | 列表 19 个，抓了 19 个详情页，成功 19 个 |
 | 人工维护清单 | ✅ 正常 | 24 | 0 ms | curated.json 24 条（其中 15 条是第三方转述，摘要里标 ⚠️） |
 
 > 任何一个来源连续失败都要当成真问题处理：**不要以为「没新赛事」**，先看这张表。
